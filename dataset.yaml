@@ -1,0 +1,91 @@
+- label: MSIE
+  name: Internet Explorer
+  type: browser
+  vendor: Microsoft
+
+- label: Chrome
+  name: Chrome
+  type: browser
+  vendor: Google
+
+- label: Safari
+  name: Safari
+  type: browser
+  vendor: Apple
+
+- label: Firefox
+  name: Firefox
+  type: browser
+  vendor: Mozilla
+
+- label: WinVista
+  name: Windows Vista
+  type: os
+  category: pc
+
+- label: Win7
+  name: Windows 7
+  type: os
+  category: pc
+  
+- label: OSX
+  name: Mac OSX
+  type: os
+  category: pc
+
+- label: Android
+  name: Android
+  type: os
+  category: smartphone
+
+- label: iPhone
+  name: iPhone
+  type: os
+  category: smartphone
+
+- label: iPad
+  name: iPad
+  type: os
+  category: smartphone
+
+- label: docomo
+  name: docomo
+  type: full
+  vendor: docomo
+  os: docomo
+  category: mobilephone
+
+- label: au
+  name: au by KDDI
+  type: full
+  vendor: au
+  os: au
+  category: mobilephone
+
+- label: SoftBank
+  name: SoftBank Mobile
+  type: full
+  vendor: SoftBank
+  os: SoftBank
+  category: mobilephone
+
+- label: willcom
+  name: WILLCOM
+  type: full
+  vendor: WILLCOM
+  os: WILLCOM
+  category: mobilephone
+
+- label: PSP
+  name: PlayStation Portable
+  type: full
+  vendor: Sony
+  os: misc
+  category: appliance
+
+- label: PS3
+  name: PlayStation 3
+  type: full
+  vendor: Sony
+  os: misc
+  category: appliance
