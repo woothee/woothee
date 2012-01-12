@@ -1,0 +1,26 @@
+# Safari + OSX
+- target: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_4; ja-jp) AppleWebKit/525.18 (KHTML, like Gecko) Version/3.1.2 Safari/525.20.1'
+  name: Safari
+  version: 3.1.2
+  os: Mac OSX
+  category: pc
+
+# Firefox + Ubuntu
+- target: 'Mozilla/5.0 (Ubuntu; X11; Linux i686; rv:9.0.1) Gecko/20100101 Firefox/9.0.1'
+  name: Firefox
+  version: 9.0.1
+  os: Linux
+  category: pc
+
+# Chrome + Linux
+- target: 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.75 Safari/535.7'
+  name: Chrome
+  version: 16.0.912.75
+  os: Linux
+  category: pc
+
+# cXense + Linux
+- target: 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.24) Gecko cXense'
+  name: Gecko cXense
+  os: Linux
+  category: pc

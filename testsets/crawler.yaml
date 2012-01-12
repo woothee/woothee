@@ -1,0 +1,124 @@
+# Yahoo
+- target: 'Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)'
+  name: Yahoo! Slurp
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Y!J-BRO/YFSJ crawler (compatible; Mozilla 4.0; MSIE 5.5; http://help.yahoo.co.jp/help/jp/search/indexing/indexing-15.html; YahooFeedSeekerJp/2.0; users 0; views 248)'
+  name: Yahoo! Japan FeedSeeker
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Y!J-BRP/YFSBJ crawler (compatible; Mozilla 4.0; MSIE 5.5; http://help.yahoo.co.jp/help/jp/search/indexing/indexing-15.html; YahooFeedSeekerBetaJp/2.0; users 0; views 80)'
+  name: Yahoo! Japan FeedSeeker
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Yahoo Pipes 2.0'
+  name: Yahoo! Pipes
+  os: UNKNOWN
+  category: crawler
+
+# Baidu
+- target: 'Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)'
+  name: Baiduspider
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Baiduspider+(+http://www.baidu.jp/spider/)'
+  name: Baiduspider
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Baiduspider-image+(+http://www.baidu.com/search/spider.htm)'
+  name: Baiduspider
+  os: UNKNOWN
+  category: crawler
+
+# MSN/Bing
+- target: 'msnbot/1.1 (+http://search.msn.com/msnbot.htm)'
+  name: msnbot
+  os: UNKNOWN
+  category: crawler
+
+- target: 'msnbot-UDiscovery/2.0b (+http://search.msn.com/msnbot.htm)'
+  name: msnbot
+  os: UNKNOWN
+  category: crawler
+
+- target: 'msnbot/2.0b (+http://search.msn.com/msnbot.htm)._'
+  name: msnbot
+  os: UNKNOWN
+  category: crawler
+
+- target: '"msnbot-NewsBlogs/2.0b (+http://search.msn.com/msnbot.htm)'
+  name: msnbot
+  os: UNKNOWN
+  category: crawler
+
+- target: 'msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)'
+  name: msnbot
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)'
+  name: bingbot
+  os: UNKNOWN
+  category: crawler
+
+# Naver
+- target: 'Yeti/1.0 (NHN Corp.; http://help.naver.com/robots/)'
+  name: Naver Yeti
+  os: UNKNOWN
+  category: crawler
+
+# Unknown Chinese bot
+- target: 'Mozilla/3.0 (compatible; Indy Library)'
+  name: Indy Library
+  os: UNKNOWN
+  category: crawler
+
+# Apple
+- target: 'Apple-PubSub/65.28'
+  name: Apple MobileMe
+  os: UNKNOWN
+  category: crawler
+
+# Hatena
+- target: 'Hatena Antenna/0.5 (http://a.hatena.ne.jp/help)'
+  name: Hatena
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Hatena Pagetitle Agent/1.0'
+  name: Hatena
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Hatena Diary RSS Module (http://d.hatena.ne.jp/help#rssmodule)'
+  name: Hatena
+  os: UNKNOWN
+  category: crawler
+
+# Goo
+- target: 'ichiro/3.0 (http://help.goo.ne.jp/door/crawler.html)'
+  name: goo
+  os: UNKNOWN
+  category: crawler
+
+- target: 'DoCoMo/2.0 P900i(c100;TB;W24H11) (compatible; ichiro/mobile goo; +http://help.goo.ne.jp/help/article/1142/)'
+  name: goo
+  os: UNKNOWN
+  category: crawler
+
+# livedoor
+- target: 'livedoor FeedFetcher/0.01 (http://reader.livedoor.com/; 999 subscribers)'
+  name: livedoor FeedFetcher
+  os: UNKNOWN
+  category: crawler
+
+# facebook
+- target: 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)'
+  name: facebook
+  os: UNKNOWN
+  category: crawler

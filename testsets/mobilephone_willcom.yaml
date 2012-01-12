@@ -1,0 +1,29 @@
+- target: 'Mozilla/3.0(WILLCOM;TOSHIBA/WX320T/2;1/1/C128) NetFront/3.4'
+  name: WILLCOM
+  version: WX320T
+  os: WILLCOM
+  category: mobilephone
+
+- target: 'Mozilla/3.0(WILLCOM;SANYO/WX310SA/2;1/1/C128) NetFront/3.3'
+  name: WILLCOM
+  version: WX310SA
+  os: WILLCOM
+  category: mobilephone
+
+- target: 'Mozilla/3.0(WILLCOM;KYOCERA/WX331K/2;1.0.8.13.000000/0.1/C100) Opera 7.2 EX'
+  name: Opera
+  version: WX331K
+  os: WILLCOM
+  category: mobilephone
+
+- target: 'Mozilla/3.0(DDIPOCKET;JRC/AH-J3001V,AH-J3002V/1.0/0100/c50)CNF/2.0'
+  name: DDIPOCKET
+  version: AH-J3001V,AH-J3002V
+  os: WILLCOM
+  category: mobilephone
+
+- target: 'Mozilla/3.0(DDIPOCKET;KYOCERA/AH-K3001V/1.4.1.67.000000/0.1/C100) Opera 7.0'
+  name: Opera
+  version: AH-K3001V
+  os: WILLCOM
+  category: mobilephone

@@ -1,0 +1,9 @@
+- target: 'AppleSyndication/56.1'
+  name: Safari RSSReader
+  os: UNKNOWN
+  category: misc
+
+- target: 'Mozilla/5.0 (compatible; Google Desktop/5.9.1005.12335; http://desktop.google.com/)'
+  name: Google Desktop
+  os: UNKNOWN
+  category: misc

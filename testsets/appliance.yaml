@@ -1,0 +1,36 @@
+# Nintendo 3DS
+- target: 'Mozilla/5.0 (Nintendo 3DS; U; ; ja) Version/1.7455.JP'
+  name: Nintendo 3DS
+  os: Nintendo 3DS
+  category: appliance
+
+# Wii
+- target: 'Opera/9.30 (Nintendo Wii; U; ; 3642; ja)'
+  name: Opera
+  os: Nintendo Wii
+  category: appliance
+
+# PlayStation 3...
+- target: 'Mozilla/5.0 (PLAYSTATION 3; 1.00)'
+  name: PlayStation 3
+  os: PlayStation 3
+  category: appliance
+
+# PSP
+- target: 'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)'
+  name: PlayStation Portable
+  os: PlayStation Portable
+  category: appliance
+
+# PSP Vita
+- target: 'Mozilla/5.0 (PlayStation Vita 1.51) AppleWebKit/531.22.8 (KHTML, like Gecko) Silk/3.2'
+  name: PlayStation Vita
+  os: PlayStation Vita
+  category: appliance
+
+# Net TV
+- target: 'Mozilla/5.0 (DTV; TSBNetTV/TXXXXXXXXX.0203.ADD; like Gecko) NetFront/3.4 DTVNetBrowser/2.2 (000039;TXXXXXXXXX;0203;ADD) InettvBrowser/2.2 (000039;TXXXXXXXXX;0203;ADD) YahooDTV/1.1 (Video=0x03;Audio=0x01;Screen=0x01;Device=0x00;Remote=0x10)'
+  name: DTVNetBrowser
+  os: DTV
+  category: appliance
+

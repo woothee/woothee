@@ -1,0 +1,14 @@
+- target: 'Mozilla/5.0 (en-us) AppleWebKit/534.14 (KHTML, like Gecko; Google Wireless Transcoder) Chrome/9.0.597 Safari/534.14'
+  name: Google Wireless Transcoder
+  os: UNKNOWN
+  category: mobilephone
+
+- target: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; ja-JP) Naver Transcoder, AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5'
+  name: Naver Transcoder
+  os: UNKNOWN
+  category: mobilephone
+
+- target: 'DoCoMo/2.0 D903i(c100;TB;W28H20) (compatible; Hatena-Mobile-Gateway/1.2; +http://mgw.hatena.ne.jp/help)'
+  name: Hatena Mobile Gateway
+  os: UNKNOWN
+  category: mobilephone

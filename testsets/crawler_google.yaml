@@ -1,0 +1,39 @@
+- target: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+  name: Googlebot
+  os: UNKNOWN
+  category: crawler
+
+- target: 'DoCoMo/2.0 N905i(c100;TB;W24H16) (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)'
+  name: Googlebot Mobile
+  os: UNKNOWN
+  category: crawler
+
+- target: 'SAMSUNG-SGH-E250/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0 (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)'
+  name: Googlebot Mobile
+  os: UNKNOWN
+  category: crawler
+
+- target: 'DoCoMo/2.0 SH905i(c100;TB;W24H16) (compatible; Mediapartners-Google/2.1; +http://www.google.com/bot.html)'
+  name: Google Mediapartners
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Mediapartners-Google'
+  name: Google Mediapartners
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Feedfetcher-Google; (+http://www.google.com/feedfetcher.html; feed-id=000000000000000000)'
+  name: Google Feedfetcher
+  os: UNKNOWN
+  category: crawler
+
+- target: 'AppEngine-Google'
+  name: Google AppEngine
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Mozilla/5.0 (en-us) AppleWebKit/525.13 (KHTML, like Gecko; Google Web Preview) Version/3.1 Safari/525.13'
+  name: Google Web Preview
+  os: UNKNOWN
+  category: crawler
