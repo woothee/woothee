@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Woothee" default="all" basedir=".">
+
+  <!-- set property -->
+  <property file="build.properties" />
+
+  <property name="source" value="./src" />
+  <property name="javadoc" value="./javadoc" />
+  <property name="dir.src.tests" value="./src/test" />
+  <property name="dir.build.testresults" value="testresults" />
+
+  <target name="all" depends="init,codegen,compile" />
+
+  <!-- Initialize -->
+  <target name="init">
+    <mkdir dir="classes" />
+  </target>
+
+  <target name="codegen">
+    <exec executable="perl">
+      <arg line="../bin/dataset_yaml2java.pl" />
+      <env key="LC_ALL" value="C" />
+    </exec>
+  </target>
+
+  <!-- compile java sources -->
+  <target name="compile">
+    <javac srcdir="${source}" destdir="classes"
+           debug="on" optimize="off" deprecation="off"
+           includeantruntime="false"
+           encoding="UTF-8">
+      <classpath>
+        <pathelement path="${classpath}" />
+        <fileset dir="lib">
+          <include name="**/*.jar" />
+        </fileset>
+        <pathelement location="classes" />
+        <!--
+        <dirset dir="${build.dir}">
+          <include name="apps/**/classes"/>
+          <exclude name="apps/**/*Test*"/>
+        </dirset>
+        <filelist refid="third-party_jars" />
+        -->
+      </classpath>
+    </javac>
+  </target>
+
+  <!-- make javadoc -->
+  <target name="javadoc">
+    <delete dir="${javadoc}" />
+    <mkdir dir="${javadoc}" />
+    <javadoc sourcepath="${source}" packagenames="${PACKAGE}" destdir="${javadoc}" />
+  </target>
+
+  <target name="test" depends="init,codegen,compile,runtests" />
+
+  <target name="runtests">
+    <mkdir dir="${dir.build.testresults}" />
+    <junit fork="true"
+           forkmode="once"
+           haltonfailure="false"
+           haltonerror="false"
+           failureproperty="tests.failures"
+           errorproperty="tests.errors"
+           includeantruntime="true"
+           showoutput="true"
+           printsummary="true">
+      <sysproperty key="testset.dirname" value="../testsets" />
+      <classpath>
+        <pathelement path="${classpath}" />
+        <fileset dir="lib">
+          <include name="**/*.jar" />
+        </fileset>
+        <pathelement location="classes" />
+        <!--
+            <dirset dir="${build.dir}">
+            <include name="apps/**/classes"/>
+            <exclude name="apps/**/*Test*"/>
+            </dirset>
+            <filelist refid="third-party_jars" />
+        -->
+      </classpath>
+
+      <formatter type="plain"/>
+
+      <batchtest fork="yes"
+                 todir="${dir.build.testresults}">
+        <fileset dir="${dir.src.tests}">
+          <include name="**/*.java"/>
+        </fileset>
+      </batchtest>
+    </junit>
+  </target>
+
+  <!-- clean work file -->
+  <target name="clean">
+    <delete dir="${classes}" />
+  </target>
+</project>
