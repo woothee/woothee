@@ -89,3 +89,33 @@
   vendor: Sony
   os: misc
   category: appliance
+
+- label: GoogleBot
+  name: Googlebot
+  type: full
+  category: crawler
+
+- label: GoogleBotMobile
+  name: Googlebot Mobile
+  type: full
+  category: crawler
+
+- label: GoogleMediaPartners
+  name: Google Mediapartners
+  type: full
+  category: crawler
+
+- label: GoogleFeedFetcher
+  name: Google Feedfetcher
+  type: full
+  category: crawler
+
+- label: GoogleAppEngine
+  name: Google AppEngine
+  type: full
+  category: crawler
+
+- label: GoogleWebPreview
+  name: Google Web Preview
+  type: full
+  category: crawler
