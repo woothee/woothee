@@ -23,25 +23,26 @@
   category: mobilephone
 
 - target: 'Vodafone/1.0/V905SH/SHJ001 Browser/VF-NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1'
-  name: Vodafone
+  name: SoftBank Mobile
   version: V905SH
   os: SoftBank
   category: mobilephone
 
 - target: 'Vodafone/1.0/V804SH/SHJ001/SN0000000000000 Browser/UP.Browser/7.0.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 Ext-J-Profile/JSCL-1.3.2 Ext-V-Profile/VSCL-2.0.0'
-  name: Vodafone
+  name: SoftBank Mobile
   version: V804SH
   os: SoftBank
   category: mobilephone
 
-- target: 'MOT-V980/80.2F.2E. MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1,V702MO'
-  name: Motorola
-  version: MOT-V980
-  os: SoftBank
-  category: mobilephone
-
 - target: 'J-PHONE/4.0/J-T51/SNXXXXXXXXX000000000 TS/1.00 Profile/MIDP-1.0 Configuration/CLDC-1.0 Ext-Profile/JSCL-1.1.0'
-  name: J-PHONE
+  name: SoftBank Mobile
   version: J-T51
   os: SoftBank
   category: mobilephone
+
+# Too rare to check all of our user-agent ...
+# - target: 'MOT-V980/80.2F.2E. MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1,V702MO'
+#   name: Motorola
+#   version: MOT-V980
+#   os: SoftBank
+#   category: mobilephone

@@ -11,13 +11,13 @@
   category: mobilephone
 
 - target: 'Mozilla/5.0 Opera/9.5 (KDDI-SH3F; BREW; Opera Mobi; U; ja) Presto/2.2.1'
-  name: Opera Mobi
+  name: Opera
   version: SH3F
   os: au
   category: mobilephone
 
 - target: 'Mozilla/4.0 (compatible; MSIE 6.0; KDDI-CA3B) Opera 8.60 [ja]'
-  name: Opera
+  name: Internet Explorer
   version: CA3B
   os: au
   category: mobilephone

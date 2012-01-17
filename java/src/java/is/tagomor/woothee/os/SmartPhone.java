@@ -7,7 +7,6 @@ import java.util.regex.MatchResult;
 
 import is.tagomor.woothee.AgentCategory;
 import is.tagomor.woothee.DataSet;
-import is.tagomor.woothee.Classifier;
 
 public class SmartPhone extends AgentCategory {
   public static boolean challenge(final String ua, final Map<String,String> result) {

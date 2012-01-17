@@ -17,7 +17,7 @@
   category: mobilephone
 
 - target: 'Mozilla/3.0(DDIPOCKET;JRC/AH-J3001V,AH-J3002V/1.0/0100/c50)CNF/2.0'
-  name: DDIPOCKET
+  name: WILLCOM
   version: 'AH-J3001V,AH-J3002V'
   os: WILLCOM
   category: mobilephone

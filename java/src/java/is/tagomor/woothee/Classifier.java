@@ -83,11 +83,20 @@ public final class Classifier {
     if (is.tagomor.woothee.os.SmartPhone.challenge(useragent, result))
       return true;
 
+    if (is.tagomor.woothee.os.MobilePhone.challenge(useragent, result))
+      return true;
+
     return false;
   }
 
   public static boolean tryMobilePhone(final String useragent, final Map<String,String> result) {
     if (is.tagomor.woothee.mobilephone.Docomo.challenge(useragent, result))
+      return true;
+    if (is.tagomor.woothee.mobilephone.Au.challenge(useragent, result))
+      return true;
+    if (is.tagomor.woothee.mobilephone.Softbank.challenge(useragent, result))
+      return true;
+    if (is.tagomor.woothee.mobilephone.Willcom.challenge(useragent, result))
       return true;
     return false;
   }
