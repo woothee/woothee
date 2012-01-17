@@ -18,8 +18,18 @@
   type: browser
   vendor: Mozilla
 
-- label: WinVista
-  name: Windows Vista
+- label: Opera
+  name: Opera
+  type: browser
+  vendor: Opera
+
+# - label: Sleipnir
+#   name: Sleipnir
+#   type: browser
+#   vendor: Fenrir Inc.
+
+- label: Win
+  name: Windows UNKNOWN Ver
   type: os
   category: pc
 
@@ -28,8 +38,28 @@
   type: os
   category: pc
   
+- label: WinVista
+  name: Windows Vista
+  type: os
+  category: pc
+
+- label: WinXP
+  name: Windows XP
+  type: os
+  category: pc
+
+- label: Win2000
+  name: Windows 2000
+  type: os
+  category: pc
+
 - label: OSX
   name: Mac OSX
+  type: os
+  category: pc
+
+- label: Linux
+  name: Linux
   type: os
   category: pc
 
@@ -45,6 +75,21 @@
 
 - label: iPad
   name: iPad
+  type: os
+  category: smartphone
+
+- label: iPod
+  name: iPod
+  type: os
+  category: smartphone
+
+- label: WinPhone
+  name: Windows Phone OS
+  type: os
+  category: smartphone
+
+- label: BlackBerry
+  name: BlackBerry
   type: os
   category: smartphone
 

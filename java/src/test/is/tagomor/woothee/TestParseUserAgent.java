@@ -92,19 +92,19 @@ public final class TestParseUserAgent {
   @Test
   public void testsetSmartPhoneIOS() throws FileNotFoundException {
     File target = new File(new File(".").getAbsolutePath().concat("/../testsets/smartphone_ios.yaml"));
-    // executeTestSet(target, "SmartPhone/ios");
+    executeTestSet(target, "SmartPhone/ios");
   }
 
   @Test
   public void testsetSmartPhoneAndroid() throws FileNotFoundException {
     File target = new File(new File(".").getAbsolutePath().concat("/../testsets/smartphone_android.yaml"));
-    // executeTestSet(target, "SmartPhone/android");
+    executeTestSet(target, "SmartPhone/android");
   }
 
   @Test
   public void testsetSmartPhoneMisc() throws FileNotFoundException {
     File target = new File(new File(".").getAbsolutePath().concat("/../testsets/smartphone_misc.yaml"));
-    // executeTestSet(target, "SmartPhone/misc");
+    executeTestSet(target, "SmartPhone/misc");
   }
 
   @Test

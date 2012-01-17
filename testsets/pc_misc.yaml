@@ -21,6 +21,6 @@
 
 # cXense + Linux
 - target: 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.24) Gecko cXense'
-  name: Gecko cXense
+  name: UNKNOWN
   os: Linux
   category: pc
