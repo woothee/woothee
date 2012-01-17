@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="Woothee" default="all" basedir=".">
+<project name="Woothee" default="test" basedir=".">
 
   <!-- set property -->
   <property file="build.properties" />
 
   <property name="source" value="./src" />
+  <property name="classes" value="classes" />
   <property name="javadoc" value="./javadoc" />
   <property name="dir.src.tests" value="./src/test" />
   <property name="dir.build.testresults" value="testresults" />
+  <property name="jar.name" value="woothee.jar" />
 
-  <target name="all" depends="init,checkyaml,codegen,compile" />
+  <target name="all" depends="clean,init,checkyaml,codegen,hiveudf,jar" />
 
   <!-- Initialize -->
   <target name="init">
-    <mkdir dir="classes" />
+    <mkdir dir="${classes}" />
   </target>
 
   <target name="checkyaml">
@@ -32,26 +34,47 @@
 
   <!-- compile java sources -->
   <target name="compile">
-    <javac srcdir="${source}" destdir="classes"
+    <javac srcdir="${source}" destdir="${classes}"
            debug="on" optimize="off" deprecation="off"
            includeantruntime="false"
            encoding="UTF-8">
+      <exclude name="**/is/tagomor/woothee/hive/*.java" />
       <classpath>
         <pathelement path="${classpath}" />
         <fileset dir="lib">
           <include name="**/*.jar" />
         </fileset>
-        <pathelement location="classes" />
-        <!--
-        <dirset dir="${build.dir}">
-          <include name="apps/**/classes"/>
-          <exclude name="apps/**/*Test*"/>
-        </dirset>
-        <filelist refid="third-party_jars" />
-        -->
+        <pathelement location="${classes}" />
       </classpath>
     </javac>
   </target>
+
+  <!-- compile hive udf with hadoop/hive jars -->
+  <target name="hiveudf">
+    <javac srcdir="${source}" destdir="${classes}"
+           debug="on" optimize="off" deprecation="off"
+           includeantruntime="false"
+           encoding="UTF-8">
+      <classpath>
+        <pathelement path="${classpath}" />
+        <fileset dir="../tmp/hadoop-1.0.0">
+          <include name="**/*.jar" />
+        </fileset>
+        <fileset dir="../tmp/hive-0.8.0/lib/">
+          <include name="**/*.jar" />
+        </fileset>
+        <fileset dir="lib">
+          <include name="**/*.jar" />
+        </fileset>
+        <pathelement location="${classes}" />
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="jar" depends="compile">
+    <jar jarfile="${jar.name}" basedir="${classes}" />
+  </target>
+
 
   <!-- make javadoc -->
   <target name="javadoc">
@@ -79,14 +102,7 @@
         <fileset dir="lib">
           <include name="**/*.jar" />
         </fileset>
-        <pathelement location="classes" />
-        <!--
-            <dirset dir="${build.dir}">
-            <include name="apps/**/classes"/>
-            <exclude name="apps/**/*Test*"/>
-            </dirset>
-            <filelist refid="third-party_jars" />
-        -->
+        <pathelement location="${classes}" />
       </classpath>
 
       <formatter type="plain"/>
@@ -103,5 +119,6 @@
   <!-- clean work file -->
   <target name="clean">
     <delete dir="${classes}" />
+    <delete file="${jar.name}" />
   </target>
 </project>
