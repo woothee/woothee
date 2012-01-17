@@ -91,10 +91,9 @@ public final class Classifier {
     if (is.tagomor.woothee.os.Linux.challenge(useragent, result))
       return true;
 
-    // all useragents matches /(iPhone|iPad|iPod|Andorid)/
+    // all useragents matches /(iPhone|iPad|iPod|Andorid|BlackBerry)/
     if (is.tagomor.woothee.os.SmartPhone.challenge(useragent, result))
       return true;
-    
 
     return false;
   }

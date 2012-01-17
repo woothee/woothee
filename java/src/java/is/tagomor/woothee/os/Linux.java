@@ -12,7 +12,7 @@ import is.tagomor.woothee.Classifier;
 public class Linux extends AgentCategory {
   public static boolean challenge(final String ua, final Map<String,String> result) {
     int pos = ua.indexOf("Linux");
-    if (pos < 0) // not Windows
+    if (pos < 0) // not Linux
       return false;
 
     Map<String,String> data = DataSet.get("Linux");
