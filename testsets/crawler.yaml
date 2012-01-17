@@ -80,7 +80,7 @@
 
 # Apple
 - target: 'Apple-PubSub/65.28'
-  name: Apple MobileMe
+  name: Apple iCloud
   os: UNKNOWN
   category: crawler
 
