@@ -15,16 +15,24 @@ public final class Classifier {
 
   public static final String VALUE_UNKNOWN = "UNKNOWN";
 
-
   public static Map<String,String> parse(final String useragent) {
     HashMap<String,String> result = new HashMap<String,String>(5, (float)1.0); // initial capacity, load factor
 
     if (tryCrawler(useragent, result)) {
-      System.out.println(result.toString());
       return fillResult(result);
     }
 
     return fillResult(result);
+  }
+
+  public static boolean tryCrawler(final String useragent, final Map<String,String> result) {
+    if (is.tagomor.woothee.crawler.Google.challenge(useragent, result)) {
+      return true;
+    }
+    if (is.tagomor.woothee.crawler.Crawlers.challenge(useragent, result)) {
+      return true;
+    }
+    return false;
   }
 
   public static Map<String,String> fillResult(final Map<String,String> result) {
@@ -40,12 +48,4 @@ public final class Classifier {
       result.put(ATTRIBUTE_KEY_VENDOR, VALUE_UNKNOWN);
     return result;
   }
-
-  public static boolean tryCrawler(final String useragent, final Map<String,String> result) {
-    if (is.tagomor.woothee.crawler.Google.challenge(useragent, result)) {
-      return true;
-    }
-    return false;
-  }
-
 }
