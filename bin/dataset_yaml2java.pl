@@ -53,6 +53,12 @@ EOD
     h.put(DATASET_KEY_VENDOR, "$vendor");
     h.put(DATASET_KEY_CATEGORY, "$category");
 EOD
+        if ($dataset->{os}) {
+            my $os = $dataset->{os};
+            $def .= <<"EOD";
+    h.put(DATASET_KEY_OS, "$os");
+EOD
+        }
     }
     else {
         die "invalid type: " . $dataset->{type};
@@ -88,6 +94,7 @@ public final class DataSet {
   public static final String DATASET_KEY_NAME = "name";
   public static final String DATASET_KEY_TYPE = "type";
   public static final String DATASET_KEY_CATEGORY = "category";
+  public static final String DATASET_KEY_OS = "os";
   public static final String DATASET_KEY_VENDOR = "vendor";
   public static final String DATASET_KEY_VERSION = "version";
 
@@ -102,7 +109,12 @@ public final class DataSet {
   public static final String DATASET_CATEGORY_APPLIANCE = "appliance";
   public static final String DATASET_CATEGORY_MISC = "misc";
 
-  // public static final String DATASET_VALUE_UNKNOWN = "UNKNOWN";
+  public static final String ATTRIBUTE_NAME = "name";
+  public static final String ATTRIBUTE_CATEGORY = "category";
+  public static final String ATTRIBUTE_OS = "os";
+  public static final String ATTRIBUTE_VENDOR = "vendor";
+  public static final String ATTRIBUTE_VERSION = "version";
+  public static final String VALUE_UNKNOWN = "UNKNOWN";
 
   private static final Map<String,Map<String,String>> DATASET = new HashMap<String,Map<String,String>>();
 
