@@ -4,9 +4,17 @@
   os: Nintendo 3DS
   category: appliance
 
+# Nintendo DSi
+- target: 'Opera/9.50 (Nintendo DSi; Opera/507; U; ja)'
+  name: Opera
+  version: '9.50'
+  os: Nintendo DSi
+  category: appliance
+
 # Wii
 - target: 'Opera/9.30 (Nintendo Wii; U; ; 3642; ja)'
   name: Opera
+  version: '9.30'
   os: Nintendo Wii
   category: appliance
 
@@ -28,9 +36,10 @@
   os: PlayStation Vita
   category: appliance
 
-# Net TV
-- target: 'Mozilla/5.0 (DTV; TSBNetTV/TXXXXXXXXX.0203.ADD; like Gecko) NetFront/3.4 DTVNetBrowser/2.2 (000039;TXXXXXXXXX;0203;ADD) InettvBrowser/2.2 (000039;TXXXXXXXXX;0203;ADD) YahooDTV/1.1 (Video=0x03;Audio=0x01;Screen=0x01;Device=0x00;Remote=0x10)'
-  name: DTVNetBrowser
-  os: DTV
-  category: appliance
+# Maybe too rare to check
+# # Net TV
+# - target: 'Mozilla/5.0 (DTV; TSBNetTV/TXXXXXXXXX.0203.ADD; like Gecko) NetFront/3.4 DTVNetBrowser/2.2 (000039;TXXXXXXXXX;0203;ADD) InettvBrowser/2.2 (000039;TXXXXXXXXX;0203;ADD) YahooDTV/1.1 (Video=0x03;Audio=0x01;Screen=0x01;Device=0x00;Remote=0x10)'
+#   name: DTVNetBrowser
+#   os: DTV
+#   category: appliance
 

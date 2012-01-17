@@ -121,19 +121,59 @@
   os: WILLCOM
   category: mobilephone
 
+- label: Nintendo3DS
+  name: Nintendo 3DS
+  type: full
+  vendor: Nintendo
+  os: Nintendo 3DS
+  category: appliance
+
+- label: NintendoDSi
+  name: Nintendo DSi
+  type: full
+  vendor: Nintendo
+  os: Nintendo DSi
+  category: appliance
+
+- label: NintendoWii
+  name: Nintendo Wii
+  type: full
+  vendor: Nintendo
+  os: Nintendo Wii
+  category: appliance
+
 - label: PSP
   name: PlayStation Portable
   type: full
   vendor: Sony
-  os: misc
+  os: PlayStation Portable
+  category: appliance
+
+- label: PSVita
+  name: PlayStation Vita
+  type: full
+  vendor: Sony
+  os: PlayStation Vita
   category: appliance
 
 - label: PS3
   name: PlayStation 3
   type: full
   vendor: Sony
-  os: misc
+  os: PlayStation 3
   category: appliance
+
+- label: SafariRSSReader
+  name: Safari RSSReader
+  type: full
+  vendor: Apple
+  category: misc
+
+- label: GoogleDesktop
+  name: Google Desktop
+  type: full
+  vendor: Google
+  category: misc
 
 - label: GoogleBot
   name: Googlebot

@@ -86,6 +86,9 @@ public final class Classifier {
     if (is.tagomor.woothee.os.MobilePhone.challenge(useragent, result))
       return true;
 
+    if (is.tagomor.woothee.os.Appliance.challenge(useragent, result))
+      return true;
+
     return false;
   }
 
@@ -102,10 +105,18 @@ public final class Classifier {
   }
 
   public static boolean tryAppliance(final String useragent, final Map<String,String> result) {
+    if (is.tagomor.woothee.appliance.Playstation.challenge(useragent, result))
+      return true;
+    if (is.tagomor.woothee.appliance.Nintendo.challenge(useragent, result))
+      return true;
+
     return false;
   }
 
   public static boolean tryMisc(final String useragent, final Map<String,String> result) {
+    if (is.tagomor.woothee.misc.DesktopTools.challenge(useragent, result))
+      return true;
+    
     return false;
   }
 
