@@ -10,13 +10,19 @@
   <property name="dir.src.tests" value="./src/test" />
   <property name="dir.build.testresults" value="testresults" />
 
-  <target name="all" depends="init,codegen,compile" />
+  <target name="all" depends="init,checkyaml,codegen,compile" />
 
   <!-- Initialize -->
   <target name="init">
     <mkdir dir="classes" />
   </target>
 
+  <target name="checkyaml">
+    <exec executable="perl">
+      <arg line="../bin/dataset_checker.pl" />
+      <env key="LC_ALL" value="C" />
+    </exec>
+  </target>
   <target name="codegen">
     <exec executable="perl">
       <arg line="../bin/dataset_yaml2java.pl" />
@@ -54,7 +60,7 @@
     <javadoc sourcepath="${source}" packagenames="${PACKAGE}" destdir="${javadoc}" />
   </target>
 
-  <target name="test" depends="init,codegen,compile,runtests" />
+  <target name="test" depends="init,checkyaml,codegen,compile,runtests" />
 
   <target name="runtests">
     <mkdir dir="${dir.build.testresults}" />
