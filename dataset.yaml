@@ -119,3 +119,68 @@
   name: Google Web Preview
   type: full
   category: crawler
+
+- label: YahooSlurp
+  name: Yahoo! Slurp
+  type: full
+  category: crawler
+
+- label: YahooJPFeedSeeker
+  name: Yahoo! Japan FeedSeeker
+  type: full
+  category: crawler
+
+- label: YahooPipes
+  name: Yahoo! Pipes
+  type: full
+  category: crawler
+
+- label: Baiduspider
+  name: Baiduspider
+  type: full
+  category: crawler
+
+- label: msnbot
+  name: msnbot
+  type: full
+  category: crawler
+
+- label: bingbot
+  name: bingbot
+  type: full
+  category: crawler
+
+- label: Yeti
+  name: Naver Yeti
+  type: full
+  category: crawler
+
+- label: facebook
+  name: facebook
+  type: full
+  category: crawler
+
+- label: IndyLibrary
+  name: Indy Library
+  type: full
+  category: crawler
+
+- label: ApplePubSub
+  name: Apple iCloud
+  type: full
+  category: crawler
+
+- label: Hatena
+  name: Hatena
+  type: full
+  category: crawler
+
+- label: gooIchiro
+  name: goo
+  type: full
+  category: crawler
+
+- label: livedoorFeedFetcher
+  name: livedoor FeedFetcher
+  type: full
+  category: crawler
