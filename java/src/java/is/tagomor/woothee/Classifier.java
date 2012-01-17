@@ -7,14 +7,6 @@ import java.util.List;
 import is.tagomor.woothee.DataSet;
 
 public final class Classifier {
-  public static final String ATTRIBUTE_KEY_NAME = "name";
-  public static final String ATTRIBUTE_KEY_CATEGORY = "category";
-  public static final String ATTRIBUTE_KEY_OS = "os";
-  public static final String ATTRIBUTE_KEY_VERSION = "version";
-  public static final String ATTRIBUTE_KEY_VENDOR = "vendor";
-
-  public static final String VALUE_UNKNOWN = "UNKNOWN";
-
   public static Map<String,String> parse(final String useragent) {
     return fillResult(execParse(useragent));
   }
@@ -30,10 +22,6 @@ public final class Classifier {
       if (tryOS(useragent, result))
         return result;
       return fillResult(result);
-    }
-
-    if (trySmartPhone(useragent, result)) {
-      return result;
     }
 
     if (tryMobilePhone(useragent, result)) {
@@ -98,11 +86,9 @@ public final class Classifier {
     return false;
   }
 
-  public static boolean trySmartPhone(final String useragent, final Map<String,String> result) {
-    return false;
-  }
-
   public static boolean tryMobilePhone(final String useragent, final Map<String,String> result) {
+    if (is.tagomor.woothee.mobilephone.Docomo.challenge(useragent, result))
+      return true;
     return false;
   }
 
@@ -115,16 +101,16 @@ public final class Classifier {
   }
 
   public static Map<String,String> fillResult(final Map<String,String> result) {
-    if (result.get(ATTRIBUTE_KEY_NAME) == null)
-      result.put(ATTRIBUTE_KEY_NAME, VALUE_UNKNOWN);
-    if (result.get(ATTRIBUTE_KEY_CATEGORY) == null)
-      result.put(ATTRIBUTE_KEY_CATEGORY, VALUE_UNKNOWN);
-    if (result.get(ATTRIBUTE_KEY_OS) == null)
-      result.put(ATTRIBUTE_KEY_OS, VALUE_UNKNOWN);
-    if (result.get(ATTRIBUTE_KEY_VERSION) == null)
-      result.put(ATTRIBUTE_KEY_VERSION, VALUE_UNKNOWN);
-    if (result.get(ATTRIBUTE_KEY_VENDOR) == null)
-      result.put(ATTRIBUTE_KEY_VENDOR, VALUE_UNKNOWN);
+    if (result.get(DataSet.ATTRIBUTE_NAME) == null)
+      result.put(DataSet.ATTRIBUTE_NAME, DataSet.VALUE_UNKNOWN);
+    if (result.get(DataSet.ATTRIBUTE_CATEGORY) == null)
+      result.put(DataSet.ATTRIBUTE_CATEGORY, DataSet.VALUE_UNKNOWN);
+    if (result.get(DataSet.ATTRIBUTE_OS) == null)
+      result.put(DataSet.ATTRIBUTE_OS, DataSet.VALUE_UNKNOWN);
+    if (result.get(DataSet.ATTRIBUTE_VERSION) == null)
+      result.put(DataSet.ATTRIBUTE_VERSION, DataSet.VALUE_UNKNOWN);
+    if (result.get(DataSet.ATTRIBUTE_VENDOR) == null)
+      result.put(DataSet.ATTRIBUTE_VENDOR, DataSet.VALUE_UNKNOWN);
     return result;
   }
 }

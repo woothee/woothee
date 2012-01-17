@@ -7,7 +7,6 @@ import java.util.regex.MatchResult;
 
 import is.tagomor.woothee.AgentCategory;
 import is.tagomor.woothee.DataSet;
-import is.tagomor.woothee.Classifier;
 
 public class MSIE extends AgentCategory {
   private static Pattern msie = Pattern.compile("MSIE ([.0-9]+);");
@@ -18,7 +17,7 @@ public class MSIE extends AgentCategory {
     if (pos < 0) // not MSIE (nor Sleipnir)
       return false;
 
-    String version = Classifier.VALUE_UNKNOWN;
+    String version = DataSet.VALUE_UNKNOWN;
 
     /*
     int spos = ua.indexOf("Sleipnir");

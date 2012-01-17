@@ -2,7 +2,7 @@ package is.tagomor.woothee;
 
 import java.util.Map;
 
-import is.tagomor.woothee.Classifier;
+import is.tagomor.woothee.DataSet;
 
 public class AgentCategory {
   protected static void updateMap(final Map<String,String> target, final Map<String,String> source) {
@@ -15,12 +15,12 @@ public class AgentCategory {
     }
   }
   protected static void updateCategory(final Map<String,String> target, final String category) {
-    target.put(Classifier.ATTRIBUTE_KEY_CATEGORY, category);
+    target.put(DataSet.ATTRIBUTE_CATEGORY, category);
   }
   protected static void updateVersion(final Map<String,String> target, final String version) {
-    target.put(Classifier.ATTRIBUTE_KEY_VERSION, version);
+    target.put(DataSet.ATTRIBUTE_VERSION, version);
   }
   protected static void updateOs(final Map<String,String> target, final String os) {
-    target.put(Classifier.ATTRIBUTE_KEY_OS, os);
+    target.put(DataSet.ATTRIBUTE_OS, os);
   }
 }

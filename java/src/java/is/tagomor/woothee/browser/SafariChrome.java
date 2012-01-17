@@ -7,7 +7,6 @@ import java.util.regex.MatchResult;
 
 import is.tagomor.woothee.AgentCategory;
 import is.tagomor.woothee.DataSet;
-import is.tagomor.woothee.Classifier;
 
 public class SafariChrome extends AgentCategory {
   private static Pattern chromeVerRegex = Pattern.compile("Chrome/([.0-9]+)");
@@ -18,7 +17,7 @@ public class SafariChrome extends AgentCategory {
     if (pos < 0) // not Safari nor Chrome
       return false;
 
-    String version = Classifier.VALUE_UNKNOWN;
+    String version = DataSet.VALUE_UNKNOWN;
 
     int cpos = ua.indexOf("Chrome");
     if (cpos > -1) {

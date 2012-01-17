@@ -7,7 +7,6 @@ import java.util.regex.MatchResult;
 
 import is.tagomor.woothee.AgentCategory;
 import is.tagomor.woothee.DataSet;
-import is.tagomor.woothee.Classifier;
 
 public class Opera extends AgentCategory {
   private static Pattern operaVerRegex = Pattern.compile("Opera[/ ]([.0-9]+)");
@@ -17,7 +16,7 @@ public class Opera extends AgentCategory {
     if (pos < 0) // not Opera
       return false;
 
-    String version = Classifier.VALUE_UNKNOWN;
+    String version = DataSet.VALUE_UNKNOWN;
 
     // Opera (PC/Mobile/Smartphone)
     Matcher opera = operaVerRegex.matcher(ua);
