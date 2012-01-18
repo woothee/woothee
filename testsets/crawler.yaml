@@ -5,12 +5,17 @@
   category: crawler
 
 - target: 'Y!J-BRO/YFSJ crawler (compatible; Mozilla 4.0; MSIE 5.5; http://help.yahoo.co.jp/help/jp/search/indexing/indexing-15.html; YahooFeedSeekerJp/2.0; users 0; views 248)'
-  name: Yahoo! Japan FeedSeeker
+  name: Yahoo! Japan
   os: UNKNOWN
   category: crawler
 
 - target: 'Y!J-BRP/YFSBJ crawler (compatible; Mozilla 4.0; MSIE 5.5; http://help.yahoo.co.jp/help/jp/search/indexing/indexing-15.html; YahooFeedSeekerBetaJp/2.0; users 0; views 80)'
-  name: Yahoo! Japan FeedSeeker
+  name: Yahoo! Japan
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Y!J-BRJ/YATS crawler (http://listing.yahoo.co.jp/support/faq/int/other/other_001.html)'
+  name: Yahoo! Japan
   os: UNKNOWN
   category: crawler
 
@@ -117,8 +122,24 @@
   os: UNKNOWN
   category: crawler
 
+- target: 'Fastladder FeedFetcher/0.01 (http://fastladder.com/; 27 subscribers)'
+  name: livedoor FeedFetcher
+  os: UNKNOWN
+  category: crawler
+
 # facebook
 - target: 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)'
   name: facebook
+  os: UNKNOWN
+  category: crawler
+
+# mixi
+- target: 'mixi-check/1.0 (http://mixi.jp/)'
+  name: mixi
+  os: UNKNOWN
+  category: crawler
+
+- target: 'mixi-news-crawler/1.00 (http://mixi.jp/)'
+  name: mixi
   os: UNKNOWN
   category: crawler

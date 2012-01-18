@@ -5,6 +5,31 @@
   os: Mac OSX
   category: pc
 
+# Instapaper + OSX
+- target: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Instapaper/4.0 (+http://www.instapaper.com/)'
+  name: UNKNOWN
+  os: Mac OSX
+  category: pc
+
+# SeaMonkey + OSX(PPC)
+- target: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10.5; ja-JP-mac; rv:1.9.1.19) Gecko/20110420 SeaMonkey/2.0.14'
+  name: UNKNOWN
+  os: Mac OSX
+  category: pc
+
+# Classic Mac
+- target: 'Mozilla/5.0 (Macintosh; U; PPC; en-US; mimic; rv:9.2.1) (mimic Gecko/20100722 Firefox/3.6.8) Classilla/CFM'
+  name: Firefox
+  version: '3.6.8'
+  os: Mac OS Classic
+  category: pc
+
+- target: 'Mozilla/4.0 (compatible; MSIE 5.17; Mac_PowerPC)'
+  name: Internet Explorer
+  version: '5.17'
+  os: Mac OS Classic
+  category: pc
+
 # Firefox + Ubuntu
 - target: 'Mozilla/5.0 (Ubuntu; X11; Linux i686; rv:9.0.1) Gecko/20100101 Firefox/9.0.1'
   name: Firefox
@@ -23,4 +48,30 @@
 - target: 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.24) Gecko cXense'
   name: UNKNOWN
   os: Linux
+  category: pc
+
+# SeaMonkey + Linux
+- target: 'Mozilla/5.0 (X11; U; Linux i686; ja-JP; rv:1.8.1.23) Gecko/20090910 SeaMonkey/1.1.18'
+  name: UNKNOWN
+  os: Linux
+  category: pc
+
+# Iceweasel + Linux
+- target: 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.0.3) Gecko/2008092814 Iceweasel/3.0.3 (Debian-3.0.3-3)'
+  name: UNKNOWN
+  os: Linux
+  category: pc
+
+# Firefox + BSD
+- target: 'Mozilla/5.0 (X11; FreeBSD amd64; rv:8.0) Gecko/20100101 Firefox/8.0'
+  name: Firefox
+  version: '8.0'
+  os: BSD
+  category: pc
+
+# Opera + BSD
+- target: 'Opera/9.80 (X11; FreeBSD 8.2-RELEASE-p3 amd64; U; ja) Presto/2.9.168 Version/11.52'
+  name: Opera
+  version: '9.80'
+  os: BSD
   category: pc

@@ -7,13 +7,17 @@ import is.tagomor.woothee.DataSet;
 
 public class Crawlers extends AgentCategory {
   public static boolean challenge(final String ua, final Map<String,String> result) {
-    if (ua.indexOf("Yahoo") > -1) {
+    if (ua.indexOf("Yahoo") > -1 || ua.indexOf("listing.yahoo.co.jp/support/faq/") > -1) {
       if (ua.indexOf("compatible; Yahoo! Slurp;") > -1) {
         updateMap(result, DataSet.get("YahooSlurp"));
         return true;
       }
       else if (ua.indexOf("YahooFeedSeekerJp") > -1 || ua.indexOf("YahooFeedSeekerBetaJp") > -1) {
-        updateMap(result, DataSet.get("YahooJPFeedSeeker"));
+        updateMap(result, DataSet.get("YahooJP"));
+        return true;
+      }
+      else if (ua.indexOf("crawler (http://listing.yahoo.co.jp/support/faq/") > -1) {
+        updateMap(result, DataSet.get("YahooJP"));
         return true;
       }
       else if (ua.indexOf("Yahoo Pipes") > -1) {
@@ -43,6 +47,10 @@ public class Crawlers extends AgentCategory {
         return true;
       }
     }
+    else if (ua.indexOf("FeedBurner/") > -1) {
+      updateMap(result, DataSet.get("FeedBurner"));
+      return true;
+    }
     else if (ua.indexOf("facebookexternalhit") > -1) {
       updateMap(result, DataSet.get("facebook"));
       return true;
@@ -57,7 +65,7 @@ public class Crawlers extends AgentCategory {
       updateMap(result, DataSet.get("ApplePubSub"));
       return true;
     }
-    else if (ua.indexOf("livedoor FeedFetcher") > -1) {
+    else if (ua.indexOf("livedoor FeedFetcher") > -1 || ua.indexOf("Fastladder FeedFetcher") > -1) {
       updateMap(result, DataSet.get("livedoorFeedFetcher"));
       return true;
     }
@@ -66,6 +74,10 @@ public class Crawlers extends AgentCategory {
         updateMap(result, DataSet.get("Hatena"));
         return true;
       }
+    }
+    else if (ua.indexOf("mixi-check") > -1 || ua.indexOf("mixi-news-crawler") > -1) {
+      updateMap(result, DataSet.get("mixi"));
+      return true;
     }
     else if (ua.indexOf("Indy Library") > -1) {
       if (ua.indexOf("compatible; Indy Library") > -1) {

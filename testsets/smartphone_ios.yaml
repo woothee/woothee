@@ -30,3 +30,15 @@
   name: UNKNOWN
   os: iPhone
   category: smartphone
+
+# like CFNetwork, Darwin
+- target: 'MobileSafari/7534.48.3 CFNetwork/548.0.4 Darwin/11.0.0'
+  name: Safari
+  version: UNKNOWN
+  os: iOS
+  category: smartphone
+
+- target: 'Blogos/1.13 CFNetwork/548.0.4 Darwin/11.0.0'
+  name: UNKNOWN
+  os: iOS
+  category: smartphone

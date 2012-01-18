@@ -1,3 +1,4 @@
+# something like desktop rss reader
 - target: 'AppleSyndication/56.1'
   name: Safari RSSReader
   os: UNKNOWN
@@ -5,5 +6,115 @@
 
 - target: 'Mozilla/5.0 (compatible; Google Desktop/5.9.1005.12335; http://desktop.google.com/)'
   name: Google Desktop
+  os: UNKNOWN
+  category: misc
+
+- target: 'Windows-RSS-Platform/2.0 (MSIE 9.0; Windows NT 6.0)'
+  name: Windows RSSReader
+  category: misc
+
+- target: 'RssBar/1.29 (RssBar for unDonut 1.35)'
+  name: RSSReader
+  os: UNKNOWN
+  category: misc
+
+- target: 'MagpieRSS/0.61 (+http://magpierss.sf.net)'
+  name: RSSReader
+  os: UNKNOWN
+  category: misc
+
+- target: 'gooRSSreader3.7 - build20090410'
+  name: RSSReader
+  os: UNKNOWN
+  category: misc
+
+# http libraries
+- target: 'Apache-HttpClient/UNAVAILABLE (java 1.4)'
+  name: HTTP Library
+  version: Java
+  os: UNKNOWN
+  category: misc
+
+- target: 'Jakarta Commons-HttpClient/3.0'
+  name: HTTP Library
+  version: Java
+  os: UNKNOWN
+  category: misc
+
+- target: 'Java/1.5.0_17'
+  name: HTTP Library
+  version: Java
+  os: UNKNOWN
+  category: misc
+
+- target: 'Wget/1.12 (linux-gnu)'
+  name: HTTP Library
+  version: wget
+  os: UNKNOWN
+  category: misc
+
+- target: 'libwww-perl/5.835'
+  name: HTTP Library
+  version: perl
+  os: UNKNOWN
+  category: misc
+
+- target: 'WWW-Mechanize/1.64'
+  name: HTTP Library
+  version: perl
+  os: UNKNOWN
+  category: misc
+
+- target: 'LWP::Simple/5.800'
+  name: HTTP Library
+  version: perl
+  os: UNKNOWN
+  category: misc
+
+- target: 'LWP LDMusicNews::LDNewsAPI'
+  name: HTTP Library
+  version: perl
+  os: UNKNOWN
+  category: misc
+
+- target: 'lwp-trivial/1.41'
+  name: HTTP Library
+  version: perl
+  os: UNKNOWN
+  category: misc
+
+- target: 'Python-urllib/1.16'
+  name: HTTP Library
+  version: python
+  os: UNKNOWN
+  category: misc
+
+- target: 'PHP/5.2.13'
+  name: HTTP Library
+  version: php
+  os: UNKNOWN
+  category: misc
+
+- target: 'WordPress/3.2.1; http://www.painlog.jp'
+  name: HTTP Library
+  version: php
+  os: UNKNOWN
+  category: misc
+
+- target: 'CakePHP'
+  name: HTTP Library
+  version: php
+  os: UNKNOWN
+  category: misc
+
+- target: 'PukiWiki/1.4.6'
+  name: HTTP Library
+  version: php
+  os: UNKNOWN
+  category: misc
+
+- target: 'Mozilla/5.0 (compatible; PEAR HTTP_Request class;)'
+  name: HTTP Library
+  version: php
   os: UNKNOWN
   category: misc

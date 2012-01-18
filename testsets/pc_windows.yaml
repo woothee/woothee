@@ -33,6 +33,18 @@
   os: Windows 7
   category: pc
 
+# UNKNOWN (IE4.78?) + Windows 98
+- target: 'Mozilla/4.78 [ja] (Win98; U)'
+  name: UNKNOWN
+  os: Windows 98
+  category: pc
+
+# UNKNOWN (WOW64?) + windows 7
+- target: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko)'
+  name: UNKNOWN
+  os: Windows 7
+  category: pc
+
 # Chrome
 - target: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13'
   name: Chrome
@@ -67,3 +79,16 @@
   version: '6.0'
   os: Windows XP
   category: pc
+
+# Netscape 7.1 + Windows Vista
+- target: 'Mozilla/5.0 (Windows; U; Windows NT 6.0; ja-JP; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)'
+  name: UNKNOWN
+  os: Windows Vista
+  category: pc
+
+# Thunderbird 8.0 + Windows XP
+- target: 'Mozilla/5.0 (Windows NT 5.1; rv:8.0) Gecko/20111105 Thunderbird/8.0'
+  name: UNKNOWN
+  os: Windows XP
+  category: pc
+

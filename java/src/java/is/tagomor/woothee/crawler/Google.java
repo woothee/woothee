@@ -20,6 +20,10 @@ public class Google extends AgentCategory {
         return true;
       }
     }
+    if (useragent.indexOf("Googlebot-Image/") > -1) {
+      updateMap(result, DataSet.get("GoogleBot"));
+      return true;
+    }
     if (useragent.indexOf("Mediapartners-Google") > -1) {
       if (useragent.indexOf("compatible; Mediapartners-Google") > -1 || useragent.equals("Mediapartners-Google")) {
         updateMap(result, DataSet.get("GoogleMediaPartners"));

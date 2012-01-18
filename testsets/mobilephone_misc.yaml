@@ -1,14 +1,73 @@
+# jig browser
+- target: 'Mozilla/5.0 (jig browser core; SH03B)'
+  name: jig browser
+  version: SH03B
+  os: jig
+  category: mobilephone
+
+- target: 'Mozilla/4.0 (jig browser9i 1.5.0; F10B; 2004)'
+  name: jig browser
+  version: F10B
+  os: jig
+  category: mobilephone
+
+- target: 'Mozilla/4.0 (jig browser9)'
+  name: jig browser
+  version: UNKNOWN
+  os: jig
+  category: mobilephone
+
+# emobile
+- target: 'emobile/1.0.0 (H11T; like Gecko; Wireless) NetFront/3.4'
+  name: emobile
+  os: emobile
+  category: mobilephone
+
+- target: 'IAC/1.0 (H31IA;like Gecko;OpenBrowser) WWW Browser/ver1.0'
+  name: emobile
+  os: emobile
+  category: mobilephone
+
+- target: 'Mozilla/5.0 (H11T; like Gecko; OpenBrowser) NetFront/3.4'
+  name: emobile
+  os: emobile
+  category: mobilephone
+
+- target: 'Huawei/1.0/H12HW/B000 Browser/Obigo-Browser/Q04A'
+  name: emobile
+  os: emobile
+  category: mobilephone
+
+# symbian
+- target: 'Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE66-1/500.21.009; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413'
+  name: Safari
+  version: UNKNOWN
+  os: SymbianOS
+  category: mobilephone
+
+# mobile gateways
 - target: 'Mozilla/5.0 (en-us) AppleWebKit/534.14 (KHTML, like Gecko; Google Wireless Transcoder) Chrome/9.0.597 Safari/534.14'
-  name: Google Wireless Transcoder
-  os: UNKNOWN
+  name: Mobile Transcoder
+  version: Google
+  os: Mobile Transcoder
   category: mobilephone
 
-- target: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; ja-JP) Naver Transcoder, AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5'
-  name: Naver Transcoder
-  os: UNKNOWN
-  category: mobilephone
+# cannot help hit as Windows 5.1 ... SXXXXXK
+# - target: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; ja-JP) Naver Transcoder, AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5'
+#   name: Mobile Transcoder
+#   version: Naver
+#   os: Mobile Transcoder
+#   category: mobilephone
 
-- target: 'DoCoMo/2.0 D903i(c100;TB;W28H20) (compatible; Hatena-Mobile-Gateway/1.2; +http://mgw.hatena.ne.jp/help)'
-  name: Hatena Mobile Gateway
-  os: UNKNOWN
+# cannot help hit as DoCoMo D903i ... SXXXXXT
+# - target: 'DoCoMo/2.0 D903i(c100;TB;W28H20) (compatible; Hatena-Mobile-Gateway/1.2; +http://mgw.hatena.ne.jp/help)'
+#   name: Mobile Transcoder
+#   version: Hatena
+#   os: Mobile Transcoder
+#   category: mobilephone
+
+- target: 'Mozilla/5.0 (compatible; livedoor-Mobile-Gateway/0.02; +http://p.m.livedoor.com/help.html)'
+  name: Mobile Transcoder
+  version: livedoor
+  os: Mobile Transcoder
   category: mobilephone

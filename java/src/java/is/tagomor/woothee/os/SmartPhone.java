@@ -21,6 +21,8 @@ public class SmartPhone extends AgentCategory {
       data = DataSet.get("iPod");
     else if (ua.indexOf("Android") > -1)
       data = DataSet.get("Android");
+    else if (ua.indexOf("CFNetwork") > -1)
+      data = DataSet.get("iOS");
     else if (ua.indexOf("BlackBerry") > -1)
       data = DataSet.get("BlackBerry");
 

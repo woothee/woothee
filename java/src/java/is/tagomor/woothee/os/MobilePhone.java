@@ -38,6 +38,24 @@ public class MobilePhone extends AgentCategory {
         return true;
       }
     }
+    if (ua.indexOf("SymbianOS") > -1) {
+      Map<String,String> data = DataSet.get("SymbianOS");
+      updateCategory(result, data.get(DataSet.DATASET_KEY_CATEGORY));
+      updateOs(result, data.get(DataSet.DATASET_KEY_OS));
+      return true;
+    }
+    if (ua.indexOf("Google Wireless Transcoder") > -1) {
+      Map<String,String> data = DataSet.get("MobileTranscoder");
+      updateMap(result, data);
+      updateVersion(result, "Google");
+      return true;
+    }
+    if (ua.indexOf("Naver Transcoder") > -1) {
+      Map<String,String> data = DataSet.get("MobileTranscoder");
+      updateMap(result, data);
+      updateVersion(result, "Naver");
+      return true;
+    }
 
     return false;
   }

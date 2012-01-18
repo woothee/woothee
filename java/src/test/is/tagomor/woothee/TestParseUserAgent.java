@@ -90,6 +90,12 @@ public final class TestParseUserAgent {
   }
 
   @Test
+  public void testsetMobilePhoneMisc() throws FileNotFoundException {
+    File target = new File(new File(".").getAbsolutePath().concat("/../testsets/mobilephone_misc.yaml"));
+    executeTestSet(target, "MobilePhone/misc");
+  }
+
+  @Test
   public void testsetSmartPhoneIOS() throws FileNotFoundException {
     File target = new File(new File(".").getAbsolutePath().concat("/../testsets/smartphone_ios.yaml"));
     executeTestSet(target, "SmartPhone/ios");
@@ -114,8 +120,20 @@ public final class TestParseUserAgent {
   }
 
   @Test
+  public void testsetPCLowPriority() throws FileNotFoundException {
+    File target = new File(new File(".").getAbsolutePath().concat("/../testsets/pc_lowpriority.yaml"));
+    executeTestSet(target, "PC/LowPriority");
+  }
+
+  @Test
   public void testsetMisc() throws FileNotFoundException {
     File target = new File(new File(".").getAbsolutePath().concat("/../testsets/misc.yaml"));
     executeTestSet(target, "Misc");
+  }
+
+  @Test
+  public void testsetCrawlerNonMajor() throws FileNotFoundException {
+    File target = new File(new File(".").getAbsolutePath().concat("/../testsets/crawler_nonmajor.yaml"));
+    executeTestSet(target, "Crawler/NonMajor");
   }
 }

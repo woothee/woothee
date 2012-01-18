@@ -21,7 +21,8 @@ public final class Classifier {
     if (tryBrowser(useragent, result)) {
       if (tryOS(useragent, result))
         return result;
-      return fillResult(result);
+      else
+        return result;
     }
 
     if (tryMobilePhone(useragent, result)) {
@@ -38,7 +39,10 @@ public final class Classifier {
 
     // browser unknown. check os only
     if (tryOS(useragent, result))
-      return fillResult(result);
+      return result;
+
+    if (tryRareCases(useragent, result))
+      return result;
 
     return result;
   }
@@ -83,10 +87,16 @@ public final class Classifier {
     if (is.tagomor.woothee.os.SmartPhone.challenge(useragent, result))
       return true;
 
+    // mobile phones like KDDI-* ...
     if (is.tagomor.woothee.os.MobilePhone.challenge(useragent, result))
       return true;
 
+    // Nintendo DSi/Wii with Opera
     if (is.tagomor.woothee.os.Appliance.challenge(useragent, result))
+      return true;
+
+    // Win98,BSD
+    if (is.tagomor.woothee.os.MiscOS.challenge(useragent, result))
       return true;
 
     return false;
@@ -101,6 +111,8 @@ public final class Classifier {
       return true;
     if (is.tagomor.woothee.mobilephone.Willcom.challenge(useragent, result))
       return true;
+    if (is.tagomor.woothee.mobilephone.MiscPhones.challenge(useragent, result))
+      return true;
     return false;
   }
 
@@ -109,14 +121,31 @@ public final class Classifier {
       return true;
     if (is.tagomor.woothee.appliance.Nintendo.challenge(useragent, result))
       return true;
-
+    if (is.tagomor.woothee.appliance.DigitalTV.challenge(useragent, result))
+      return true;
+    
     return false;
   }
 
   public static boolean tryMisc(final String useragent, final Map<String,String> result) {
     if (is.tagomor.woothee.misc.DesktopTools.challenge(useragent, result))
       return true;
-    
+
+    return false;
+  }
+
+  public static boolean tryRareCases(final String useragent, final Map<String,String> result) {
+    if (is.tagomor.woothee.misc.SmartPhonePatterns.challenge(useragent, result))
+      return true;
+    if (is.tagomor.woothee.browser.Sleipnir.challenge(useragent, result))
+      return true;
+    if (is.tagomor.woothee.misc.HTTPLibrary.challenge(useragent, result))
+      return true;
+    if (is.tagomor.woothee.misc.MayBeRSSReader.challenge(useragent, result))
+      return true;
+    if (is.tagomor.woothee.crawler.MayBeCrawler.challenge(useragent, result))
+      return true;
+
     return false;
   }
 

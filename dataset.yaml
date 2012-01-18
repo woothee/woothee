@@ -23,10 +23,10 @@
   type: browser
   vendor: Opera
 
-# - label: Sleipnir
-#   name: Sleipnir
-#   type: browser
-#   vendor: Fenrir Inc.
+- label: Sleipnir
+  name: Sleipnir
+  type: browser
+  vendor: Fenrir Inc.
 
 - label: Win
   name: Windows UNKNOWN Ver
@@ -53,13 +53,53 @@
   type: os
   category: pc
 
+- label: WinNT4
+  name: Windows NT 4.0
+  type: os
+  category: pc
+
+- label: WinMe
+  name: Windows Me
+  type: os
+  category: pc
+
+- label: Win98
+  name: Windows 98
+  type: os
+  category: pc
+
+- label: Win95
+  name: Windows 95
+  type: os
+  category: pc
+
+- label: WinPhone
+  name: Windows Phone OS
+  type: os
+  category: smartphone
+
+- label: WinCE
+  name: Windows CE
+  type: os
+  category: smartphone
+
 - label: OSX
   name: Mac OSX
   type: os
   category: pc
 
+- label: MacOS
+  name: Mac OS Classic
+  type: os
+  category: pc
+
 - label: Linux
   name: Linux
+  type: os
+  category: pc
+
+- label: BSD
+  name: BSD
   type: os
   category: pc
 
@@ -83,8 +123,8 @@
   type: os
   category: smartphone
 
-- label: WinPhone
-  name: Windows Phone OS
+- label: iOS
+  name: iOS
   type: os
   category: smartphone
 
@@ -119,6 +159,30 @@
   type: full
   vendor: WILLCOM
   os: WILLCOM
+  category: mobilephone
+
+- label: jig
+  name: jig browser
+  type: full
+  os: jig
+  category: mobilephone
+
+- label: emobile
+  name: emobile
+  type: full
+  os: emobile
+  category: mobilephone
+
+- label: SymbianOS
+  name: SymbianOS
+  type: full
+  os: SymbianOS
+  category: mobilephone
+
+- label: MobileTranscoder
+  name: Mobile Transcoder
+  type: full
+  os: Mobile Transcoder
   category: mobilephone
 
 - label: Nintendo3DS
@@ -163,6 +227,12 @@
   os: PlayStation 3
   category: appliance
 
+- label: DigitalTV
+  name: InternetTVBrowser
+  type: full
+  os: DigitalTV
+  category: appliance
+
 - label: SafariRSSReader
   name: Safari RSSReader
   type: full
@@ -173,6 +243,22 @@
   name: Google Desktop
   type: full
   vendor: Google
+  category: misc
+
+- label: WindowsRSSReader
+  name: Windows RSSReader
+  type: full
+  vendor: Microsoft
+  category: misc
+
+- label: VariousRSSReader
+  name: RSSReader
+  type: full
+  category: misc
+
+- label: HTTPLibrary
+  name: HTTP Library
+  type: full
   category: misc
 
 - label: GoogleBot
@@ -210,8 +296,8 @@
   type: full
   category: crawler
 
-- label: YahooJPFeedSeeker
-  name: Yahoo! Japan FeedSeeker
+- label: YahooJP
+  name: Yahoo! Japan
   type: full
   category: crawler
 
@@ -240,8 +326,18 @@
   type: full
   category: crawler
 
+- label: FeedBurner
+  name: Google FeedBurner
+  type: full
+  category: crawler
+
 - label: facebook
   name: facebook
+  type: full
+  category: crawler
+
+- label: mixi
+  name: mixi
   type: full
   category: crawler
 
@@ -267,5 +363,10 @@
 
 - label: livedoorFeedFetcher
   name: livedoor FeedFetcher
+  type: full
+  category: crawler
+
+- label: VariousCrawler
+  name: misc crawler
   type: full
   category: crawler

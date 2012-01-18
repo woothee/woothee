@@ -1,0 +1,6 @@
+# pc, windows, sleipnir
+- target: 'Sleipnir/2.9.9'
+  name: Sleipnir
+  version: '2.9.9'
+  os: Windows UNKNOWN Ver
+  category: pc

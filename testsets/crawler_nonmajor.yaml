@@ -1,0 +1,93 @@
+# include 'bot'
+- target: 'emBot-GalaBuzz/Nutch-1.0 (http://emining.jp/; em@galabuzz.jp)'
+  name: misc crawler
+  category: crawler
+
+# hey...
+- target: 'Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; aggregator VocusBot 0.4; +http://www.vocus.com/vnhs.html)'
+  name: UNKNOWN
+  os: Windows Vista
+  category: pc
+
+- target: 'Mozilla/5.0 (compatible; Ezooms/1.0; ezooms.bot@gmail.com)'
+  name: misc crawler
+  category: crawler
+
+- target: 'Mozilla/5.0 (compatible; Rakutenbot/1.0; +http://dynamic.rakuten.co.jp/bot.html)'
+  name: misc crawler
+  category: crawler
+
+- target: 'Flamingo_SearchEngine (+http://www.flamingosearch.com/bot)'
+  name: misc crawler
+  category: crawler
+
+- target: '"mapion-news-bot/1.0 (http://www.mapion.co.jp/news/)"'
+  name: misc crawler
+  category: crawler
+
+- target: 'Mozilla/5.0 (compatible; MJ12bot/v1.4.0; http://www.majestic12.co.uk/bot.php?+)'
+  name: misc crawler
+  category: crawler
+
+- target: 'Mozilla/5.0 (compatible; TweetmemeBot/2.11; +http://tweetmeme.com/)'
+  name: misc crawler
+  category: crawler
+
+- target: 'Mozilla/5.0 (compatible; PaperLiBot/2.1; http://support.paper.li/entries/20023257-what-is-paper-li)'
+  name: misc crawler
+  category: crawler
+
+- target: 'SearQuBot/SearQuBot v1.0'
+  name: misc crawler
+  category: crawler
+
+- target: 'Mozilla/5.0 (compatible; ADJUSTbot/2.0; +http://www.ad-just.jp/)'
+  name: misc crawler
+  category: crawler
+
+- target: 'FTRF: Friendly robot/1.3'
+  name: misc crawler
+  category: crawler
+
+# misc crawler (not includes "bot")
+- target: 'www2.apserver.net ASP-Ranker Feed Crawler'
+  name: misc crawler
+  category: crawler
+
+- target: 'Rome Client (http://tinyurl.com/64t5n)'
+  name: misc crawler
+  category: crawler
+
+- target: 'UnwindFetchor/1.0 (+http://www.gnip.com/)'
+  name: misc crawler
+  category: crawler
+
+- target: 'ia_archiver (+http://www.alexa.com/site/help/webmasters; crawler@alexa.com)'
+  name: misc crawler
+  category: crawler
+
+- target: 'Summify (Summify/1.0.1; +http://summify.com)'
+  name: misc crawler
+  category: crawler
+
+- target: 'PostRank/2.0 (postrank.com; 1 subscribers)'
+  name: misc crawler
+  category: crawler
+
+- target: 'cloudforecastbot'
+  name: misc crawler
+  category: crawler
+
+# like 'parser'
+- target: 'SimplePie/1.3-dev (Feed Parser; http://simplepie.org; Allow like Gecko) Build/20111118194710'
+  name: misc crawler
+  category: crawler
+
+- target: 'Rainmeter WebParser plugin'
+  name: misc crawler
+  category: crawler
+
+# watchdogs
+- target: 'Data-Hotel-Watchdog/1.1'
+  name: misc crawler
+  category: crawler

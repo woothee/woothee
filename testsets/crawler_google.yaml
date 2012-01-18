@@ -3,6 +3,11 @@
   os: UNKNOWN
   category: crawler
 
+- target: 'Googlebot-Image/1.0'
+  name: Googlebot
+  os: UNKNOWN
+  category: crawler
+
 - target: 'DoCoMo/2.0 N905i(c100;TB;W24H16) (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)'
   name: Googlebot Mobile
   os: UNKNOWN
@@ -35,5 +40,10 @@
 
 - target: 'Mozilla/5.0 (en-us) AppleWebKit/525.13 (KHTML, like Gecko; Google Web Preview) Version/3.1 Safari/525.13'
   name: Google Web Preview
+  os: UNKNOWN
+  category: crawler
+
+- target: 'FeedBurner/1.0 (http://www.FeedBurner.com)'
+  name: Google FeedBurner
   os: UNKNOWN
   category: crawler
