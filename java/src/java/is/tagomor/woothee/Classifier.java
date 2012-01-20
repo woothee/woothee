@@ -14,6 +14,9 @@ public final class Classifier {
   public static Map<String,String> execParse(final String useragent) {
     HashMap<String,String> result = new HashMap<String,String>(6, (float)1.0); // initial capacity, load factor
 
+    if (useragent.length() < 1 || useragent.equals("-"))
+      return result;
+
     if (tryCrawler(useragent, result)) {
       return result;
     }
