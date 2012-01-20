@@ -7,6 +7,7 @@ checkyaml:
 
 lib/Woothee/DataSet.pm: ../dataset.yaml
 	perl ../bin/dataset_yaml2pm.pl
+	sync; sync; sync;
 
 test: lib/Woothee/DataSet.pm
 	prove -Ilib

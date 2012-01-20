@@ -90,7 +90,7 @@ our (@ISA, @EXPORT_OK);
 BEGIN {
     require Exporter;
     our @ISA = qw(Exporter);
-    our @EXPORT_OK = qw(get const);
+    our @EXPORT_OK = qw(dataset const);
 }
 
 my $CONST = {
@@ -133,7 +133,7 @@ my $DATASET = {};
 ___GENERATED_STATIC_INITIALIZER___
 }
 
-sub get {
+sub dataset {
     my ($klass, $label) = @_;
     $label = $klass unless $label;
     $DATASET->{$label};

@@ -8,7 +8,7 @@ our (@ISA, @EXPORT_OK);
 BEGIN {
     require Exporter;
     our @ISA = qw(Exporter);
-    our @EXPORT_OK = qw(get const);
+    our @EXPORT_OK = qw(dataset const);
 }
 
 my $CONST = {
@@ -46,10 +46,9 @@ sub const {
     $CONST->{$const_name};
 }
 
-
 my $DATASET = {};
 {
-    # GENERATED from dataset.yaml at Fri Jan 20 16:43:07 JST 2012 by tagomoris
+    # GENERATED from dataset.yaml at Fri Jan 20 18:09:13 JST 2012 by tagomoris
     my $obj;
     $obj = {label => 'MSIE', name => 'Internet Explorer', type => 'browser'};
     $obj->{vendor} = 'Microsoft';
@@ -317,7 +316,7 @@ my $DATASET = {};
     $DATASET->{'VariousCrawler'} = $obj;
 }
 
-sub get {
+sub dataset {
     my ($klass, $label) = @_;
     $label = $klass unless $label;
     $DATASET->{$label};
