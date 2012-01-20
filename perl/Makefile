@@ -5,9 +5,8 @@ TIMESTAMP=$(shell date +%Y%m%d-%H%M%S)
 checkyaml:
 	perl ../bin/dataset_checker.pl
 
-copy: checkyaml
-	rm -f ./dataset*.yaml
-	cp ../dataset.yaml ./dataset_$(TIMESTAMP).yaml
+lib/Woothee/DataSet.pm: ../dataset.yaml
+	perl ../bin/dataset_yaml2pm.pl
 
-test: copy
+test: lib/Woothee/DataSet.pm
 	prove -Ilib
