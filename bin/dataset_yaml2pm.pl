@@ -86,36 +86,52 @@ use strict;
 use warnings;
 use Carp;
 
-my $DATASET_KEY_LABEL = "label";
-my $DATASET_KEY_NAME = "name";
-my $DATASET_KEY_TYPE = "type";
-my $DATASET_KEY_CATEGORY = "category";
-my $DATASET_KEY_OS = "os";
-my $DATASET_KEY_VENDOR = "vendor";
-my $DATASET_KEY_VERSION = "version";
+our (@ISA, @EXPORT_OK);
+BEGIN {
+    require Exporter;
+    our @ISA = qw(Exporter);
+    our @EXPORT_OK = qw(get const);
+}
 
-my $DATASET_TYPE_BROWSER = "browser";
-my $DATASET_TYPE_OS = "os";
-my $DATASET_TYPE_FULL = "full";
+my $CONST = {
+    KEY_LABEL => "label",
+    KEY_NAME => "name",
+    KEY_TYPE => "type",
+    KEY_CATEGORY => "category",
+    KEY_OS => "os",
+    KEY_VENDOR => "vendor",
+    KEY_VERSION => "version",
 
-my $DATASET_CATEGORY_PC = "pc";
-my $DATASET_CATEGORY_SMARTPHONE = "smartphone";
-my $DATASET_CATEGORY_MOBILEPHONE = "mobilephone";
-my $DATASET_CATEGORY_CRAWLER = "crawler";
-my $DATASET_CATEGORY_APPLIANCE = "appliance";
-my $DATASET_CATEGORY_MISC = "misc";
+    TYPE_BROWSER => "browser",
+    TYPE_OS => "os",
+    TYPE_FULL => "full",
 
-my $ATTRIBUTE_NAME = "name";
-my $ATTRIBUTE_CATEGORY = "category";
-my $ATTRIBUTE_OS = "os";
-my $ATTRIBUTE_VENDOR = "vendor";
-my $ATTRIBUTE_VERSION = "version";
-my $VALUE_UNKNOWN = "UNKNOWN";
+    CATEGORY_PC => "pc",
+    CATEGORY_SMARTPHONE => "smartphone",
+    CATEGORY_MOBILEPHONE => "mobilephone",
+    CATEGORY_CRAWLER => "crawler",
+    CATEGORY_APPLIANCE => "appliance",
+    CATEGORY_MISC => "misc",
+
+    ATTRIBUTE_NAME => "name",
+    ATTRIBUTE_CATEGORY => "category",
+    ATTRIBUTE_OS => "os",
+    ATTRIBUTE_VENDOR => "vendor",
+    ATTRIBUTE_VERSION => "version",
+
+    VALUE_UNKNOWN => "UNKNOWN",
+};
+
+sub const {
+    my ($klass, $const_name) = @_;
+    $const_name = $klass unless $const_name;
+    $CONST->{$const_name};
+}
 
 my $DATASET = {};
-# $DATASET->{label} = {name => ....};
-
+{
 ___GENERATED_STATIC_INITIALIZER___
+}
 
 sub get {
     my ($klass, $label) = @_;
