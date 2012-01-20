@@ -134,4 +134,28 @@ sub challenge_crawlers {
 
 }
 
+sub challenge_maybe_crawler {
+    my ($ua, $result) = @_;
+
+    if ($ua =~ m{bot(?:[-_ ./;@()]|$)}oi) {
+        update_map($result, dataset("VariousCrawler"));
+        return 1;
+    }
+    if ($ua =~ m{^(?:Rome Client |UnwindFetchor/|ia_archiver |Summify |PostRank/)}o
+            or index($ua, "ASP-Ranker Feed Crawler") > -1) {
+        update_map($result, dataset("VariousCrawler"));
+        return 1;
+    }
+    if ($ua =~ m{(feed|web) ?parser}oi) {
+        update_map($result, dataset("VariousCrawler"));
+        return 1;
+    }
+    if ($ua =~ m{watch ?dog}oi) {
+        update_map($result, dataset("VariousCrawler"));
+        return 1;
+    }
+
+    return 0;
+}
+
 1;
