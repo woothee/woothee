@@ -11,7 +11,6 @@ import is.tagomor.woothee.DataSet;
 public class MiscPhones extends AgentCategory {
   // capture Terminal Name
   private static Pattern jigTypes = Pattern.compile("jig browser[^;]+; ([^\\);]+)");
-  // public static Pattern auVersion = Pattern.compile("KDDI-([^- /;\\(\\)\"']+)");
   // public to be refered by os.MobilePhone
 
   public static boolean challenge(final String ua, final Map<String,String> result) {

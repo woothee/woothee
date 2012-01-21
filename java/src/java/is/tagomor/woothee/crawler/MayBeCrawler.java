@@ -20,12 +20,12 @@ public class MayBeCrawler extends AgentCategory {
       return true;
     }
 
-    if (ua.indexOf("ASP-Ranker Feed Crawler") > -1 ||
-        ua.startsWith("Rome Client ") ||
+    if (ua.startsWith("Rome Client ") ||
         ua.startsWith("UnwindFetchor/") ||
         ua.startsWith("ia_archiver ") ||
         ua.startsWith("Summify ") ||
-        ua.startsWith("PostRank/")) {
+        ua.startsWith("PostRank/") ||
+        ua.indexOf("ASP-Ranker Feed Crawler") > -1) {
       updateMap(result, DataSet.get("VariousCrawler"));
       return true;
     }
