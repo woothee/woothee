@@ -17,6 +17,16 @@ sub parse {
     return fill_result(exec_parse($useragent));
 }
 
+sub is_crawler {
+    my $useragent = shift;
+
+    return 0 if length($useragent) < 1 || $useragent eq '-';
+    if (try_crawler($useragent, {})) {
+        return 1;
+    }
+    return 0;
+}
+
 sub exec_parse {
     my $useragent = shift;
     my $result = {};
