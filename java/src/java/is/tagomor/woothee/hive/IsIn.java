@@ -11,7 +11,7 @@ import is.tagomor.woothee.DataSet;
 
 @Description(name="is_in",
              value="_FUNC_ return TRUE when specified map's ['category'] is equals to one of LIST, else NULL",
-             extended="count( _FUNC_(parse_agent(user_agent_string), ('pc', 'mobilephone', 'smartphone', 'appliance')) )")
+             extended="count( _FUNC_(parse_agent(user_agent_string), array('pc', 'mobilephone', 'smartphone', 'appliance')) )")
 public final class IsIn extends UDF {
   public boolean evaluate(final Map<String,String> m, final List<String> categories) {
     String targetCategory = m.get(DataSet.ATTRIBUTE_CATEGORY);
