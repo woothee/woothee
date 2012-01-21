@@ -48,7 +48,7 @@ EOD
 EOD
     }
     elsif ($type eq 'full') {
-        my $vendor = $dataset->{vendor};
+        my $vendor = $dataset->{vendor} || '';
         my $category = $dataset->{category};
         $def .= <<"EOD";
     h.put(DATASET_KEY_VENDOR, "$vendor");

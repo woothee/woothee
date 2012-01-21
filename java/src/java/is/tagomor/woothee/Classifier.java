@@ -11,6 +11,16 @@ public final class Classifier {
     return fillResult(execParse(useragent));
   }
 
+  public static boolean isCrawler(final String useragent) {
+    if (useragent.length() < 1 || useragent.equals("-"))
+      return false;
+
+    if (tryCrawler(useragent, new HashMap<String,String>(6, (float)1.0)))
+      return true;
+
+    return false;
+  }
+
   public static Map<String,String> execParse(final String useragent) {
     HashMap<String,String> result = new HashMap<String,String>(6, (float)1.0); // initial capacity, load factor
 
