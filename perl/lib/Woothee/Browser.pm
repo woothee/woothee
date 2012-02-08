@@ -31,7 +31,7 @@ sub challenge_safari_chrome {
 
     my $version = Woothee::DataSet->const('VALUE_UNKNOWN');
 
-    if ($ua =~ m{Chrome/([.0-9]+)}o) {
+    if ($ua =~ m{(?:Chrome|CrMo)/([.0-9]+)}o) {
         # Chrome
         $version = $1;
         update_map($result, dataset("Chrome"));
