@@ -27,6 +27,28 @@ in Java:
     r.get("version");
     // => version of browser, or terminal type name of mobile phones
 
+in Hive:
+
+    // add woothee.jar to classpath
+    add jar woothee.jar;
+    
+    create temporary function parse_agent as 'is.tagomor.woothee.hive.ParseAgent';
+    create temporary function is_pc as 'is.tagomor.woothee.hive.IsPC';
+    create temporary function is_smartphone as 'is.tagomor.woothee.hive.IsSmartPhone';
+    create temporary function is_mobilephone as 'is.tagomor.woothee.hive.IsMobilePhone';
+    create temporary function is_appliance as 'is.tagomor.woothee.hive.IsAppliance';
+    create temporary function is_crawler as 'is.tagomor.woothee.hive.IsCrawler';
+    create temporary function is_misc as 'is.tagomor.woothee.hive.IsMisc';
+    create temporary function is_unknown as 'is.tagomor.woothee.hive.IsUnknown';
+    create temporary function is_in as 'is.tagomor.woothee.hive.IsIn';
+    
+    SELECT
+      count(is_pc(parsed_agent)) as pc_pageviews,
+      count(is_in(parsed_agent, array('pc', 'mobilephone', 'smartphone', 'appliance'))) as total_pageviews
+    FROM (
+      SELECT parse_agent(useragent) as parsed_agent FROM access_log WHERE date='today'
+    ) x
+
 in Perl:
 
     use Woothee::Classifier;
