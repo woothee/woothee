@@ -10,12 +10,52 @@ require 'woothee/dataset'
 
 module Woothee
   def self.parse(useragent)
-  end
+    fill_result(exec_parse(useragent))
+ end
 
   def self.is_crawler(useragent)
+    useragent.length > 0 and useragent != '-' and try_crawler(useragent, {})
   end
 
   def self.exec_parse(useragent)
+    result = {}
+
+    return result if useragent.lenght < 1 or useragent == '-'
+
+    if try_crawler(useragent, result)
+      return result
+    end
+
+    if try_browser(useragent, result)
+      if try_os(useragent, result)
+        return result
+      else
+        return result
+      end
+    end
+
+    if try_mobilephone(useragent, result)
+      return result
+    end
+
+    if try_appliance(useragent, result)
+      return result
+    end
+
+    if try_misc(useragent, result)
+      return result
+    end
+
+    # browser unknown. check os only
+    if try_os(useragent, result)
+      return result
+    end
+
+    if try_rare_cases(useragent, result)
+      return result
+    end
+
+    result
   end
 
   def self.try_crawler(useragent, result)
