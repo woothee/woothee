@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 require 'woothee/dataset'
-#require 'woothee/browser'
-#require 'woothee/os'
+require 'woothee/browser'
+require 'woothee/os'
 #require 'woothee/mobilephone'
 #require 'woothee/crawler'
 #require 'woothee/appliance'
@@ -20,7 +20,7 @@ module Woothee
   def self.exec_parse(useragent)
     result = {}
 
-    return result if useragent.lenght < 1 or useragent == '-'
+    return result if useragent.length < 1 or useragent == '-'
 
     if try_crawler(useragent, result)
       return result
@@ -62,9 +62,15 @@ module Woothee
   end
 
   def self.try_browser(useragent, result)
+    return true if Woothee::Browser.challenge_msie(useragent, result)
+
+    false
   end
 
   def self.try_os(useragent, result)
+    return true if Woothee::OS.challenge_windows(useragent, result)
+
+    false
   end
 
   def self.try_mobilephone(useragent, result)
@@ -86,7 +92,7 @@ module Woothee
     Woothee::ATTRIBUTE_VERSION => Woothee::VALUE_UNKNOWN,
     Woothee::ATTRIBUTE_VENDOR => Woothee::VALUE_UNKNOWN,
   }.freeze
-  def fill_result(result)
+  def self.fill_result(result)
     FILLED.merge(result)
   end
 end
