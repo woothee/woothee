@@ -13,6 +13,9 @@ import is.tagomor.woothee.Classifier;
              extended="_FUNC_(user_agent_string)")
 public final class ParseAgent extends UDF {
   public Map<String,String> evaluate(final Text s) {
-    return Classifier.parse(s.toString());
+    if (s != null)
+      return Classifier.parse(s.toString());
+    else
+      return Classifier.parse(null);
   }
 }

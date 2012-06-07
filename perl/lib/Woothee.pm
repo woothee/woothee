@@ -20,7 +20,7 @@ sub parse {
 sub is_crawler {
     my $useragent = shift;
 
-    return 0 if length($useragent) < 1 || $useragent eq '-';
+    return 0 if not defined($useragent) || length($useragent) < 1 || $useragent eq '-';
     if (try_crawler($useragent, {})) {
         return 1;
     }
@@ -31,7 +31,7 @@ sub exec_parse {
     my $useragent = shift;
     my $result = {};
 
-    return $result if length($useragent) < 1 || $useragent eq '-';
+    return $result if not defined($useragent) || length($useragent) < 1 || $useragent eq '-';
 
     if (try_crawler($useragent, $result)) {
         return $result;
