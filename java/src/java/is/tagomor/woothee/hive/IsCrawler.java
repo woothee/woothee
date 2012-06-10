@@ -9,10 +9,10 @@ import org.apache.hadoop.io.Text;
 import is.tagomor.woothee.DataSet;
 
 @Description(name="is_crawler",
-             value="_FUNC_ return TRUE when specified map['category'] is a crawler, else NULL",
-             extended="count( _FUNC_(parse_agent(user_agent_string)) )")
+             value="_FUNC_ return Boolean: map['category'] is a crawler or not.",
+             extended="WHERE _FUNC_(parse_agent(user_agent_string)) AND ...")
 public final class IsCrawler extends UDF {
   public Boolean evaluate(final Map<String,String> m) {
-    return m.get(DataSet.ATTRIBUTE_CATEGORY).equals(DataSet.DATASET_CATEGORY_CRAWLER) ? Boolean.TRUE : null;
+    return m.get(DataSet.ATTRIBUTE_CATEGORY).equals(DataSet.DATASET_CATEGORY_CRAWLER);
   }
 }
