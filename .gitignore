@@ -14,3 +14,6 @@ java/testresults
 java/src/java/is/tagomor/woothee/DataSet.java
 
 *.pyc
+
+python/PyYAML*.egg
+python/lib/*.egg-info
