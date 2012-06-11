@@ -12,3 +12,5 @@ java/classes
 java/testresults
 # java/src/java/is/tagomor/woothee/DataSet.java is generated at "ant codegen"
 java/src/java/is/tagomor/woothee/DataSet.java
+
+*.pyc
