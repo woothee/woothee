@@ -22,7 +22,8 @@ sub challenge_windows {
     }
 
     my $version = $1;
-    if ($version eq "NT 6.1") { $data = dataset("Win7"); }
+    if ($version eq "NT 6.2") { $data = dataset("Win8"); }
+    elsif ($version eq "NT 6.1") { $data = dataset("Win7"); }
     elsif ($version eq "NT 6.0") { $data = dataset("WinVista"); }
     elsif ($version eq "NT 5.1") { $data = dataset("WinXP"); }
     elsif ($version =~ /^Phone OS/o) { $data = dataset("WinPhone"); }

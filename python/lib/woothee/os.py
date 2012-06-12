@@ -16,7 +16,9 @@ def challenge_windows(ua, result):
     return True
   
   version = obj.group(1)
-  if version == 'NT 6.1':
+  if version == 'NT 6.2':
+    data = dataset.get('Win8')
+  elif version == 'NT 6.1':
     data = dataset.get('Win7')
   elif version == 'NT 6.0':
     data = dataset.get('WinVista')

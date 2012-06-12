@@ -33,6 +33,20 @@
   os: Windows 7
   category: pc
 
+# MSIE 9 + Windows 7
+- target: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+  name: Internet Explorer
+  version: '9.0'
+  os: Windows 7
+  category: pc
+
+# MSIE10 + Windows 8
+- target: 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0)'
+  name: Internet Explorer
+  version: '10.0'
+  os: Windows 8
+  category: pc
+
 # UNKNOWN (IE4.78?) + Windows 98
 - target: 'Mozilla/4.78 [ja] (Win98; U)'
   name: UNKNOWN

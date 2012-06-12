@@ -19,6 +19,7 @@ module Woothee::OS
 
     version = $1
     data = case 
+           when version == 'NT 6.2' then Woothee::DataSet.get('Win8')
            when version == 'NT 6.1' then Woothee::DataSet.get('Win7')
            when version == 'NT 6.0' then Woothee::DataSet.get('WinVista')
            when version == 'NT 5.1' then Woothee::DataSet.get('WinXP')

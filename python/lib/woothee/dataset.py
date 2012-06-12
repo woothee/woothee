@@ -30,7 +30,7 @@ VALUE_UNKNOWN = 'UNKNOWN'
 DATASET = {}
 
 def _init():
-  # GENERATED from dataset.yaml at Mon Jun 11 18:34:26 2012 by Ueda
+  # GENERATED from dataset.yaml at Tue Jun 12 12:18:54 2012 by tagomoris
   obj = {'label': 'MSIE', 'name': 'Internet Explorer', 'type': 'browser'}
   obj['vendor'] = 'Microsoft'
   DATASET[obj['label']] = obj
@@ -50,6 +50,9 @@ def _init():
   obj['vendor'] = 'Fenrir Inc.'
   DATASET[obj['label']] = obj
   obj = {'label': 'Win', 'name': 'Windows UNKNOWN Ver', 'type': 'os'}
+  obj['category'] = 'pc'
+  DATASET[obj['label']] = obj
+  obj = {'label': 'Win8', 'name': 'Windows 8', 'type': 'os'}
   obj['category'] = 'pc'
   DATASET[obj['label']] = obj
   obj = {'label': 'Win7', 'name': 'Windows 7', 'type': 'os'}

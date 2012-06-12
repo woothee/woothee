@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 module Woothee
   KEY_LABEL = :label
   KEY_NAME = :name
@@ -31,7 +30,7 @@ end
 
 module Woothee::DataSet
   DATASET = {}
-  # GENERATED from dataset.yaml at Wed May  2 19:04:39 JST 2012 by tagomoris
+  # GENERATED from dataset.yaml at Tue Jun 12 12:17:48 JST 2012 by tagomoris
   obj = {:label => 'MSIE', :name => 'Internet Explorer', :type => :browser}
   obj[:vendor] = 'Microsoft'
   DATASET[obj[:label]] = obj
@@ -51,6 +50,9 @@ module Woothee::DataSet
   obj[:vendor] = 'Fenrir Inc.'
   DATASET[obj[:label]] = obj
   obj = {:label => 'Win', :name => 'Windows UNKNOWN Ver', :type => :os}
+  obj[:category] = :pc
+  DATASET[obj[:label]] = obj
+  obj = {:label => 'Win8', :name => 'Windows 8', :type => :os}
   obj[:category] = :pc
   DATASET[obj[:label]] = obj
   obj = {:label => 'Win7', :name => 'Windows 7', :type => :os}
