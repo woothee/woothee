@@ -13,7 +13,8 @@ java/testresults
 # java/src/java/is/tagomor/woothee/DataSet.java is generated at "ant codegen"
 java/src/java/is/tagomor/woothee/DataSet.java
 
-*.pyc
+ruby/pkg
 
+*.pyc
 python/PyYAML*.egg
 python/lib/*.egg-info
