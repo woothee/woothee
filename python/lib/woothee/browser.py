@@ -17,7 +17,7 @@ def challenge_safari_chrome(ua, result):
   if 'Safari/' not in ua:
     return False
   version = dataset.VALUE_UNKNOWN
-  obj = re.search('(?:Chrome|CrMo)/([.0-9]+)', ua)
+  obj = re.search('(?:Chrome|CrMo|CriOS)/([.0-9]+)', ua)
   if obj:
     # Chrome
     version = obj.group(1)

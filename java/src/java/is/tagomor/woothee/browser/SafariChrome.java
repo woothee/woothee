@@ -9,7 +9,7 @@ import is.tagomor.woothee.AgentCategory;
 import is.tagomor.woothee.DataSet;
 
 public class SafariChrome extends AgentCategory {
-  private static Pattern chromeVerRegex = Pattern.compile("(?:Chrome|CrMo)/([.0-9]+)");
+  private static Pattern chromeVerRegex = Pattern.compile("(?:Chrome|CrMo|CriOS)/([.0-9]+)");
   private static Pattern safariVerRegex = Pattern.compile("Version/([.0-9]+)");
 
   public static boolean challenge(final String ua, final Map<String,String> result) {

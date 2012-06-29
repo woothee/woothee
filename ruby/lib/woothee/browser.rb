@@ -24,7 +24,7 @@ module Woothee::Browser
 
     version = Woothee::VALUE_UNKNOWN
 
-    if ua =~ /(?:Chrome|CrMo)\/([.0-9]+)/o
+    if ua =~ /(?:Chrome|CrMo|CriOS)\/([.0-9]+)/o
       # Chrome
       version = $1
       update_map(result, Woothee::DataSet.get('Chrome'))
