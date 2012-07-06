@@ -31,7 +31,7 @@ sub run_testset {
     }
 }
 
-my $testset_dir = File::Basename::dirname(__FILE__) . "/../../testsets/";
+my $testset_dir = File::Basename::dirname(__FILE__) . "/testsets/";
 
 subtest 'crawler' => sub { run_testset($testset_dir . "crawler.yaml", "Crawler"); };
 subtest 'crawler_google' => sub { run_testset($testset_dir . "crawler_google.yaml", "Crawler/Google"); };

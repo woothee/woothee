@@ -25,7 +25,7 @@ sub check_is_crawler {
     }
 }
 
-my $testset_dir = File::Basename::dirname(__FILE__) . "/../../testsets/";
+my $testset_dir = File::Basename::dirname(__FILE__) . "/testsets/";
 
 subtest 'crawler' => sub { check_is_crawler($testset_dir . "crawler.yaml", "Crawler", 1); };
 subtest 'crawler_google' => sub { check_is_crawler($testset_dir . "crawler_google.yaml", "Crawler/Google", 1); };

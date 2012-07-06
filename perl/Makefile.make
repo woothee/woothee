@@ -10,4 +10,6 @@ lib/Woothee/DataSet.pm: ../dataset.yaml
 	sync; sync; sync;
 
 test: lib/Woothee/DataSet.pm
+	test -d t/testsets || mkdir t/testsets
+	cp ../testsets/*.yaml t/testsets
 	prove -Ilib
