@@ -14,6 +14,13 @@ java/testresults
 java/src/java/is/tagomor/woothee/DataSet.java
 
 perl/t/testsets
+perl/META.yml
+perl/MYMETA.json
+perl/MYMETA.yml
+perl/Makefile
+perl/blib/
+perl/inc/
+perl/pm_to_blib
 
 ruby/pkg
 
