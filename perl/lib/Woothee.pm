@@ -12,6 +12,8 @@ use Woothee::Crawler;
 use Woothee::Appliance;
 use Woothee::Misc;
 
+our $VERSION = "0.2.1";
+
 sub parse {
     my $useragent = shift;
     return fill_result(exec_parse($useragent));
