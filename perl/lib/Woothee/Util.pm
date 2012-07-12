@@ -6,6 +6,8 @@ use Carp;
 
 use Woothee::DataSet;
 
+our $VERSION = "0.2.1";
+
 our (@ISA, @EXPORT_OK);
 BEGIN {
     require Exporter;
