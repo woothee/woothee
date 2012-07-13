@@ -1,5 +1,8 @@
 Revision history for Perl module Woothee
 
+0.2.2  Fri Jul 13 12:51:26 JST 2012
+   - Perl documents maintainance dist
+
 0.2.1  Fri Jul  6 20:42:39 JST 2012
    - CPAN 1st dist
 
