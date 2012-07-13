@@ -93,3 +93,26 @@ sub challenge_maybe_rss_reader {
 }
 
 1;
+
+__END__
+
+=head1 NAME
+
+Woothee::Misc - part of Woothee
+
+For Woothee, see https://github.com/tagomoris/woothee
+
+=head1 DESCRIPTION
+
+This module doesn't have any public interfaces. To parse user-agent strings, see module 'Woothee'.
+
+=head1 AUTHOR
+
+TAGOMORI Satoshi E<lt>tagomoris {at} gmail.comE<gt>
+
+=head1 LICENSE
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut

@@ -7,7 +7,7 @@ use File::Basename;
 use YAML qw//;
 
 my $dataset_file = dirname(__FILE__) . '/../dataset.yaml';
-my $java_file = dirname(__FILE__) . '/../perl/lib/Woothee/DataSet.pm';
+my $pm_file = dirname(__FILE__) . '/../perl/lib/Woothee/DataSet.pm';
 
 open(my $dfh, '-|', 'env', 'LANG=C', 'date');
 my $generated_timestamp = <$dfh>;
@@ -66,7 +66,7 @@ EOD
     push @defs, $def;
 }
 
-open(my $fh, ">", $java_file);
+open(my $fh, ">", $pm_file);
 while (my $line = <DATA>) {
     if ($line =~ /^___GENERATED_STATIC_INITIALIZER___/) {
         print $fh join('', @defs);
@@ -75,6 +75,33 @@ while (my $line = <DATA>) {
         print $fh $line;
     }
 }
+
+my $pod = <<EOPOD;
+=head1 NAME
+
+Woothee::DataSet - part of Woothee
+
+For Woothee, see https://github.com/tagomoris/woothee
+
+=head1 DESCRIPTION
+
+This module doesn't have any public interfaces. To parse user-agent strings, see module 'Woothee'.
+
+=head1 AUTHOR
+
+TAGOMORI Satoshi E<lt>tagomoris {at} gmail.comE<gt>
+
+=head1 LICENSE
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut
+EOPOD
+
+print $fh "__END__\n\n";
+print $fh $pod;
+
 close($fh);
 
 exit 0;

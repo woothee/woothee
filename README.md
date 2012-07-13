@@ -34,7 +34,25 @@ in Java:
     r.get("version");
     // => version of browser, or terminal type name of mobile phones
 
-in Hive:
+in Perl:
+
+    use Woothee;
+    Woothee::parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)");
+    # => {'name'=>"Internet Explorer", 'category'=>"pc", 'os'=>"Windows 7", 'version'=>"8.0", 'vendor'=>"Microsoft"}
+
+in Ruby:
+
+    require 'woothee'
+    Woothee.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)")
+    # => {:name=>"Internet Explorer", :category=>:pc, :os=>"Windows 7", :version=>"8.0", :vendor=>"Microsoft"}
+
+in Python:
+
+    import woothee
+    woothee.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)")
+    # => {'name': 'Internet Explorer', 'category': 'pc', 'os': 'Windows 7', 'version': '8.0', 'vendor': 'Microsoft'}
+
+### Hive UDF
 
     // add woothee.jar to classpath
     add jar woothee.jar;
@@ -64,25 +82,6 @@ in Hive:
       SELECT parse_agent(useragent) as parsed_agent FROM access_log WHERE date='today'
     ) x
     WHERE NOT is_crawler(parsed_agent) AND NOT is_unknown(parsed_agent)
-
-in Perl:
-
-    use Woothee::Classifier;
-    Woothee::Classifier::parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)");
-    # => {'name'=>"Internet Explorer", 'category'=>"pc", 'os'=>"Windows 7", 'version'=>"8.0", 'vendor'=>"Microsoft"}
-
-in Ruby:
-
-    require 'woothee'
-    Woothee.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)")
-    # => {:name=>"Internet Explorer", :category=>:pc, :os=>"Windows 7", :version=>"8.0", :vendor=>"Microsoft"}
-
-in Python:
-
-    import woothee
-    woothee.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)")
-    # => {'name': 'Internet Explorer', 'category': 'pc', 'os': 'Windows 7', 'version': '8.0', 'vendor': 'Microsoft'}
-
 
 ## Todo
 
