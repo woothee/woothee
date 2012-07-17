@@ -13,6 +13,7 @@ java/testresults
 # java/src/java/is/tagomor/woothee/DataSet.java is generated at "ant codegen"
 java/src/java/is/tagomor/woothee/DataSet.java
 
+perl/extlib
 perl/t/testsets
 perl/META.yml
 perl/MYMETA.json
