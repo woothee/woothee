@@ -22,12 +22,12 @@ sub walker {
        }
 
        # expects filename matches 'lib/.+\.pm'
-       my($name) = $path =~ m{^lib/(.+)\.pm$};
+       my($name) = $path =~ m{^lib[/\\](.+)\.pm$};
        unless ($name) {
            ok 0, "$path is not a package file?";
            next;
        }
-       $name =~ s{/}{::}g;
+       $name =~ s{[/\\]}{::}g;
        like $path->slurp, qr/(?:^|\n)package $name;/, "$path -> $name";
     }
 }
