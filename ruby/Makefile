@@ -10,4 +10,4 @@ lib/woothee/dataset.rb: ../dataset.yaml
 	sync; sync; sync
 
 test: lib/woothee/dataset.rb
-	rspec specs
+	rspec spec
