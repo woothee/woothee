@@ -22,6 +22,8 @@ public class SafariChrome extends AgentCategory {
     int cpos = ua.indexOf("Chrome");
     if (cpos < 0)
       cpos = ua.indexOf("CrMo");
+    if (cpos < 0)
+      cpos = ua.indexOf("CriOS");
     if (cpos > -1) {
       // Chrome
       Matcher chrome = chromeVerRegex.matcher(ua);
