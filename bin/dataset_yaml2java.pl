@@ -117,6 +117,14 @@ public final class DataSet {
   public static final String ATTRIBUTE_VERSION = "version";
   public static final String VALUE_UNKNOWN = "UNKNOWN";
 
+  public static final String[] CATEGORY_LIST = {
+    DATASET_CATEGORY_PC, DATASET_CATEGORY_SMARTPHONE, DATASET_CATEGORY_MOBILEPHONE,
+    DATASET_CATEGORY_CRAWLER, DATASET_CATEGORY_APPLIANCE, DATASET_CATEGORY_MISC, VALUE_UNKNOWN
+  };
+  public static final String[] ATTRIBUTE_LIST = {
+    ATTRIBUTE_NAME, ATTRIBUTE_CATEGORY, ATTRIBUTE_OS, ATTRIBUTE_VENDOR, ATTRIBUTE_VERSION
+  };
+
   private static final Map<String,Map<String,String>> DATASET = new HashMap<String,Map<String,String>>();
 
 ___GENERATED_STATIC_INITIALIZER___

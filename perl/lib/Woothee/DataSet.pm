@@ -38,6 +38,9 @@ my $CONST = {
     ATTRIBUTE_VERSION => "version",
 
     VALUE_UNKNOWN => "UNKNOWN",
+
+    CATEGORY_LIST => ["pc", "smartphone", "mobilephone", "crawler", "appliance", "misc", "UNKNOWN"],
+    ATTRIBUTE_LIST => ["name", "category", "os", "vendor", "version"],
 };
 
 sub const {
@@ -48,7 +51,7 @@ sub const {
 
 my $DATASET = {};
 {
-    # GENERATED from dataset.yaml at Fri Jul 13 12:39:39 JST 2012 by tagomoris
+    # GENERATED from dataset.yaml at Fri Jul 20 13:19:49 JST 2012 by tagomoris
     my $obj;
     $obj = {label => 'MSIE', name => 'Internet Explorer', type => 'browser'};
     $obj->{vendor} = 'Microsoft';

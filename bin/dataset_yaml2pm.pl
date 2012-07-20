@@ -147,6 +147,9 @@ my $CONST = {
     ATTRIBUTE_VERSION => "version",
 
     VALUE_UNKNOWN => "UNKNOWN",
+
+    CATEGORY_LIST => ["pc", "smartphone", "mobilephone", "crawler", "appliance", "misc", "UNKNOWN"],
+    ATTRIBUTE_LIST => ["name", "category", "os", "vendor", "version"],
 };
 
 sub const {

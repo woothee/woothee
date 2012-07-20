@@ -30,6 +30,16 @@ class WootheeTest(unittest.TestCase):
     from woothee import dataset
     self.assertEqual(dataset.ATTRIBUTE_NAME, 'name')
   
+  def test_contains_const_list(self):
+    from woothee import dataset
+    self.assertEqual(dataset.ATTRIBUTE_LIST,
+                     [dataset.ATTRIBUTE_NAME, dataset.ATTRIBUTE_CATEGORY, dataset.ATTRIBUTE_OS,
+                      dataset.ATTRIBUTE_VENDOR, dataset.ATTRIBUTE_VERSION])
+    self.assertEqual(dataset.CATEGORY_LIST,
+                     [dataset.CATEGORY_PC, dataset.CATEGORY_SMARTPHONE, dataset.CATEGORY_MOBILEPHONE,
+                      dataset.CATEGORY_CRAWLER, dataset.CATEGORY_APPLIANCE, dataset.CATEGORY_MISC,
+                      dataset.VALUE_UNKNOWN])
+
   def test_contains_dataset(self):
     from woothee import dataset
     self.assertEqual(dataset.get('GoogleBot')['name'], 'Googlebot')

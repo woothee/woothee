@@ -27,10 +27,13 @@ ATTRIBUTE_VERSION = 'version'
 
 VALUE_UNKNOWN = 'UNKNOWN'
 
+CATEGORY_LIST = [CATEGORY_PC,CATEGORY_SMARTPHONE,CATEGORY_MOBILEPHONE,CATEGORY_CRAWLER,CATEGORY_APPLIANCE,CATEGORY_MISC,VALUE_UNKNOWN]
+ATTRIBUTE_LIST = [ATTRIBUTE_NAME,ATTRIBUTE_CATEGORY,ATTRIBUTE_OS,ATTRIBUTE_VENDOR,ATTRIBUTE_VERSION]
+
 DATASET = {}
 
 def _init():
-  # GENERATED from dataset.yaml at Tue Jun 12 12:18:54 2012 by tagomoris
+  # GENERATED from dataset.yaml at Fri Jul 20 13:25:41 2012 by tagomoris
   obj = {'label': 'MSIE', 'name': 'Internet Explorer', 'type': 'browser'}
   obj['vendor'] = 'Microsoft'
   DATASET[obj['label']] = obj
