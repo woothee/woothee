@@ -1,6 +1,6 @@
 # Project Woothee
 
-Project Woothee is multi-language user-agent strings parsers, now contains perl and java implementations.
+Project Woothee is multi-language user-agent strings parsers.
 
 ## Why new project?
 
