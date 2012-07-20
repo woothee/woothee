@@ -14,7 +14,7 @@ use Woothee::Misc;
 
 use 5.010_000;
 
-our $VERSION = "0.2.3";
+our $VERSION = "0.2.4";
 
 sub parse {
     my ($this,$useragent) = @_;
