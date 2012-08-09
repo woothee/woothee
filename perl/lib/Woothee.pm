@@ -231,18 +231,18 @@ __END__
 
 =head1 NAME
 
-Woothee - multi-language user-agent strings parsers (perl implemantation)
+Woothee - multi-language user-agent strings parsers (perl implementation)
 
 For Woothee, see https://github.com/tagomoris/woothee
 
 =head1 SYNOPSIS
 
-  use Woothee::Classifier;
+  use Woothee;
 
   Woothee->parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)");
   # => {'name'=>"Internet Explorer", 'category'=>"pc", 'os'=>"Windows 7", 'version'=>"8.0", 'vendor'=>"Microsoft"}
 
-  Woothee::is_crawler('Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)');
+  Woothee->is_crawler('Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)');
   # => 1
 
 =head1 DESCRIPTION
