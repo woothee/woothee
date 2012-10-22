@@ -1,5 +1,8 @@
 Revision history for Perl module Woothee
 
+0.2.5  Mon Oct 22 12:41:06 JST 2012
+   - update bundled Module::Install to 1.06
+
 0.2.2  Fri Jul 13 12:51:26 JST 2012
    - Perl documents maintainance dist
 
