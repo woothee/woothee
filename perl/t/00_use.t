@@ -11,7 +11,7 @@ for (@files) {
     $_ = File::Spec->abs2rel($_, "$FindBin::Bin/../lib/");
     s![/\\]!::!g;
     s!\.pm$!!g;
-    next if $_ ~~ [qw//];
+    next if $_ eq q{};
     use_ok $_;
 }
 

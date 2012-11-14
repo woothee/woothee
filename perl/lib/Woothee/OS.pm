@@ -7,8 +7,6 @@ use Carp;
 use Woothee::Util qw/update_map update_category update_version update_os/;
 use Woothee::DataSet qw/dataset/;
 
-use 5.010_000;
-
 our $VERSION = "0.2.4";
 
 sub challenge_windows {
