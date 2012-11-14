@@ -1,5 +1,8 @@
 Revision history for Perl module Woothee
 
+0.2.6  Wed Nov 14 11:47:17 JST 2012
+   - remove perl 5.10 dependency
+
 0.2.5  Mon Oct 22 12:41:06 JST 2012
    - update bundled Module::Install to 1.06
 
