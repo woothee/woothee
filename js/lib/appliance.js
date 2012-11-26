@@ -25,6 +25,7 @@ var challengeNintendo = exports.challengeNintendo = function(ua, result) {
   if (ua.indexOf('Nintendo 3DS;') >= 0) data = dataset.get('Nintendo3DS');
   else if (ua.indexOf('Nintendo DSi;') >= 0) data = dataset.get('NintendoDSi');
   else if (ua.indexOf('Nintendo Wii;') >= 0) data = dataset.get('NintendoWii');
+  else if (ua.indexOf('(Nintendo WiiU)') >= 0) data = dataset.get('NintendoWiiU');
 
   if (! data)
     return false;

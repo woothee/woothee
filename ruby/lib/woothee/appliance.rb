@@ -24,6 +24,7 @@ module Woothee::Appliance
            when ua.index('Nintendo 3DS;') then Woothee::DataSet.get('Nintendo3DS')
            when ua.index('Nintendo DSi;') then Woothee::DataSet.get('NintendoDSi')
            when ua.index('Nintendo Wii;') then Woothee::DataSet.get('NintendoWii')
+           when ua.index('(Nintendo WiiU)') then Woothee::DataSet.get('NintendoWiiU')
            else nil
            end
     return false unless data

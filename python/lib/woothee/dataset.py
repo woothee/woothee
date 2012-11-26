@@ -33,7 +33,7 @@ ATTRIBUTE_LIST = [ATTRIBUTE_NAME,ATTRIBUTE_CATEGORY,ATTRIBUTE_OS,ATTRIBUTE_VENDO
 DATASET = {}
 
 def _init():
-  # GENERATED from dataset.yaml at Fri Jul 20 13:25:41 2012 by tagomoris
+  # GENERATED from dataset.yaml at Mon Nov 26 15:54:00 2012 by tagomoris
   obj = {'label': 'MSIE', 'name': 'Internet Explorer', 'type': 'browser'}
   obj['vendor'] = 'Microsoft'
   DATASET[obj['label']] = obj
@@ -168,6 +168,11 @@ def _init():
   obj['vendor'] = 'Nintendo'
   obj['category'] = 'appliance'
   obj['os'] = 'Nintendo Wii'
+  DATASET[obj['label']] = obj
+  obj = {'label': 'NintendoWiiU', 'name': 'Nintendo Wii U', 'type': 'full'}
+  obj['vendor'] = 'Nintendo'
+  obj['category'] = 'appliance'
+  obj['os'] = 'Nintendo Wii U'
   DATASET[obj['label']] = obj
   obj = {'label': 'PSP', 'name': 'PlayStation Portable', 'type': 'full'}
   obj['vendor'] = 'Sony'

@@ -6,9 +6,9 @@ var KEY_LABEL = exports.KEY_LABEL = 'label',
     KEY_VENDOR = exports.KEY_VENDOR = 'vendor',
     KEY_VERSION = exports.KEY_VERSION = 'version';
 
-var TYPE_BROWSER = exports.TYPE_BROWSER = 'browser',
-    TYPE_OS = exports.TYPE_OS = 'os',
-    TYPE_FULL = exports.TYPE_FULL = 'full';
+var TYPE_BROWSER = 'browser',
+    TYPE_OS = 'os',
+    TYPE_FULL = 'full';
 
 var CATEGORY_PC = exports.CATEGORY_PC = 'pc',
     CATEGORY_SMARTPHONE = exports.CATEGORY_SMARTPHONE = 'smartphone',
@@ -33,7 +33,7 @@ var ATTRIBUTE_LIST = exports.ATTRIBUTE_LIST = [ATTRIBUTE_NAME, ATTRIBUTE_CATEGOR
 
 var DATASET = {};
 
-// GENERATED from dataset.yaml at Fri Nov 23 18:55:36 JST 2012 by tagomoris
+// GENERATED from dataset.yaml at Mon Nov 26 16:00:35 JST 2012 by tagomoris
 var obj;
 obj = {label:'MSIE', name:'Internet Explorer', type:'browser'};
 obj['vendor'] = 'Microsoft';
@@ -173,6 +173,11 @@ obj = {label:'NintendoWii', name:'Nintendo Wii', type:'full'};
 obj['vendor'] = 'Nintendo';
 obj['category'] = 'appliance';
 obj['os'] = 'Nintendo Wii';
+DATASET[obj.label] = obj;
+obj = {label:'NintendoWiiU', name:'Nintendo Wii U', type:'full'};
+obj['vendor'] = 'Nintendo';
+obj['category'] = 'appliance';
+obj['os'] = 'Nintendo Wii U';
 DATASET[obj.label] = obj;
 obj = {label:'PSP', name:'PlayStation Portable', type:'full'};
 obj['vendor'] = 'Sony';

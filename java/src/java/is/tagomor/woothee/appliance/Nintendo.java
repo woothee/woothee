@@ -22,6 +22,9 @@ public class Nintendo extends AgentCategory {
     else if (ua.indexOf("Nintendo Wii;") > -1) {
       data = DataSet.get("NintendoWii");
     }
+    else if (ua.indexOf("(Nintendo WiiU)") > -1) {
+      data = DataSet.get("NintendoWiiU");
+    }
 
     if (data == null)
       return false;

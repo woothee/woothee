@@ -18,6 +18,12 @@
   os: Nintendo Wii
   category: appliance
 
+# Wii U (US?)
+- target: 'Mozilla/5.0 (Nintendo WiiU) AppleWebKit/534.52 (KHTML, like Gecko) NX/2.1.0.8.21 NintendoBrowser/1.0.0.7494.US'
+  name: Nintendo Wii U
+  os: Nintendo Wii U
+  category: appliance
+
 # PlayStation 3...
 - target: 'Mozilla/5.0 (PLAYSTATION 3; 1.00)'
   name: PlayStation 3

@@ -33,7 +33,7 @@ end
 
 module Woothee::DataSet
   DATASET = {}
-  # GENERATED from dataset.yaml at Fri Jul 20 13:14:50 JST 2012 by tagomoris
+  # GENERATED from dataset.yaml at Mon Nov 26 15:53:14 JST 2012 by tagomoris
   obj = {:label => 'MSIE', :name => 'Internet Explorer', :type => :browser}
   obj[:vendor] = 'Microsoft'
   DATASET[obj[:label]] = obj
@@ -168,6 +168,11 @@ module Woothee::DataSet
   obj[:vendor] = 'Nintendo'
   obj[:category] = :appliance
   obj[:os] = 'Nintendo Wii'
+  DATASET[obj[:label]] = obj
+  obj = {:label => 'NintendoWiiU', :name => 'Nintendo Wii U', :type => :full}
+  obj[:vendor] = 'Nintendo'
+  obj[:category] = :appliance
+  obj[:os] = 'Nintendo Wii U'
   DATASET[obj[:label]] = obj
   obj = {:label => 'PSP', :name => 'PlayStation Portable', :type => :full}
   obj[:vendor] = 'Sony'

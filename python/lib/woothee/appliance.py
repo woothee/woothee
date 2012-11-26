@@ -22,6 +22,8 @@ def challenge_nintendo(ua, result):
     data = dataset.get('NintendoDSi')
   elif 'Nintendo Wii;' in ua:
     data = dataset.get('NintendoWii')
+  elif '(Nintendo WiiU)' in ua:
+    data = dataset.get('NintendoWiiU')
   else:
     return False
   util.update_map(result, data)
