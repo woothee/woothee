@@ -1,9 +1,11 @@
+/* HEADER BEGIN */
 var util = require('./util'),
     updateMap = util.updateMap,
     updateVersion = util.updateVersion,
     updateCategory = util.updateCategory,
     updateOs = util.updateOs,
     dataset = require('./dataset');
+/* HEADER END */
 
 var challengeGoogle = exports.challengeGoogle = function(ua, result) {
   if (ua.indexOf('Google') < 0)

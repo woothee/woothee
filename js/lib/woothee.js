@@ -1,3 +1,4 @@
+/* HEADER BEGIN */
 var dataset = require('./dataset'),
     browser = require('./browser'),
     os = require('./os'),
@@ -5,6 +6,7 @@ var dataset = require('./dataset'),
     crawler = require('./crawler'),
     appliance = require('./appliance'),
     misc = require('./misc');
+/* HEADER END */
 
 var parse = exports.parse = function(userAgent) {
   return fillResult(execParse(userAgent));

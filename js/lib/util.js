@@ -1,4 +1,6 @@
+/* HEADER BEGIN */
 var dataset = require('./dataset');
+/* HEADER END */
 
 var updateMap = exports.updateMap = function(target, source) {
   for (var key in source) {

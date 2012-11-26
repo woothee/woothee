@@ -1,9 +1,11 @@
+/* HEADER BEGIN */
 var util = require('./util'),
     updateMap = util.updateMap,
+    updateVersion = util.updateVersion,
     updateCategory = util.updateCategory,
     updateOs = util.updateOs,
-    updateVersion = util.updateVersion,
     dataset = require('./dataset');
+/* HEADER END */
 
 var challengeDesktopTools = exports.challengeDesktopTools = function(ua, result){
   var data = null;

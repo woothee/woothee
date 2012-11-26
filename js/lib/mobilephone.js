@@ -1,9 +1,11 @@
+/* HEADER BEGIN */
 var util = require('./util'),
     updateMap = util.updateMap,
     updateVersion = util.updateVersion,
     updateCategory = util.updateCategory,
     updateOs = util.updateOs,
     dataset = require('./dataset');
+/* HEADER END */
 
 var docomoPattern = /DoCoMo\/[.0-9]+[ \/]([^- \/;()"']+)/;
 var fomaPattern = /\(([^;)]+);FOMA;/;
