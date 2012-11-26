@@ -2,7 +2,7 @@
   var root = this;
   // embed: dataset, util, browser, mobilephone, crawler, appliance, misc, woothee
 
-// GENERATED at Mon Nov 26 13:21:16 JST 2012 by tagomoris
+// GENERATED at Mon Nov 26 16:01:17 JST 2012 by tagomoris
   var dataset = {};
   (function(){
     var exports = dataset;
@@ -15,9 +15,9 @@
         KEY_VENDOR = exports.KEY_VENDOR = 'vendor',
         KEY_VERSION = exports.KEY_VERSION = 'version';
     
-    var TYPE_BROWSER = exports.TYPE_BROWSER = 'browser',
-        TYPE_OS = exports.TYPE_OS = 'os',
-        TYPE_FULL = exports.TYPE_FULL = 'full';
+    var TYPE_BROWSER = 'browser',
+        TYPE_OS = 'os',
+        TYPE_FULL = 'full';
     
     var CATEGORY_PC = exports.CATEGORY_PC = 'pc',
         CATEGORY_SMARTPHONE = exports.CATEGORY_SMARTPHONE = 'smartphone',
@@ -42,7 +42,7 @@
     
     var DATASET = {};
     
-    // GENERATED from dataset.yaml at Fri Nov 23 18:55:36 JST 2012 by tagomoris
+    // GENERATED from dataset.yaml at Mon Nov 26 16:00:35 JST 2012 by tagomoris
     var obj;
     obj = {label:'MSIE', name:'Internet Explorer', type:'browser'};
     obj['vendor'] = 'Microsoft';
@@ -182,6 +182,11 @@
     obj['vendor'] = 'Nintendo';
     obj['category'] = 'appliance';
     obj['os'] = 'Nintendo Wii';
+    DATASET[obj.label] = obj;
+    obj = {label:'NintendoWiiU', name:'Nintendo Wii U', type:'full'};
+    obj['vendor'] = 'Nintendo';
+    obj['category'] = 'appliance';
+    obj['os'] = 'Nintendo Wii U';
     DATASET[obj.label] = obj;
     obj = {label:'PSP', name:'PlayStation Portable', type:'full'};
     obj['vendor'] = 'Sony';
@@ -876,6 +881,7 @@
       if (ua.indexOf('Nintendo 3DS;') >= 0) data = dataset.get('Nintendo3DS');
       else if (ua.indexOf('Nintendo DSi;') >= 0) data = dataset.get('NintendoDSi');
       else if (ua.indexOf('Nintendo Wii;') >= 0) data = dataset.get('NintendoWii');
+      else if (ua.indexOf('(Nintendo WiiU)') >= 0) data = dataset.get('NintendoWiiU');
     
       if (! data)
         return false;

@@ -211,6 +211,13 @@
   os: Nintendo Wii
   category: appliance
 
+- label: NintendoWiiU
+  name: Nintendo Wii U
+  type: full
+  vendor: Nintendo
+  os: Nintendo Wii U
+  category: appliance
+
 - label: PSP
   name: PlayStation Portable
   type: full

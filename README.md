@@ -14,43 +14,69 @@ Implemantations:
   * Perl
   * Ruby
   * Python
+  * Javascript (Node.js or browser)
 
 ## SYNOPSIS
 in Java: (use java/woothee.jar)
 
-    // import is.tagomor.woothee.Classifier;
-    // import is.tagomor.woothee.DataSet;
-    Map r = Classifier.parse("user agent string");
+```java
+// import is.tagomor.woothee.Classifier;
+// import is.tagomor.woothee.DataSet;
+Map r = Classifier.parse("user agent string");
     
-    r.get("name")
-    // => name of browser (or string like name of user-agent
+r.get("name")
+// => name of browser (or string like name of user-agent
 
-    r.get("category")
-    // => "pc", "smartphone", "mobilephone", "appliance", "crawler", "misc", "unknown"
-    
-    r.get("os")
-    // => os from user-agent, or carrier name of mobile phones
-    
-    r.get("version");
-    // => version of browser, or terminal type name of mobile phones
+r.get("category")
+// => "pc", "smartphone", "mobilephone", "appliance", "crawler", "misc", "unknown"
+
+r.get("os")
+// => os from user-agent, or carrier name of mobile phones
+
+r.get("version");
+// => version of browser, or terminal type name of mobile phones
+```
 
 in Perl: (cpanm Woothee)
 
-    use Woothee;
-    Woothee::parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)");
-    # => {'name'=>"Internet Explorer", 'category'=>"pc", 'os'=>"Windows 7", 'version'=>"8.0", 'vendor'=>"Microsoft"}
+```perl
+use Woothee;
+Woothee::parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)");
+# => {'name'=>"Internet Explorer", 'category'=>"pc", 'os'=>"Windows 7", 'version'=>"8.0", 'vendor'=>"Microsoft"}
+```
 
 in Ruby: (gem install woothee)
 
-    require 'woothee'
-    Woothee.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)")
-    # => {:name=>"Internet Explorer", :category=>:pc, :os=>"Windows 7", :version=>"8.0", :vendor=>"Microsoft"}
+```ruby
+require 'woothee'
+Woothee.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)")
+# => {:name=>"Internet Explorer", :category=>:pc, :os=>"Windows 7", :version=>"8.0", :vendor=>"Microsoft"}
+```
 
 in Python:
 
-    import woothee
-    woothee.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)")
-    # => {'name': 'Internet Explorer', 'category': 'pc', 'os': 'Windows 7', 'version': '8.0', 'vendor': 'Microsoft'}
+```python
+import woothee
+woothee.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)")
+# => {'name': 'Internet Explorer', 'category': 'pc', 'os': 'Windows 7', 'version': '8.0', 'vendor': 'Microsoft'}
+```
+
+in Javascript(HTML, copy from release/woothee.js)
+```html
+<script src="./your/own/path/woothee.js"></script>
+<script>
+woothee.parse('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)')
+// => {name: 'Internet Explorer', category: 'pc', os: 'Windows 7', version: '8.0', vendor: 'Microsoft'}
+</script>
+```
+
+in Node.js (npm install woothee)
+
+```javascript
+var woothee = require('woothee');
+woothee.parse('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)')
+// => {name: 'Internet Explorer', category: 'pc', os: 'Windows 7', version: '8.0', vendor: 'Microsoft'}
+```
 
 ### Hive UDF
 
@@ -87,7 +113,6 @@ in Python:
 
 * 'mobilephone' means Japanese mobile phone groups
   * For multi-region code, domestic pattern specifier (or another mechanism) needed
-* Add node.js implementation
 
 ## FAQ
 

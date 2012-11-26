@@ -1,5 +1,8 @@
 Revision history for Perl module Woothee
 
+0.3.0  Mon Nov 26 16:13:13 JST 2012
+   - add WiiU (with js implementation)
+
 0.2.6  Wed Nov 14 11:47:17 JST 2012
    - remove perl 5.10 dependency
 
