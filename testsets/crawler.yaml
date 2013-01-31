@@ -4,6 +4,11 @@
   os: UNKNOWN
   category: crawler
 
+- target: 'Mozilla/5.0 (compatible; Yahoo! Slurp/3.0; http://help.yahoo.com/help/us/ysearch/slurp)'
+  name: Yahoo! Slurp
+  os: UNKNOWN
+  category: crawler
+
 - target: 'Y!J-BRO/YFSJ crawler (compatible; Mozilla 4.0; MSIE 5.5; http://help.yahoo.co.jp/help/jp/search/indexing/indexing-15.html; YahooFeedSeekerJp/2.0; users 0; views 248)'
   name: Yahoo! Japan
   os: UNKNOWN
@@ -15,6 +20,16 @@
   category: crawler
 
 - target: 'Y!J-BRJ/YATS crawler (http://listing.yahoo.co.jp/support/faq/int/other/other_001.html)'
+  name: Yahoo! Japan
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Y!J-BRJ/YATS crawler (http://help.yahoo.co.jp/help/jp/search/indexing/indexing-15.html)'
+  name: Yahoo! Japan
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Y!J-BSC/1.0 crawler (http://help.yahoo.co.jp/help/jp/blog-search/)'
   name: Yahoo! Japan
   os: UNKNOWN
   category: crawler
@@ -89,6 +104,40 @@
   os: UNKNOWN
   category: crawler
 
+# salesforce marketing radian6
+- target: 'R6_CommentReader(www.radian6.com/crawler)'
+  name: salesforce radian6
+  os: UNKNOWN
+  category: crawler
+
+- target: 'R6_FeedFetcher(www.radian6.com/crawler)'
+  name: salesforce radian6
+  os: UNKNOWN
+  category: crawler
+
+# topsy
+- target: 'Mozilla/5.0 (compatible; Butterfly/1.0; +http://labs.topsy.com/butterfly/) Gecko/2009032608 Firefox/3.0.8'
+  name: topsy Butterfly
+  os: UNKNOWN
+  category: crawler
+
+# SeoMoz rogerbot
+- target: 'rogerbot/1.0 (http://www.seomoz.org/dp/rogerbot, rogerbot-crawler@seomoz.org)'
+  name: SeoMoz rogerbot
+  os: UNKNOWN
+  category: crawler
+
+- target: 'rogerbot/1.0 (http://www.seomoz.org/dp/rogerbot, rogerbot-crawler+shiny@seomoz.org)'
+  name: SeoMoz rogerbot
+  os: UNKNOWN
+  category: crawler
+
+# ahref
+- target: 'Mozilla/5.0 (compatible; AhrefsBot/4.0; +http://ahrefs.com/robot/)'
+  name: ahref AhrefsBot
+  os: UNKNOWN
+  category: crawler
+
 # Hatena
 - target: 'Hatena Antenna/0.5 (http://a.hatena.ne.jp/help)'
   name: Hatena
@@ -140,6 +189,11 @@
   category: crawler
 
 - target: 'mixi-news-crawler/1.00 (http://mixi.jp/)'
+  name: mixi
+  os: UNKNOWN
+  category: crawler
+
+- target: 'mixi-crawler/2.00 (http://mixi.jp/)'
   name: mixi
   os: UNKNOWN
   category: crawler

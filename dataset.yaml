@@ -363,6 +363,26 @@
   type: full
   category: crawler
 
+- label: topsyButterfly
+  name: topsy Butterfly
+  type: full
+  category: crawler
+
+- label: rogerbot
+  name: SeoMoz rogerbot
+  type: full
+  category: crawler
+
+- label: AhrefsBot
+  name: ahref AhrefsBot
+  type: full
+  category: crawler
+
+- label: radian6
+  name: salesforce radian6
+  type: full
+  category: crawler
+
 - label: Hatena
   name: Hatena
   type: full
