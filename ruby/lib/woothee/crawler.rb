@@ -45,8 +45,8 @@ module Woothee::Crawler
   end
 
   def self.challenge_crawlers(ua, result)
-    if ua.index('Yahoo') or ua.index('listing.yahoo.co.jp/support/faq/')
-      if ua.index('compatible; Yahoo! Slurp;')
+    if ua.index('Yahoo') or ua.index('help.yahoo.co.jp/help/jp/') or ua.index('listing.yahoo.co.jp/support/faq/')
+      if ua.index('compatible; Yahoo! Slurp')
         update_map(result, Woothee::DataSet.get('YahooSlurp'))
         return true
       end
@@ -54,7 +54,7 @@ module Woothee::Crawler
         update_map(result, Woothee::DataSet.get('YahooJP'))
         return true
       end
-      if ua.index('crawler (http://listing.yahoo.co.jp/support/faq/')
+      if ua.index('crawler (http://listing.yahoo.co.jp/support/faq/') || ua.index('crawler (http://help.yahoo.co.jp/help/jp/')
         update_map(result, Woothee::DataSet.get('YahooJP'))
         return true
       end
@@ -103,6 +103,22 @@ module Woothee::Crawler
       update_map(result, Woothee::DataSet.get('ApplePubSub'))
       return true
     end
+    if ua.index("(www.radian6.com/crawler)")
+      update_map(result, Woothee::DataSet.get("radian6"))
+      return true
+    end
+    if ua.index("labs.topsy.com/butterfly/")
+      update_map(result, Woothee::DataSet.get("topsyButterfly"))
+      return true
+    end
+    if ua.index("rogerbot/1.0 (http://www.seomoz.org/dp/rogerbot")
+      update_map(result, Woothee::DataSet.get("rogerbot"))
+      return true
+    end
+    if ua.index("compatible; AhrefsBot/")
+      update_map(result, Woothee::DataSet.get("AhrefsBot"))
+      return true
+    end
     if ua.index('livedoor FeedFetcher') or ua.index('Fastladder FeedFetcher')
       update_map(result, Woothee::DataSet.get('livedoorFeedFetcher'))
       return true
@@ -113,7 +129,7 @@ module Woothee::Crawler
         return true
       end
     end
-    if ua.index('mixi-check') or ua.index('mixi-news-crawler')
+    if ua.index('mixi-check') or ua.index('mixi-crawler') or ua.index('mixi-news-crawler')
       update_map(result, Woothee::DataSet.get('mixi'))
       return true
     end

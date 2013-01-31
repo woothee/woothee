@@ -51,7 +51,7 @@ sub const {
 
 my $DATASET = {};
 {
-    # GENERATED from dataset.yaml at Mon Nov 26 15:52:31 JST 2012 by tagomoris
+    # GENERATED from dataset.yaml at Thu Jan 31 18:56:20 JST 2013 by tagomoris
     my $obj;
     $obj = {label => 'MSIE', name => 'Internet Explorer', type => 'browser'};
     $obj->{vendor} = 'Microsoft';
@@ -309,6 +309,22 @@ my $DATASET = {};
     $obj->{category} = 'crawler';
     $obj->{vendor} = '';
     $DATASET->{'ApplePubSub'} = $obj;
+    $obj = {label => 'topsyButterfly', name => 'topsy Butterfly', type => 'full'};
+    $obj->{category} = 'crawler';
+    $obj->{vendor} = '';
+    $DATASET->{'topsyButterfly'} = $obj;
+    $obj = {label => 'rogerbot', name => 'SeoMoz rogerbot', type => 'full'};
+    $obj->{category} = 'crawler';
+    $obj->{vendor} = '';
+    $DATASET->{'rogerbot'} = $obj;
+    $obj = {label => 'AhrefsBot', name => 'ahref AhrefsBot', type => 'full'};
+    $obj->{category} = 'crawler';
+    $obj->{vendor} = '';
+    $DATASET->{'AhrefsBot'} = $obj;
+    $obj = {label => 'radian6', name => 'salesforce radian6', type => 'full'};
+    $obj->{category} = 'crawler';
+    $obj->{vendor} = '';
+    $DATASET->{'radian6'} = $obj;
     $obj = {label => 'Hatena', name => 'Hatena', type => 'full'};
     $obj->{category} = 'crawler';
     $obj->{vendor} = '';

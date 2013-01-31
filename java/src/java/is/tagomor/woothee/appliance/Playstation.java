@@ -18,7 +18,7 @@ public class Playstation extends AgentCategory {
     else if (ua.indexOf("PlayStation Vita") > -1) {
       data = DataSet.get("PSVita");
     }
-    else if (ua.indexOf("PLAYSTATION 3;") > -1) {
+    else if (ua.indexOf("PLAYSTATION 3 ") > -1 || ua.indexOf("PLAYSTATION 3;") > -1) {
       data = DataSet.get("PS3");
     }
 

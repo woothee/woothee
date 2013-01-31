@@ -47,8 +47,10 @@ var challengeGoogle = exports.challengeGoogle = function(ua, result) {
 };
 
 var challengeCrawlers = exports.challengeCrawlers = function(ua, result) {
-  if (ua.indexOf('Yahoo') >= 0 || ua.indexOf('listing.yahoo.co.jp/support/faq/') >= 0) {
-    if (ua.indexOf('compatible; Yahoo! Slurp;') >= 0) {
+  if (ua.indexOf('Yahoo') >= 0
+      || ua.indexOf('help.yahoo.co.jp/help/jp/') >= 0
+      || ua.indexOf('listing.yahoo.co.jp/support/faq/') >= 0) {
+    if (ua.indexOf('compatible; Yahoo! Slurp') >= 0) {
       updateMap(result, dataset.get('YahooSlurp'));
       return true;
     }
@@ -56,7 +58,8 @@ var challengeCrawlers = exports.challengeCrawlers = function(ua, result) {
       updateMap(result, dataset.get('YahooJP'));
       return true;
     }
-    if (ua.indexOf('crawler (http://listing.yahoo.co.jp/support/faq/') >= 0) {
+    if (ua.indexOf('crawler (http://listing.yahoo.co.jp/support/faq/') >= 0
+        || ua.indexOf('crawler (http://help.yahoo.co.jp/help/jp/') >= 0) {
       updateMap(result, dataset.get('YahooJP'));
       return true;
     }
@@ -108,6 +111,22 @@ var challengeCrawlers = exports.challengeCrawlers = function(ua, result) {
     updateMap(result, dataset.get('ApplePubSub'));
     return true;
   }
+  if (ua.indexOf('(www.radian6.com/crawler)') >= 0) {
+    updateMap(result, dataset.get('radian6'));
+    return true;
+  }
+  if (ua.indexOf('labs.topsy.com/butterfly/') >= 0) {
+    updateMap(result, dataset.get('topsyButterfly'));
+    return true;
+  }
+  if (ua.indexOf('rogerbot/1.0 (http://www.seomoz.org/dp/rogerbot') >= 0) {
+    updateMap(result, dataset.get('rogerbot'));
+    return true;
+  }
+  if (ua.indexOf('compatible; AhrefsBot/') >= 0) {
+    updateMap(result, dataset.get('AhrefsBot'));
+    return true;
+  }
   if (ua.indexOf('livedoor FeedFetcher') >= 0 || ua.indexOf('Fastladder FeedFetcher') >= 0) {
     updateMap(result, dataset.get('livedoorFeedFetcher'));
     return true;
@@ -121,6 +140,7 @@ var challengeCrawlers = exports.challengeCrawlers = function(ua, result) {
     }
   }
   if (ua.indexOf('mixi-check') >= 0 ||
+      ua.indexOf('mixi-crawler') >= 0 ||
       ua.indexOf('mixi-news-crawler') >= 0) {
     updateMap(result, dataset.get('mixi'));
     return true;

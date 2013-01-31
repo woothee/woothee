@@ -39,8 +39,8 @@ def challenge_google(ua, result):
   return False
 
 def challenge_crawlers(ua, result):
-  if 'Yahoo' in ua or 'listing.yahoo.co.jp/support/faq/' in ua:
-    if 'compatible; Yahoo! Slurp;' in ua:
+  if 'Yahoo' in ua or 'help.yahoo.co.jp/help/jp/' in ua or 'listing.yahoo.co.jp/support/faq/' in ua:
+    if 'compatible; Yahoo! Slurp' in ua:
       util.update_map(result, dataset.get('YahooSlurp'))
       return True
     
@@ -48,7 +48,7 @@ def challenge_crawlers(ua, result):
       util.update_map(result, dataset.get('YahooJP'))
       return True
     
-    if 'crawler (http://listing.yahoo.co.jp/support/faq/' in ua:
+    if 'crawler (http://listing.yahoo.co.jp/support/faq/' in ua or 'crawler (http://help.yahoo.co.jp/help/jp/' in ua:
       util.update_map(result, dataset.get('YahooJP'))
       return True
     
@@ -91,6 +91,22 @@ def challenge_crawlers(ua, result):
   if 'Apple-PubSub' in ua:
     util.update_map(result, dataset.get('ApplePubSub'))
     return True
+
+  if '(www.radian6.com/crawler)' in ua:
+    util.update_map(result, dataset.get('radian6'))
+    return True
+
+  if 'labs.topsy.com/butterfly/' in ua:
+    util.update_map(result, dataset.get('topsyButterfly'))
+    return True
+
+  if 'rogerbot/1.0 (http://www.seomoz.org/dp/rogerbot' in ua:
+    util.update_map(result, dataset.get('rogerbot'))
+    return True
+
+  if 'compatible; AhrefsBot/' in ua:
+    util.update_map(result, dataset.get('AhrefsBot'))
+    return True
   
   if 'livedoor FeedFetcher' in ua or 'Fastladder FeedFetcher' in ua:
     util.update_map(result, dataset.get('livedoorFeedFetcher'))
@@ -101,7 +117,7 @@ def challenge_crawlers(ua, result):
       util.update_map(result, dataset.get('Hatena'))
       return True
   
-  if 'mixi-check' in ua or 'mixi-news-crawler' in ua:
+  if 'mixi-check' in ua or 'mixi-crawler' in ua or 'mixi-news-crawler' in ua:
     util.update_map(result, dataset.get('mixi'))
     return True
   

@@ -53,8 +53,10 @@ sub challenge_google {
 sub challenge_crawlers {
     my ($ua,$result) = @_;
 
-    if (index($ua, "Yahoo") > -1 || index($ua, "listing.yahoo.co.jp/support/faq/") > -1) {
-        if (index($ua, "compatible; Yahoo! Slurp;") > -1) {
+    if (index($ua, "Yahoo") > -1 ||
+            index($ua, "help.yahoo.co.jp/help/jp/") > -1 ||
+            index($ua, "listing.yahoo.co.jp/support/faq/") > -1) {
+        if (index($ua, "compatible; Yahoo! Slurp") > -1) {
             update_map($result, dataset("YahooSlurp"));
             return 1;
         }
@@ -62,7 +64,8 @@ sub challenge_crawlers {
             update_map($result, dataset("YahooJP"));
             return 1;
         }
-        elsif (index($ua, "crawler (http://listing.yahoo.co.jp/support/faq/") > -1) {
+        elsif (index($ua, "crawler (http://listing.yahoo.co.jp/support/faq/") > -1 ||
+                   index($ua, "crawler (http://help.yahoo.co.jp/help/jp/") > -1 ) {
             update_map($result, dataset("YahooJP"));
             return 1;
         }
@@ -111,6 +114,22 @@ sub challenge_crawlers {
         update_map($result, dataset("ApplePubSub"));
         return 1;
     }
+    elsif (index($ua, "(www.radian6.com/crawler)") > -1) {
+        update_map($result, dataset("radian6"));
+        return 1;
+    }
+    elsif (index($ua, "labs.topsy.com/butterfly/") > -1) {
+        update_map($result, dataset("topsyButterfly"));
+        return 1;
+    }
+    elsif (index($ua, "rogerbot/1.0 (http://www.seomoz.org/dp/rogerbot") > -1) {
+        update_map($result, dataset("rogerbot"));
+        return 1;
+    }
+    elsif (index($ua, "compatible; AhrefsBot/") > -1) {
+        update_map($result, dataset("AhrefsBot"));
+        return 1;
+    }
     elsif (index($ua, "livedoor FeedFetcher") > -1 || index($ua, "Fastladder FeedFetcher") > -1) {
         update_map($result, dataset("livedoorFeedFetcher"));
         return 1;
@@ -121,8 +140,8 @@ sub challenge_crawlers {
             return 1;
         }
     }
-    elsif (index($ua, "mixi-check") > -1 || index($ua, "mixi-news-crawler") > -1) {
-        update_map($result, dataset("mixi")); 
+    elsif (index($ua, "mixi-check") > -1 || index($ua, "mixi-crawler") > -1 || index($ua, "mixi-news-crawler") > -1) {
+        update_map($result, dataset("mixi"));
         return 1;
     }
     elsif (index($ua, "Indy Library") > -1) {

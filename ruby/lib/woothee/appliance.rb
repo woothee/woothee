@@ -10,7 +10,7 @@ module Woothee::Appliance
     data = case
            when ua.index('PSP (PlayStation Portable);') then Woothee::DataSet.get('PSP')
            when ua.index('PlayStation Vita') then Woothee::DataSet.get('PSVita')
-           when ua.index('PLAYSTATION 3;') then Woothee::DataSet.get('PS3')
+           when ua.index('PLAYSTATION 3 ') || ua.index('PLAYSTATION 3;') then Woothee::DataSet.get('PS3')
            else nil
            end
     return false unless data

@@ -20,7 +20,7 @@ sub challenge_playstation {
     elsif (index($ua, "PlayStation Vita") > -1) {
         $data = dataset("PSVita");
     }
-    elsif (index($ua, "PLAYSTATION 3;") > -1) {
+    elsif (index($ua, "PLAYSTATION 3 ") > -1 || index($ua, "PLAYSTATION 3;") > -1) {
         $data = dataset("PS3");
     }
 

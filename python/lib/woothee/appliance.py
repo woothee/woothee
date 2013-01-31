@@ -8,7 +8,7 @@ def challenge_playstation(ua, result):
     data = dataset.get('PSP')
   elif 'PlayStation Vita' in ua:
     data = dataset.get('PSVita')
-  elif 'PLAYSTATION 3;' in ua:
+  elif 'PLAYSTATION 3 ' in ua or 'PLAYSTATION 3;' in ua:
     data = dataset.get('PS3')
   else:
     return False

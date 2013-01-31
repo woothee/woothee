@@ -11,7 +11,7 @@ var challengePlaystation = exports.challengePlaystation = function(ua, result) {
   var data = null;
   if (ua.indexOf('PSP (PlayStation Portable);') >= 0) data = dataset.get('PSP');
   else if (ua.indexOf('PlayStation Vita') >= 0) data = dataset.get('PSVita');
-  else if (ua.indexOf('PLAYSTATION 3;') >= 0) data = dataset.get('PS3');
+  else if (ua.indexOf('PLAYSTATION 3 ') >= 0 || ua.indexOf('PLAYSTATION 3;') >= 0) data = dataset.get('PS3');
 
   if (! data)
     return false;

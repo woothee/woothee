@@ -7,8 +7,10 @@ import is.tagomor.woothee.DataSet;
 
 public class Crawlers extends AgentCategory {
   public static boolean challenge(final String ua, final Map<String,String> result) {
-    if (ua.indexOf("Yahoo") > -1 || ua.indexOf("listing.yahoo.co.jp/support/faq/") > -1) {
-      if (ua.indexOf("compatible; Yahoo! Slurp;") > -1) {
+    if (ua.indexOf("Yahoo") > -1 ||
+        ua.indexOf("help.yahoo.co.jp/help/jp/") > -1 ||
+        ua.indexOf("listing.yahoo.co.jp/support/faq/") > -1 ) {
+      if (ua.indexOf("compatible; Yahoo! Slurp") > -1) {
         updateMap(result, DataSet.get("YahooSlurp"));
         return true;
       }
@@ -16,7 +18,8 @@ public class Crawlers extends AgentCategory {
         updateMap(result, DataSet.get("YahooJP"));
         return true;
       }
-      else if (ua.indexOf("crawler (http://listing.yahoo.co.jp/support/faq/") > -1) {
+      else if (ua.indexOf("crawler (http://listing.yahoo.co.jp/support/faq/") > -1 ||
+               ua.indexOf("crawler (http://help.yahoo.co.jp/help/jp/") > -1) {
         updateMap(result, DataSet.get("YahooJP"));
         return true;
       }
@@ -65,6 +68,22 @@ public class Crawlers extends AgentCategory {
       updateMap(result, DataSet.get("ApplePubSub"));
       return true;
     }
+    else if (ua.indexOf("(www.radian6.com/crawler)") > -1) {
+      updateMap(result, DataSet.get("radian6"));
+      return true;
+    }
+    else if (ua.indexOf("labs.topsy.com/butterfly/") > -1) {
+      updateMap(result, DataSet.get("topsyButterfly"));
+      return true;
+    }
+    else if (ua.indexOf("rogerbot/1.0 (http://www.seomoz.org/dp/rogerbot") > -1) {
+      updateMap(result, DataSet.get("rogerbot"));
+      return true;
+    }
+    else if (ua.indexOf("compatible; AhrefsBot/") > -1) {
+      updateMap(result, DataSet.get("AhrefsBot"));
+      return true;
+    }
     else if (ua.indexOf("livedoor FeedFetcher") > -1 || ua.indexOf("Fastladder FeedFetcher") > -1) {
       updateMap(result, DataSet.get("livedoorFeedFetcher"));
       return true;
@@ -75,7 +94,7 @@ public class Crawlers extends AgentCategory {
         return true;
       }
     }
-    else if (ua.indexOf("mixi-check") > -1 || ua.indexOf("mixi-news-crawler") > -1) {
+    else if (ua.indexOf("mixi-check") > -1 || ua.indexOf("mixi-crawler") > -1 || ua.indexOf("mixi-news-crawler") > -1) {
       updateMap(result, DataSet.get("mixi"));
       return true;
     }
