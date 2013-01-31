@@ -30,6 +30,11 @@
   os: PlayStation 3
   category: appliance
 
+- target: 'Mozilla/5.0 (PLAYSTATION 3 4.31) AppleWebKit/531.22.8 (KHTML, like Gecko)'
+  name: PlayStation 3
+  os: PlayStation 3
+  category: appliance
+
 # PSP
 - target: 'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)'
   name: PlayStation Portable
