@@ -1,5 +1,9 @@
 Revision history for Perl module Woothee
 
+0.3.1  Fri Feb  1 12:33:41 JST 2013
+   - fix Playstation3 pattern
+   - fix/add some crawler pattern
+
 0.3.0  Mon Nov 26 16:13:13 JST 2012
    - add WiiU (with js implementation)
 
