@@ -2,7 +2,7 @@
   var root = this;
   // embed: dataset, util, browser, mobilephone, crawler, appliance, misc, woothee
 
-// GENERATED at Mon Nov 26 16:01:17 JST 2012 by tagomoris
+// GENERATED at Thu Jan 31 19:37:42 JST 2013 by tagomoris
   var dataset = {};
   (function(){
     var exports = dataset;
@@ -42,7 +42,7 @@
     
     var DATASET = {};
     
-    // GENERATED from dataset.yaml at Mon Nov 26 16:00:35 JST 2012 by tagomoris
+    // GENERATED from dataset.yaml at Thu Jan 31 19:33:03 JST 2013 by tagomoris
     var obj;
     obj = {label:'MSIE', name:'Internet Explorer', type:'browser'};
     obj['vendor'] = 'Microsoft';
@@ -297,6 +297,22 @@
     obj['category'] = 'crawler';
     DATASET[obj.label] = obj;
     obj = {label:'ApplePubSub', name:'Apple iCloud', type:'full'};
+    obj['vendor'] = '';
+    obj['category'] = 'crawler';
+    DATASET[obj.label] = obj;
+    obj = {label:'topsyButterfly', name:'topsy Butterfly', type:'full'};
+    obj['vendor'] = '';
+    obj['category'] = 'crawler';
+    DATASET[obj.label] = obj;
+    obj = {label:'rogerbot', name:'SeoMoz rogerbot', type:'full'};
+    obj['vendor'] = '';
+    obj['category'] = 'crawler';
+    DATASET[obj.label] = obj;
+    obj = {label:'AhrefsBot', name:'ahref AhrefsBot', type:'full'};
+    obj['vendor'] = '';
+    obj['category'] = 'crawler';
+    DATASET[obj.label] = obj;
+    obj = {label:'radian6', name:'salesforce radian6', type:'full'};
     obj['vendor'] = '';
     obj['category'] = 'crawler';
     DATASET[obj.label] = obj;
@@ -748,8 +764,10 @@
     };
     
     var challengeCrawlers = exports.challengeCrawlers = function(ua, result) {
-      if (ua.indexOf('Yahoo') >= 0 || ua.indexOf('listing.yahoo.co.jp/support/faq/') >= 0) {
-        if (ua.indexOf('compatible; Yahoo! Slurp;') >= 0) {
+      if (ua.indexOf('Yahoo') >= 0
+          || ua.indexOf('help.yahoo.co.jp/help/jp/') >= 0
+          || ua.indexOf('listing.yahoo.co.jp/support/faq/') >= 0) {
+        if (ua.indexOf('compatible; Yahoo! Slurp') >= 0) {
           updateMap(result, dataset.get('YahooSlurp'));
           return true;
         }
@@ -757,7 +775,8 @@
           updateMap(result, dataset.get('YahooJP'));
           return true;
         }
-        if (ua.indexOf('crawler (http://listing.yahoo.co.jp/support/faq/') >= 0) {
+        if (ua.indexOf('crawler (http://listing.yahoo.co.jp/support/faq/') >= 0
+            || ua.indexOf('crawler (http://help.yahoo.co.jp/help/jp/') >= 0) {
           updateMap(result, dataset.get('YahooJP'));
           return true;
         }
@@ -809,6 +828,22 @@
         updateMap(result, dataset.get('ApplePubSub'));
         return true;
       }
+      if (ua.indexOf('(www.radian6.com/crawler)') >= 0) {
+        updateMap(result, dataset.get('radian6'));
+        return true;
+      }
+      if (ua.indexOf('labs.topsy.com/butterfly/') >= 0) {
+        updateMap(result, dataset.get('topsyButterfly'));
+        return true;
+      }
+      if (ua.indexOf('rogerbot/1.0 (http://www.seomoz.org/dp/rogerbot') >= 0) {
+        updateMap(result, dataset.get('rogerbot'));
+        return true;
+      }
+      if (ua.indexOf('compatible; AhrefsBot/') >= 0) {
+        updateMap(result, dataset.get('AhrefsBot'));
+        return true;
+      }
       if (ua.indexOf('livedoor FeedFetcher') >= 0 || ua.indexOf('Fastladder FeedFetcher') >= 0) {
         updateMap(result, dataset.get('livedoorFeedFetcher'));
         return true;
@@ -822,6 +857,7 @@
         }
       }
       if (ua.indexOf('mixi-check') >= 0 ||
+          ua.indexOf('mixi-crawler') >= 0 ||
           ua.indexOf('mixi-news-crawler') >= 0) {
         updateMap(result, dataset.get('mixi'));
         return true;
@@ -867,7 +903,7 @@
       var data = null;
       if (ua.indexOf('PSP (PlayStation Portable);') >= 0) data = dataset.get('PSP');
       else if (ua.indexOf('PlayStation Vita') >= 0) data = dataset.get('PSVita');
-      else if (ua.indexOf('PLAYSTATION 3;') >= 0) data = dataset.get('PS3');
+      else if (ua.indexOf('PLAYSTATION 3 ') >= 0 || ua.indexOf('PLAYSTATION 3;') >= 0) data = dataset.get('PS3');
     
       if (! data)
         return false;
