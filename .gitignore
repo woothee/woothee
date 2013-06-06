@@ -24,6 +24,7 @@ perl/inc/
 perl/pm_to_blib
 
 ruby/pkg
+ruby/Gemfile.lock
 
 *.pyc
 python/PyYAML*.egg
