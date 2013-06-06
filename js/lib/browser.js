@@ -63,15 +63,21 @@ var challengeFirefox = exports.challengeFirefox = function(ua, result) {
   return true;
 };
 
-var operaPattern = /Opera[\/ ]([.0-9]+)/;
+var operaPattern1 = /Version\/([.0-9]+)/;
+var operaPattern2 = /Opera[\/ ]([.0-9]+)/;
 var challengeOpera = exports.challengeOpera = function(ua, result) {
   if (ua.indexOf('Opera') < 0)
     return false;
 
   var version = dataset.VALUE_UNKNOWN;
-  var match = operaPattern.exec(ua);
-  if (match)
+  var match = operaPattern1.exec(ua);
+  if (match) {
     version = match[1];
+  } else {
+    match = operaPattern2.exec(ua);
+    if (match)
+      version = match[1];
+  }
   updateMap(result, dataset.get('Opera'));
   updateVersion(result, version);
   return true;

@@ -57,7 +57,9 @@ module Woothee::Browser
   def self.challenge_opera(ua, result)
     return false if ua.index('Opera').nil?
 
-    version = if ua =~ /Opera[\/ ]([.0-9]+)/o
+    version = if ua =~ /Version\/([.0-9]+)/o
+                $1
+              elsif ua =~ /Opera[\/ ]([.0-9]+)/o
                 $1
               else
                 Woothee::VALUE_UNKNOWN

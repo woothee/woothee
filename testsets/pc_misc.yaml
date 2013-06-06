@@ -5,6 +5,27 @@
   os: Mac OSX
   category: pc
 
+# Chrome + OSX
+- target: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36'
+  name: Chrome
+  version: 27.0.1453.93
+  os: Mac OSX
+  category: pc
+
+# Firefox + OSX
+- target: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:21.0) Gecko/20100101 Firefox/21.0'
+  name: Firefox
+  version: '21.0'
+  os: Mac OSX
+  category: pc
+
+# Opera + OSX
+- target: 'Opera/9.80 (Macintosh; Intel Mac OS X 10.8.3) Presto/2.12.388 Version/12.15'
+  name: Opera
+  version: '12.15'
+  os: Mac OSX
+  category: pc
+
 # Instapaper + OSX
 - target: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Instapaper/4.0 (+http://www.instapaper.com/)'
   name: UNKNOWN
@@ -72,6 +93,6 @@
 # Opera + BSD
 - target: 'Opera/9.80 (X11; FreeBSD 8.2-RELEASE-p3 amd64; U; ja) Presto/2.9.168 Version/11.52'
   name: Opera
-  version: '9.80'
+  version: '11.52'
   os: BSD
   category: pc

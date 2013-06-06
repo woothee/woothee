@@ -45,8 +45,14 @@ def challenge_firefox(ua, result):
 def challenge_opera(ua, result):
   if 'Opera' not in ua:
     return False
-  obj = re.search('Opera[/ ]([.0-9]+)', ua)
-  version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
+  obj = re.search('Version/([.0-9]+)', ua)
+  version = dataset.VALUE_UNKNOWN
+  if obj:
+    version = obj.group(1)
+  else:
+    obj = re.search('Opera[/ ]([.0-9]+)', ua)
+    if obj:
+      version = obj.group(1)
   util.update_map(result, dataset.get('Opera'))
   util.update_version(result, version)
   return True

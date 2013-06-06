@@ -22,7 +22,7 @@
 # Opera Mini + Android
 - target: 'Opera/9.80 (Android; Opera Mini/6.5.27452/26.1305; U; ja) Presto/2.8.119 Version/10.54'
   name: Opera
-  version: '9.80'
+  version: '10.54'
   os: Android
   category: smartphone
 

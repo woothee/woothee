@@ -73,7 +73,10 @@ sub challenge_opera {
     return 0 if index($ua, "Opera") < 0;
 
     my $version;
-    if ($ua =~ m{Opera[/ ]([.0-9]+)}o) {
+    if ($ua =~ m{Version/([.0-9]+)}o) {
+	$version = $1;
+    }
+    elsif ($ua =~ m{Opera[/ ]([.0-9]+)}o) {
         $version = $1;
     }
     else {

@@ -9,7 +9,8 @@ import is.tagomor.woothee.AgentCategory;
 import is.tagomor.woothee.DataSet;
 
 public class Opera extends AgentCategory {
-  private static Pattern operaVerRegex = Pattern.compile("Opera[/ ]([.0-9]+)");
+  private static Pattern operaVerRegex1 = Pattern.compile("Version/([.0-9]+)");
+  private static Pattern operaVerRegex2 = Pattern.compile("Opera[/ ]([.0-9]+)");
 
   public static boolean challenge(final String ua, final Map<String,String> result) {
     int pos = ua.indexOf("Opera");
@@ -19,9 +20,15 @@ public class Opera extends AgentCategory {
     String version = DataSet.VALUE_UNKNOWN;
 
     // Opera (PC/Mobile/Smartphone)
-    Matcher opera = operaVerRegex.matcher(ua);
-    if (opera.find(pos))
+    Matcher opera = operaVerRegex1.matcher(ua);
+    if (opera.find(pos)) {
       version = opera.group(1);
+    }
+    else {
+      opera = operaVerRegex2.matcher(ua);
+      if (opera.find(pos))
+        version = opera.group(1);
+    }
     updateMap(result, DataSet.get("Opera"));
     updateVersion(result, version);
     return true;
