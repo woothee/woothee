@@ -50,6 +50,14 @@
   category: crawler
 
 # misc crawler (not includes "bot")
+- target: 'kizasi-spider/1.0 (+http://kizasi.jp/)'
+  name: misc crawler
+  category: crawler
+
+- target: 'BlogramCrawler/1.0.1(+http://blogram.jp/)'
+  name: misc crawler
+  category: crawler
+
 - target: 'www2.apserver.net ASP-Ranker Feed Crawler'
   name: misc crawler
   category: crawler

@@ -115,6 +115,12 @@
   os: UNKNOWN
   category: crawler
 
+# Genieo
+- target: 'Mozilla/5.0 (compatible; Genieo/1.0 http://www.genieo.com/webfilter.html)'
+  name: Genieo Web Filter
+  os: UNKNOWN
+  category: crawler
+
 # topsy
 - target: 'Mozilla/5.0 (compatible; Butterfly/1.0; +http://labs.topsy.com/butterfly/) Gecko/2009032608 Firefox/3.0.8'
   name: topsy Butterfly
@@ -161,6 +167,11 @@
   category: crawler
 
 - target: 'DoCoMo/2.0 P900i(c100;TB;W24H11) (compatible; ichiro/mobile goo; +http://help.goo.ne.jp/help/article/1142/)'
+  name: goo
+  os: UNKNOWN
+  category: crawler
+
+- target: 'gooblogsearch/2.0 (http://search.goo.ne.jp/option/use/sub4/sub4-1/)'
   name: goo
   os: UNKNOWN
   category: crawler

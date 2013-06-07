@@ -363,6 +363,11 @@
   type: full
   category: crawler
 
+- label: Genieo
+  name: Genieo Web Filter
+  type: full
+  category: crawler
+
 - label: topsyButterfly
   name: topsy Butterfly
   type: full
@@ -388,7 +393,7 @@
   type: full
   category: crawler
 
-- label: gooIchiro
+- label: goo
   name: goo
   type: full
   category: crawler

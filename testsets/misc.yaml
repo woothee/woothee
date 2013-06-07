@@ -28,8 +28,35 @@
   os: UNKNOWN
   category: misc
 
+- target: 'Fenrir Headline-Reader Plugin'
+  name: RSSReader
+  os: UNKNOWN
+  category: misc
+
+- target: 'jsRSS++/3.15'
+  name: RSSReader
+  os: UNKNOWN
+  category: misc
+
+- target: 'cococ/1.06'
+  name: RSSReader
+  os: UNKNOWN
+  category: misc
+
 # http libraries
+- target: 'Wget/1.12 (linux-gnu)'
+  name: HTTP Library
+  version: wget
+  os: UNKNOWN
+  category: misc
+
 - target: 'Apache-HttpClient/UNAVAILABLE (java 1.4)'
+  name: HTTP Library
+  version: Java
+  os: UNKNOWN
+  category: misc
+
+- target: 'livedoor HttpClient'
   name: HTTP Library
   version: Java
   os: UNKNOWN
@@ -47,9 +74,9 @@
   os: UNKNOWN
   category: misc
 
-- target: 'Wget/1.12 (linux-gnu)'
+- target: 'IE6.0,Java(TM) 2 Runtime Environment, Standard Edition'
   name: HTTP Library
-  version: wget
+  version: Java
   os: UNKNOWN
   category: misc
 
@@ -83,13 +110,61 @@
   os: UNKNOWN
   category: misc
 
+- target: 'Ruby'
+  name: HTTP Library
+  version: ruby
+  os: UNKNOWN
+  category: misc
+
+- target: 'feedzirra http://github.com/pauldix/feedzirra/tree/master'
+  name: HTTP Library
+  version: ruby
+  os: UNKNOWN
+  category: misc
+
+- target: 'Typhoeus - https://github.com/typhoeus/typhoeus'
+  name: HTTP Library
+  version: ruby
+  os: UNKNOWN
+  category: misc
+
 - target: 'Python-urllib/1.16'
   name: HTTP Library
   version: python
   os: UNKNOWN
   category: misc
 
+- target: 'Twisted PageGetter'
+  name: HTTP Library
+  version: python
+  os: UNKNOWN
+  category: misc
+
 - target: 'PHP/5.2.13'
+  name: HTTP Library
+  version: php
+  os: UNKNOWN
+  category: misc
+
+- target: 'PHP'
+  name: HTTP Library
+  version: php
+  os: UNKNOWN
+  category: misc
+
+- target: 'PEAR HTTP_Request class'
+  name: HTTP Library
+  version: php
+  os: UNKNOWN
+  category: misc
+
+- target: 'HTTP_Request2/2.1.1 (http://pear.php.net/package/http_request2) PHP/5.3.10-1ubuntu3.6'
+  name: HTTP Library
+  version: php
+  os: UNKNOWN
+  category: misc
+
+- target: 'PECL::HTTP/1.7.4 (PHP/5.4.4)'
   name: HTTP Library
   version: php
   os: UNKNOWN
