@@ -33,7 +33,7 @@ var ATTRIBUTE_LIST = exports.ATTRIBUTE_LIST = [ATTRIBUTE_NAME, ATTRIBUTE_CATEGOR
 
 var DATASET = {};
 
-// GENERATED from dataset.yaml at Thu Jan 31 19:33:03 JST 2013 by tagomoris
+// GENERATED from dataset.yaml at Fri Jun  7 19:04:57 JST 2013 by tagomoris
 var obj;
 obj = {label:'MSIE', name:'Internet Explorer', type:'browser'};
 obj['vendor'] = 'Microsoft';
@@ -291,6 +291,10 @@ obj = {label:'ApplePubSub', name:'Apple iCloud', type:'full'};
 obj['vendor'] = '';
 obj['category'] = 'crawler';
 DATASET[obj.label] = obj;
+obj = {label:'Genieo', name:'Genieo Web Filter', type:'full'};
+obj['vendor'] = '';
+obj['category'] = 'crawler';
+DATASET[obj.label] = obj;
 obj = {label:'topsyButterfly', name:'topsy Butterfly', type:'full'};
 obj['vendor'] = '';
 obj['category'] = 'crawler';
@@ -311,7 +315,7 @@ obj = {label:'Hatena', name:'Hatena', type:'full'};
 obj['vendor'] = '';
 obj['category'] = 'crawler';
 DATASET[obj.label] = obj;
-obj = {label:'gooIchiro', name:'goo', type:'full'};
+obj = {label:'goo', name:'goo', type:'full'};
 obj['vendor'] = '';
 obj['category'] = 'crawler';
 DATASET[obj.label] = obj;

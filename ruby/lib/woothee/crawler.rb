@@ -95,9 +95,13 @@ module Woothee::Crawler
     end
     if ua.index('ichiro')
       if ua.index('http://help.goo.ne.jp/door/crawler.html') or ua.index('compatible; ichiro/mobile goo;')
-        update_map(result, Woothee::DataSet.get('gooIchiro'))
+        update_map(result, Woothee::DataSet.get('goo'))
         return true
       end
+    end
+    if ua.index('gooblogsearch/')
+      update_map(result, Woothee::DataSet.get('goo'))
+      return true
     end
     if ua.index('Apple-PubSub')
       update_map(result, Woothee::DataSet.get('ApplePubSub'))
@@ -105,6 +109,10 @@ module Woothee::Crawler
     end
     if ua.index("(www.radian6.com/crawler)")
       update_map(result, Woothee::DataSet.get("radian6"))
+      return true
+    end
+    if ua.index('Genieo/')
+      update_map(result, Woothee::DataSet.get("Genieo"))
       return true
     end
     if ua.index("labs.topsy.com/butterfly/")
@@ -144,7 +152,7 @@ module Woothee::Crawler
   end
 
   def self.challenge_maybe_crawler(ua, result)
-    if ua =~ /bot(?:[-_ .\/;@()]|$)/oi
+    if ua =~ /(bot|crawler|spider)(?:[-_ .\/;@()]|$)/oi
       update_map(result, Woothee::DataSet.get('VariousCrawler'))
       return true
     end

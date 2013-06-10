@@ -103,9 +103,13 @@ var challengeCrawlers = exports.challengeCrawlers = function(ua, result) {
   if (ua.indexOf('ichiro') >= 0) {
     if (ua.indexOf('http://help.goo.ne.jp/door/crawler.html') >= 0 ||
         ua.indexOf('compatible; ichiro/mobile goo;') >= 0) {
-      updateMap(result, dataset.get('gooIchiro'));
+      updateMap(result, dataset.get('goo'));
       return true;
     }
+  }
+  if (ua.indexOf('gooblogsearch/') >= 0) {
+    updateMap(result, dataset.get('goo'));
+    return true;
   }
   if (ua.indexOf('Apple-PubSub') >= 0) {
     updateMap(result, dataset.get('ApplePubSub'));
@@ -113,6 +117,10 @@ var challengeCrawlers = exports.challengeCrawlers = function(ua, result) {
   }
   if (ua.indexOf('(www.radian6.com/crawler)') >= 0) {
     updateMap(result, dataset.get('radian6'));
+    return true;
+  }
+  if (ua.indexOf('Genieo/') >= 0) {
+    updateMap(result, dataset.get('Genieo'));
     return true;
   }
   if (ua.indexOf('labs.topsy.com/butterfly/') >= 0) {
@@ -156,7 +164,7 @@ var challengeCrawlers = exports.challengeCrawlers = function(ua, result) {
 };
 
 var challengeMaybeCrawler = exports.challengeMaybeCrawler = function(ua, result) {
-  if (/bot(?:[-_ .\/;@()]|$)/i.exec(ua)) {
+  if (/(bot|crawler|spider)(?:[-_ .\/;@()]|$)/i.exec(ua)) {
     updateMap(result, dataset.get('VariousCrawler'));
     return true;
   }

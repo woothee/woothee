@@ -85,8 +85,11 @@ def challenge_crawlers(ua, result):
   
   if 'ichiro' in ua:
     if 'http://help.goo.ne.jp/door/crawler.html' in ua or 'compatible; ichiro/mobile goo;' in ua:
-      util.update_map(result, dataset.get('gooIchiro'))
+      util.update_map(result, dataset.get('goo'))
       return True
+  if 'gooblogsearch/' in ua:
+    util.update_map(result, dataset.get('goo'))
+    return True
   
   if 'Apple-PubSub' in ua:
     util.update_map(result, dataset.get('ApplePubSub'))
@@ -94,6 +97,10 @@ def challenge_crawlers(ua, result):
 
   if '(www.radian6.com/crawler)' in ua:
     util.update_map(result, dataset.get('radian6'))
+    return True
+
+  if 'Genieo/' in ua:
+    util.update_map(result, dataset.get('Genieo'))
     return True
 
   if 'labs.topsy.com/butterfly/' in ua:
@@ -129,7 +136,7 @@ def challenge_crawlers(ua, result):
   return False
 
 def challenge_maybe_crawler(ua, result):
-  if re.search('bot(?:[-_ ./;@()]|$)', ua, re.I):
+  if re.search('(bot|crawler|spider)(?:[-_ ./;@()]|$)', ua, re.I):
     util.update_map(result, dataset.get('VariousCrawler'))
     return True
   

@@ -34,15 +34,19 @@ var challengeSmartPhonePatterns = exports.challengeSmartPhonePatterns = function
 
 var challengeHTTPLibrary = exports.challengeHTTPLibrary = function(ua, result){
   var data,version;
-  if (/^(?:Apache-HttpClient\/|Jakarta Commons-HttpClient\/|Java\/)/.exec(ua)) {
+  if (/^(?:Apache-HttpClient\/|Jakarta Commons-HttpClient\/|Java\/)/.exec(ua) || /[- ]HttpClient(\/|$)/.exec(ua)) {
+    data = dataset.get('HTTPLibrary'); version = 'Java';
+  } else if (ua.indexOf('Java(TM) 2 Runtime Environment,') >= 0) {
     data = dataset.get('HTTPLibrary'); version = 'Java';
   } else if (/^Wget/.exec(ua)) {
     data = dataset.get('HTTPLibrary'); version = 'wget';
   } else if (/^(?:libwww-perl|WWW-Mechanize|LWP::Simple|LWP |lwp-trivial)/.exec(ua)) {
     data = dataset.get('HTTPLibrary'); version = 'perl';
-  } else if (/^Python-urllib\//.exec(ua)) {
+  } else if (/^(?:Ruby|feedzirra|Typhoeus)/.exec(ua)) {
+    data = dataset.get('HTTPLibrary'); version = 'ruby';
+  } else if (/^(?:Python-urllib\/|Twisted )/.exec(ua)) {
     data = dataset.get('HTTPLibrary'); version = 'python';
-  } else if (/^(:?PHP\/|WordPress\/|CakePHP|PukiWiki\/)/.exec(ua)) {
+  } else if (/^(:?PHP|WordPress|CakePHP|PukiWiki|PECL::HTTP)(?:\/| |$)/.exec(ua) || /(?:PEAR |)HTTP_Request(?: class|2)/.exec(ua)) {
     data = dataset.get('HTTPLibrary'); version = 'php';
   } else if (ua.indexOf('PEAR HTTP_Request class;') >= 0) {
     data = dataset.get('HTTPLibrary'); version = 'php';
@@ -58,7 +62,13 @@ var challengeHTTPLibrary = exports.challengeHTTPLibrary = function(ua, result){
 
 var challengeMaybeRSSReader = exports.challengeMaybeRSSReader = function(ua, result){
   var data = null;
-  if (/rss(?:reader|bar|[-_ \/;()])/i.exec(ua)) data = dataset.get('VariousRSSReader');
+  if (/rss(?:reader|bar|[-_ \/;()]|[ +]*\/)/i.exec(ua) || /headline-reader/i.exec(ua)) {
+    data = dataset.get('VariousRSSReader');
+  }
+  else {
+    if (ua.indexOf('cococ/') >= 0)
+      data = dataset.get('VariousRSSReader');
+  }
 
   if (! data)
     return false;

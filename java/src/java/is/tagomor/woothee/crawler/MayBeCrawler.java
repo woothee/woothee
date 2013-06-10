@@ -9,7 +9,7 @@ import is.tagomor.woothee.AgentCategory;
 import is.tagomor.woothee.DataSet;
 
 public class MayBeCrawler extends AgentCategory {
-  private static Pattern maybeBotPattern = Pattern.compile("bot(?:[-_ ./;@\\(\\)]|$)", Pattern.CASE_INSENSITIVE);
+  private static Pattern maybeBotPattern = Pattern.compile("(bot|crawler|spider)(?:[-_ ./;@\\(\\)]|$)", Pattern.CASE_INSENSITIVE);
   private static Pattern maybeParserPattern = Pattern.compile("(feed|web) ?parser", Pattern.CASE_INSENSITIVE);
   private static Pattern maybeWatchdogPattern = Pattern.compile("watch ?dog", Pattern.CASE_INSENSITIVE);
 

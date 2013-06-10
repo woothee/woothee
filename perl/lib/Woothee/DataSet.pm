@@ -51,7 +51,7 @@ sub const {
 
 my $DATASET = {};
 {
-    # GENERATED from dataset.yaml at Thu Jan 31 18:56:20 JST 2013 by tagomoris
+    # GENERATED from dataset.yaml at Fri Jun  7 16:09:18 JST 2013 by tagomoris
     my $obj;
     $obj = {label => 'MSIE', name => 'Internet Explorer', type => 'browser'};
     $obj->{vendor} = 'Microsoft';
@@ -309,6 +309,10 @@ my $DATASET = {};
     $obj->{category} = 'crawler';
     $obj->{vendor} = '';
     $DATASET->{'ApplePubSub'} = $obj;
+    $obj = {label => 'Genieo', name => 'Genieo Web Filter', type => 'full'};
+    $obj->{category} = 'crawler';
+    $obj->{vendor} = '';
+    $DATASET->{'Genieo'} = $obj;
     $obj = {label => 'topsyButterfly', name => 'topsy Butterfly', type => 'full'};
     $obj->{category} = 'crawler';
     $obj->{vendor} = '';
@@ -329,10 +333,10 @@ my $DATASET = {};
     $obj->{category} = 'crawler';
     $obj->{vendor} = '';
     $DATASET->{'Hatena'} = $obj;
-    $obj = {label => 'gooIchiro', name => 'goo', type => 'full'};
+    $obj = {label => 'goo', name => 'goo', type => 'full'};
     $obj->{category} = 'crawler';
     $obj->{vendor} = '';
-    $DATASET->{'gooIchiro'} = $obj;
+    $DATASET->{'goo'} = $obj;
     $obj = {label => 'livedoorFeedFetcher', name => 'livedoor FeedFetcher', type => 'full'};
     $obj->{category} = 'crawler';
     $obj->{vendor} = '';

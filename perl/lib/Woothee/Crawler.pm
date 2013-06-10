@@ -106,9 +106,13 @@ sub challenge_crawlers {
     }
     elsif (index($ua, "ichiro") > -1) {
         if (index($ua, "http://help.goo.ne.jp/door/crawler.html") > -1 || index($ua, "compatible; ichiro/mobile goo;") > -1) {
-            update_map($result, dataset("gooIchiro"));
+            update_map($result, dataset("goo"));
             return 1;
         }
+    }
+    elsif (index($ua, "gooblogsearch/") > -1) {
+        update_map($result, dataset("goo"));
+        return 1;
     }
     elsif (index($ua, "Apple-PubSub") > -1) {
         update_map($result, dataset("ApplePubSub"));
@@ -116,6 +120,10 @@ sub challenge_crawlers {
     }
     elsif (index($ua, "(www.radian6.com/crawler)") > -1) {
         update_map($result, dataset("radian6"));
+        return 1;
+    }
+    elsif (index($ua, "Genieo/") > -1) {
+        update_map($result, dataset("Genieo"));
         return 1;
     }
     elsif (index($ua, "labs.topsy.com/butterfly/") > -1) {
@@ -158,7 +166,7 @@ sub challenge_crawlers {
 sub challenge_maybe_crawler {
     my ($ua, $result) = @_;
 
-    if ($ua =~ m{bot(?:[-_ ./;@()]|$)}oi) {
+    if ($ua =~ m{(bot|crawler|spider)(?:[-_ ./;@()]|$)}oi) {
         update_map($result, dataset("VariousCrawler"));
         return 1;
     }

@@ -32,17 +32,19 @@ module Woothee::Misc
 
   def self.challenge_http_library(ua, result)
     data,version = case
-                   when ua =~ /^(?:Apache-HttpClient\/|Jakarta Commons-HttpClient\/|Java\/)/o
+                   when ua =~ /^(?:Apache-HttpClient\/|Jakarta Commons-HttpClient\/|Java\/)/o || ua =~ /[- ]HttpClient(\/|$)/o
+                     [Woothee::DataSet.get('HTTPLibrary'), 'Java']
+                   when ua.index('Java(TM) 2 Runtime Environment,')
                      [Woothee::DataSet.get('HTTPLibrary'), 'Java']
                    when ua =~ /^Wget/o
                      [Woothee::DataSet.get('HTTPLibrary'), 'wget']
                    when ua =~ /^(?:libwww-perl|WWW-Mechanize|LWP::Simple|LWP |lwp-trivial)/o
                      [Woothee::DataSet.get('HTTPLibrary'), 'perl']
-                   when ua =~ /^Python-urllib\//o
+                   when ua =~ /^(?:Ruby|feedzirra|Typhoeus)/o
+                     [Woothee::DataSet.get('HTTPLibrary'), 'ruby']
+                   when ua =~ /^(Python-urllib\/|Twisted )/o
                      [Woothee::DataSet.get('HTTPLibrary'), 'python']
-                   when ua =~ /^(:?PHP\/|WordPress\/|CakePHP|PukiWiki\/)/o
-                     [Woothee::DataSet.get('HTTPLibrary'), 'php']
-                   when ua.index('PEAR HTTP_Request class;')
+                   when ua =~ /^(?:PHP|WordPress|CakePHP|PukiWiki|PECL::HTTP)(?:\/| |$)/o || ua =~ /(?:PEAR |)HTTP_Request(?: class|2)/o
                      [Woothee::DataSet.get('HTTPLibrary'), 'php']
                    else [nil,nil]
                    end
@@ -54,7 +56,9 @@ module Woothee::Misc
   end
 
   def self.challenge_maybe_rss_reader(ua, result)
-    data = if ua =~ /rss(?:reader|bar|[-_ \/;()])/oi
+    data = if ua =~ /rss(?:reader|bar|[-_ \/;()]|[ +]*\/)/oi || ua =~ /headline-reader/oi
+             Woothee::DataSet.get('VariousRSSReader')
+           elsif ua.index('cococ/')
              Woothee::DataSet.get('VariousRSSReader')
            else
              nil

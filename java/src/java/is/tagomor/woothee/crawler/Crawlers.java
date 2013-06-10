@@ -60,9 +60,13 @@ public class Crawlers extends AgentCategory {
     }
     else if (ua.indexOf("ichiro") > -1) {
       if (ua.indexOf("http://help.goo.ne.jp/door/crawler.html") > -1 || ua.indexOf("compatible; ichiro/mobile goo;") > -1) {
-        updateMap(result, DataSet.get("gooIchiro"));
+        updateMap(result, DataSet.get("goo"));
         return true;
       }
+    }
+    else if (ua.indexOf("gooblogsearch/") > -1) {
+        updateMap(result, DataSet.get("goo"));
+        return true;
     }
     else if (ua.indexOf("Apple-PubSub") > -1) {
       updateMap(result, DataSet.get("ApplePubSub"));
@@ -71,6 +75,10 @@ public class Crawlers extends AgentCategory {
     else if (ua.indexOf("(www.radian6.com/crawler)") > -1) {
       updateMap(result, DataSet.get("radian6"));
       return true;
+    }
+    else if (ua.indexOf("Genieo/") > -1) {
+        updateMap(result, DataSet.get("Genieo"));
+        return true;
     }
     else if (ua.indexOf("labs.topsy.com/butterfly/") > -1) {
       updateMap(result, DataSet.get("topsyButterfly"));

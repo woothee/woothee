@@ -7,7 +7,7 @@ use Carp;
 use Woothee::Util qw/update_map update_category update_version update_os/;
 use Woothee::DataSet qw/dataset/;
 
-our $VERSION = "0.3.1";
+our $VERSION = "0.3.2";
 
 sub challenge_desktoptools {
     my ($ua, $result) = @_;
@@ -49,7 +49,11 @@ sub challenge_http_library {
     my $data;
     my $version;
 
-    if ($ua =~ m{^(?:Apache-HttpClient/|Jakarta Commons-HttpClient/|Java/)}o) {
+    if ($ua =~ m{^(?:Apache-HttpClient/|Jakarta Commons-HttpClient/|Java/)}o || $ua =~ m{[- ]HttpClient(/|$)}o) {
+        $data = dataset("HTTPLibrary");
+        $version = "Java";
+    }
+    elsif (index($ua, "Java(TM) 2 Runtime Environment,") > -1) {
         $data = dataset("HTTPLibrary");
         $version = "Java";
     }
@@ -61,11 +65,17 @@ sub challenge_http_library {
         $data = dataset("HTTPLibrary");
         $version = "perl";
     }
-    elsif ($ua =~ m{^Python-urllib/}o) {
+    elsif ($ua =~ m{^(?:Ruby|feedzirra|Typhoeus)}o) {
+        # for feedzirra, see http://github.com/pauldix/feedzirra/tree/master
+        # for Typhoeus, see https://github.com/typhoeus/typhoeus
+        $data = dataset("HTTPLibrary");
+        $version = "ruby";
+    }
+    elsif ($ua =~ m{^(?:Python-urllib/|Twisted )}o) {
         $data = dataset("HTTPLibrary");
         $version = "python";
     }
-    elsif ($ua =~ m{^(:?PHP/|WordPress/|CakePHP|PukiWiki/)}o or index($ua, "PEAR HTTP_Request class;") > -1) {
+    elsif ($ua =~ m{^(?:PHP|WordPress|CakePHP|PukiWiki|PECL::HTTP)(?:/| |$)}o || $ua =~ m{(?:PEAR |)HTTP_Request(?: class|2)}o) {
         $data = dataset("HTTPLibrary");
         $version = "php";
     }
@@ -82,7 +92,10 @@ sub challenge_maybe_rss_reader {
 
     my $data;
 
-    if ($ua =~ m{rss(?:reader|bar|[-_ /;()])}oi) {
+    if ($ua =~ m{rss(?:reader|bar|[-_ /;()]|[ +]*/)}oi || $ua =~ m{headline-reader}oi) {
+        $data = dataset("VariousRSSReader");
+    }
+    elsif (index($ua, "cococ/") > -1) {
         $data = dataset("VariousRSSReader");
     }
 

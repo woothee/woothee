@@ -33,7 +33,7 @@ end
 
 module Woothee::DataSet
   DATASET = {}
-  # GENERATED from dataset.yaml at Thu Jan 31 19:26:55 JST 2013 by tagomoris
+  # GENERATED from dataset.yaml at Mon Jun 10 18:14:36 JST 2013 by tagomoris
   obj = {:label => 'MSIE', :name => 'Internet Explorer', :type => :browser}
   obj[:vendor] = 'Microsoft'
   DATASET[obj[:label]] = obj
@@ -265,6 +265,9 @@ module Woothee::DataSet
   obj = {:label => 'ApplePubSub', :name => 'Apple iCloud', :type => :full}
   obj[:category] = :crawler
   DATASET[obj[:label]] = obj
+  obj = {:label => 'Genieo', :name => 'Genieo Web Filter', :type => :full}
+  obj[:category] = :crawler
+  DATASET[obj[:label]] = obj
   obj = {:label => 'topsyButterfly', :name => 'topsy Butterfly', :type => :full}
   obj[:category] = :crawler
   DATASET[obj[:label]] = obj
@@ -280,7 +283,7 @@ module Woothee::DataSet
   obj = {:label => 'Hatena', :name => 'Hatena', :type => :full}
   obj[:category] = :crawler
   DATASET[obj[:label]] = obj
-  obj = {:label => 'gooIchiro', :name => 'goo', :type => :full}
+  obj = {:label => 'goo', :name => 'goo', :type => :full}
   obj[:category] = :crawler
   DATASET[obj[:label]] = obj
   obj = {:label => 'livedoorFeedFetcher', :name => 'livedoor FeedFetcher', :type => :full}

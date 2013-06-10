@@ -9,6 +9,9 @@ import is.tagomor.woothee.AgentCategory;
 import is.tagomor.woothee.DataSet;
 
 public class HTTPLibrary extends AgentCategory {
+  private static Pattern httpclientPattern = Pattern.compile("[- ]HttpClient(/|$)");
+  private static Pattern pearPattern = Pattern.compile("(?:PEAR |)HTTP_Request(?: class|2)");
+
   public static boolean challenge(final String ua, final Map<String,String> result) {
     Map<String,String> data = null;
     String version = null;
@@ -16,6 +19,14 @@ public class HTTPLibrary extends AgentCategory {
     if (ua.startsWith("Apache-HttpClient/") ||
         ua.startsWith("Jakarta Commons-HttpClient/") ||
         ua.startsWith("Java/")) {
+      data = DataSet.get("HTTPLibrary");
+      version = "Java";
+    }
+    else if (httpclientPattern.matcher(ua).find()) {
+      data = DataSet.get("HTTPLibrary");
+      version = "Java";
+    }
+    else if (ua.indexOf("Java(TM) 2 Runtime Environment,") > -1) {
       data = DataSet.get("HTTPLibrary");
       version = "Java";
     }
@@ -31,15 +42,23 @@ public class HTTPLibrary extends AgentCategory {
       data = DataSet.get("HTTPLibrary");
       version = "perl";
     }
-    else if (ua.startsWith("Python-urllib/")) {
+    else if (ua.startsWith("Ruby") ||
+             ua.startsWith("feedzirra") ||
+             ua.startsWith("Typhoeus")) {
+      data = DataSet.get("HTTPLibrary");
+      version = "ruby";
+    }
+    else if (ua.startsWith("Python-urllib/") ||
+             ua.startsWith("Twisted ")) {
       data = DataSet.get("HTTPLibrary");
       version = "python";
     }
-    else if (ua.startsWith("PHP/") ||
+    else if (ua.startsWith("PHP") ||
              ua.startsWith("WordPress/") ||
              ua.startsWith("CakePHP") ||
              ua.startsWith("PukiWiki/") ||
-             ua.indexOf("PEAR HTTP_Request class;") > -1) {
+             ua.startsWith("PECL::HTTP") ||
+             pearPattern.matcher(ua).find()) {
       data = DataSet.get("HTTPLibrary");
       version = "php";
     }
