@@ -51,7 +51,7 @@ sub const {
 
 my $DATASET = {};
 {
-    # GENERATED from dataset.yaml at Fri Jun  7 16:09:18 JST 2013 by tagomoris
+    # GENERATED from dataset.yaml at Mon Sep  2 19:47:29 JST 2013 by tagomoris
     my $obj;
     $obj = {label => 'MSIE', name => 'Internet Explorer', type => 'browser'};
     $obj->{vendor} = 'Microsoft';
@@ -74,6 +74,9 @@ my $DATASET = {};
     $obj = {label => 'Win', name => 'Windows UNKNOWN Ver', type => 'os'};
     $obj->{category} = 'pc';
     $DATASET->{'Win'} = $obj;
+    $obj = {label => 'Win8.1', name => 'Windows 8.1', type => 'os'};
+    $obj->{category} = 'pc';
+    $DATASET->{'Win8.1'} = $obj;
     $obj = {label => 'Win8', name => 'Windows 8', type => 'os'};
     $obj->{category} = 'pc';
     $DATASET->{'Win8'} = $obj;

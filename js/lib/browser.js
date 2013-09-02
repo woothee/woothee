@@ -8,13 +8,14 @@ var util = require('./util'),
 /* HEADER END */
 
 var msiePattern = /MSIE ([.0-9]+);/;
+var tridentPattern = /Trident\/[.0-9]+; rv ([.0-9]+)/;
 var challengeMSIE = exports.challengeMSIE = function(ua, result) {
-  if (ua.indexOf('compatible; MSIE') < 0)
+  if (ua.indexOf('compatible; MSIE') < 0 && ua.indexOf('Trident/') < 0)
     return false;
 
   var version;
-  var match = msiePattern.exec(ua);
-  if (match)
+  var match;
+  if ((match = msiePattern.exec(ua)) || (match = tridentPattern.exec(ua)))
     version = match[1];
   else
     version = dataset.VALUE_UNKNOWN;

@@ -33,7 +33,7 @@ var ATTRIBUTE_LIST = exports.ATTRIBUTE_LIST = [ATTRIBUTE_NAME, ATTRIBUTE_CATEGOR
 
 var DATASET = {};
 
-// GENERATED from dataset.yaml at Fri Jun  7 19:04:57 JST 2013 by tagomoris
+// GENERATED from dataset.yaml at Mon Sep  2 19:53:25 JST 2013 by tagomoris
 var obj;
 obj = {label:'MSIE', name:'Internet Explorer', type:'browser'};
 obj['vendor'] = 'Microsoft';
@@ -54,6 +54,9 @@ obj = {label:'Sleipnir', name:'Sleipnir', type:'browser'};
 obj['vendor'] = 'Fenrir Inc.';
 DATASET[obj.label] = obj;
 obj = {label:'Win', name:'Windows UNKNOWN Ver', type:'os'};
+obj['category'] = 'pc';
+DATASET[obj.label] = obj;
+obj = {label:'Win8.1', name:'Windows 8.1', type:'os'};
 obj['category'] = 'pc';
 DATASET[obj.label] = obj;
 obj = {label:'Win8', name:'Windows 8', type:'os'};

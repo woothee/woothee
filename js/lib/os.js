@@ -22,7 +22,8 @@ var challengeWindows = exports.challengeWindows = function(ua, result) {
     return true;
   }
   var version = match[1];
-  if (version === 'NT 6.2') data = dataset.get('Win8'); // "NT 6.2; ARM;" means Windows RT, oh....
+  if (version === 'NT 6.3') data = dataset.get('Win8.1'); 
+  else if (version === 'NT 6.2') data = dataset.get('Win8'); // "NT 6.2; ARM;" means Windows RT, oh....
   else if (version === 'NT 6.1') data = dataset.get('Win7');
   else if (version === 'NT 6.0') data = dataset.get('WinVista');
   else if (version === 'NT 5.1') data = dataset.get('WinXP');

@@ -33,7 +33,7 @@ end
 
 module Woothee::DataSet
   DATASET = {}
-  # GENERATED from dataset.yaml at Mon Jun 10 18:14:36 JST 2013 by tagomoris
+  # GENERATED from dataset.yaml at Mon Sep  2 19:55:04 JST 2013 by tagomoris
   obj = {:label => 'MSIE', :name => 'Internet Explorer', :type => :browser}
   obj[:vendor] = 'Microsoft'
   DATASET[obj[:label]] = obj
@@ -53,6 +53,9 @@ module Woothee::DataSet
   obj[:vendor] = 'Fenrir Inc.'
   DATASET[obj[:label]] = obj
   obj = {:label => 'Win', :name => 'Windows UNKNOWN Ver', :type => :os}
+  obj[:category] = :pc
+  DATASET[obj[:label]] = obj
+  obj = {:label => 'Win8.1', :name => 'Windows 8.1', :type => :os}
   obj[:category] = :pc
   DATASET[obj[:label]] = obj
   obj = {:label => 'Win8', :name => 'Windows 8', :type => :os}

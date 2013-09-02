@@ -33,6 +33,11 @@
   type: os
   category: pc
 
+- label: Win8.1
+  name: Windows 8.1
+  type: os
+  category: pc
+
 - label: Win8
   name: Windows 8
   type: os

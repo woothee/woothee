@@ -7,10 +7,12 @@ module Woothee::Browser
   extend Woothee::Util
 
   def self.challenge_msie(ua, result)
-    return false if ua.index("compatible; MSIE").nil?
+    return false if ua.index("compatible; MSIE").nil? && ua.index("Trident/").nil?
 
     version = if ua =~ /MSIE ([.0-9]+);/o
                 $1
+              elsif ua =~ /Trident\/([.0-9]+); rv ([.0-9]+)/o
+                $2
               else
                 Woothee::VALUE_UNKNOWN
               end

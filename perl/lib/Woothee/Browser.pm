@@ -7,18 +7,19 @@ use Carp;
 use Woothee::Util qw/update_map update_category update_version update_os/;
 use Woothee::DataSet qw/dataset/;
 
-our $VERSION = "0.3.1";
+our $VERSION = "0.3.3";
 
 sub challenge_msie {
     my ($ua,$result) = @_;
 
-    return 0 if index($ua, "compatible; MSIE") < 0;
+    return 0 if index($ua, "compatible; MSIE") < 0 and index($ua, "Trident/") < 0;
 
     my $version;
     if ($ua =~ m{MSIE ([.0-9]+);}o) {
         $version = $1;
-    }
-    else {
+    } elsif ($ua =~ m{Trident/([.0-9]+); rv ([.0-9]+)}o) {
+        $version = $2;
+    } else {
         $version = Woothee::DataSet->const('VALUE_UNKNOWN');
     }
     update_map($result, dataset('MSIE'));

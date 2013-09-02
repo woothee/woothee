@@ -7,7 +7,7 @@ use Carp;
 use Woothee::Util qw/update_map update_category update_version update_os/;
 use Woothee::DataSet qw/dataset/;
 
-our $VERSION = "0.3.1";
+our $VERSION = "0.3.3";
 
 sub challenge_windows {
     my ($ua, $result) = @_;
@@ -24,7 +24,8 @@ sub challenge_windows {
     }
 
     my $version = $1;
-    if ($version eq "NT 6.2") { $data = dataset("Win8"); }
+    if ($version eq "NT 6.3") { $data = dataset("Win8.1"); }
+    elsif ($version eq "NT 6.2") { $data = dataset("Win8"); }
     elsif ($version eq "NT 6.1") { $data = dataset("Win7"); }
     elsif ($version eq "NT 6.0") { $data = dataset("WinVista"); }
     elsif ($version eq "NT 5.1") { $data = dataset("WinXP"); }
