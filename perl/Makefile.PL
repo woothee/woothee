@@ -12,6 +12,4 @@ test_requires 'File::Spec';
 test_requires 'Path::Class';
 test_requires 'Time::HiRes';
 
-auto_set_repository;
-
 WriteAll;
