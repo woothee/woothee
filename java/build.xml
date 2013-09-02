@@ -57,10 +57,10 @@
            encoding="UTF-8">
       <classpath>
         <pathelement path="${classpath}" />
-        <fileset dir="../tmp/hadoop-1.0.0">
+        <fileset dir="${user.home}/tmp/hadoop-1.2.1">
           <include name="**/*.jar" />
         </fileset>
-        <fileset dir="../tmp/hive-0.8.0/lib/">
+        <fileset dir="${user.home}/tmp/hive-0.10.0/lib/">
           <include name="**/*.jar" />
         </fileset>
         <fileset dir="lib">
@@ -89,8 +89,8 @@
     <mkdir dir="${dir.build.testresults}" />
     <junit fork="true"
            forkmode="once"
-           haltonfailure="false"
-           haltonerror="false"
+           haltonfailure="true"
+           haltonerror="true"
            failureproperty="tests.failures"
            errorproperty="tests.errors"
            includeantruntime="true"
