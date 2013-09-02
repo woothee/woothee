@@ -1,0 +1,7 @@
+language: perl
+perl:
+  - "5.18"
+before_script:
+  - cpanm YAML
+script:
+  - make test
