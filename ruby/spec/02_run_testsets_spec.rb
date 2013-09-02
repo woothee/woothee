@@ -22,7 +22,6 @@ TARGETS = [
           ]
 
 describe Woothee do
-  
   TARGETS.each do |filename,groupname|
     YAML.load_file(TESTSET_DIR + filename).each do |e|
       r = Woothee.parse(e['target'])
@@ -35,5 +34,4 @@ describe Woothee do
       end
     end
   end
-
 end

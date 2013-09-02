@@ -6,13 +6,13 @@ require 'woothee/dataset'
 
 describe Woothee::DataSet do
   it "contains constants" do
-    lambda { Woothee::ATTRIBUTE_NAME }.should_not raise_error(NameError)
+    lambda { Woothee::ATTRIBUTE_NAME }.should_not raise_error()
     Woothee::ATTRIBUTE_NAME.should eql(:name)
   end
 
   it "contains list of categories/attributes" do
-    lambda { Woothee::ATTRIBUTE_LIST }.should_not raise_error(NameError)
-    lambda { Woothee::CATEGORY_LIST }.should_not raise_error(NameError)
+    lambda { Woothee::ATTRIBUTE_LIST }.should_not raise_error()
+    lambda { Woothee::CATEGORY_LIST }.should_not raise_error()
     Woothee::ATTRIBUTE_LIST.should eql([
         Woothee::ATTRIBUTE_NAME, Woothee::ATTRIBUTE_CATEGORY, Woothee::ATTRIBUTE_OS,
         Woothee::ATTRIBUTE_VENDOR, Woothee::ATTRIBUTE_VERSION,

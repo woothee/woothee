@@ -7,7 +7,7 @@ end
 
 describe Woothee do
   it "should be read from each modules correctly" do
-    lambda { require 'woothee/dataset' }.should_not raise_error(LoadError)
-    lambda { require 'woothee' }.should_not raise_error(LoadError)
+    expect { require 'woothee/dataset' }.not_to raise_error()
+    expect { require 'woothee' }.not_to raise_error()
   end
 end
