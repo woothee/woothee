@@ -2,7 +2,7 @@
   var root = this;
   // embed: dataset, util, browser, mobilephone, crawler, appliance, misc, woothee
 
-// GENERATED at Thu Jun  6 17:29:07 JST 2013 by tagomoris
+// GENERATED at Mon Sep  2 20:00:02 JST 2013 by tagomoris
   var dataset = {};
   (function(){
     var exports = dataset;
@@ -42,7 +42,7 @@
     
     var DATASET = {};
     
-    // GENERATED from dataset.yaml at Thu Jan 31 19:33:03 JST 2013 by tagomoris
+    // GENERATED from dataset.yaml at Mon Sep  2 19:53:25 JST 2013 by tagomoris
     var obj;
     obj = {label:'MSIE', name:'Internet Explorer', type:'browser'};
     obj['vendor'] = 'Microsoft';
@@ -63,6 +63,9 @@
     obj['vendor'] = 'Fenrir Inc.';
     DATASET[obj.label] = obj;
     obj = {label:'Win', name:'Windows UNKNOWN Ver', type:'os'};
+    obj['category'] = 'pc';
+    DATASET[obj.label] = obj;
+    obj = {label:'Win8.1', name:'Windows 8.1', type:'os'};
     obj['category'] = 'pc';
     DATASET[obj.label] = obj;
     obj = {label:'Win8', name:'Windows 8', type:'os'};
@@ -300,6 +303,10 @@
     obj['vendor'] = '';
     obj['category'] = 'crawler';
     DATASET[obj.label] = obj;
+    obj = {label:'Genieo', name:'Genieo Web Filter', type:'full'};
+    obj['vendor'] = '';
+    obj['category'] = 'crawler';
+    DATASET[obj.label] = obj;
     obj = {label:'topsyButterfly', name:'topsy Butterfly', type:'full'};
     obj['vendor'] = '';
     obj['category'] = 'crawler';
@@ -320,7 +327,7 @@
     obj['vendor'] = '';
     obj['category'] = 'crawler';
     DATASET[obj.label] = obj;
-    obj = {label:'gooIchiro', name:'goo', type:'full'};
+    obj = {label:'goo', name:'goo', type:'full'};
     obj['vendor'] = '';
     obj['category'] = 'crawler';
     DATASET[obj.label] = obj;
@@ -371,13 +378,14 @@
     /* CODE: browser.js */
     
     var msiePattern = /MSIE ([.0-9]+);/;
+    var tridentPattern = /Trident\/[.0-9]+; rv ([.0-9]+)/;
     var challengeMSIE = exports.challengeMSIE = function(ua, result) {
-      if (ua.indexOf('compatible; MSIE') < 0)
+      if (ua.indexOf('compatible; MSIE') < 0 && ua.indexOf('Trident/') < 0)
         return false;
     
       var version;
-      var match = msiePattern.exec(ua);
-      if (match)
+      var match;
+      if ((match = msiePattern.exec(ua)) || (match = tridentPattern.exec(ua)))
         version = match[1];
       else
         version = dataset.VALUE_UNKNOWN;
@@ -490,7 +498,8 @@
         return true;
       }
       var version = match[1];
-      if (version === 'NT 6.2') data = dataset.get('Win8'); // "NT 6.2; ARM;" means Windows RT, oh....
+      if (version === 'NT 6.3') data = dataset.get('Win8.1'); 
+      else if (version === 'NT 6.2') data = dataset.get('Win8'); // "NT 6.2; ARM;" means Windows RT, oh....
       else if (version === 'NT 6.1') data = dataset.get('Win7');
       else if (version === 'NT 6.0') data = dataset.get('WinVista');
       else if (version === 'NT 5.1') data = dataset.get('WinXP');
@@ -826,9 +835,13 @@
       if (ua.indexOf('ichiro') >= 0) {
         if (ua.indexOf('http://help.goo.ne.jp/door/crawler.html') >= 0 ||
             ua.indexOf('compatible; ichiro/mobile goo;') >= 0) {
-          updateMap(result, dataset.get('gooIchiro'));
+          updateMap(result, dataset.get('goo'));
           return true;
         }
+      }
+      if (ua.indexOf('gooblogsearch/') >= 0) {
+        updateMap(result, dataset.get('goo'));
+        return true;
       }
       if (ua.indexOf('Apple-PubSub') >= 0) {
         updateMap(result, dataset.get('ApplePubSub'));
@@ -836,6 +849,10 @@
       }
       if (ua.indexOf('(www.radian6.com/crawler)') >= 0) {
         updateMap(result, dataset.get('radian6'));
+        return true;
+      }
+      if (ua.indexOf('Genieo/') >= 0) {
+        updateMap(result, dataset.get('Genieo'));
         return true;
       }
       if (ua.indexOf('labs.topsy.com/butterfly/') >= 0) {
@@ -879,7 +896,7 @@
     };
     
     var challengeMaybeCrawler = exports.challengeMaybeCrawler = function(ua, result) {
-      if (/bot(?:[-_ .\/;@()]|$)/i.exec(ua)) {
+      if (/(bot|crawler|spider)(?:[-_ .\/;@()]|$)/i.exec(ua)) {
         updateMap(result, dataset.get('VariousCrawler'));
         return true;
       }
@@ -975,15 +992,19 @@
     
     var challengeHTTPLibrary = exports.challengeHTTPLibrary = function(ua, result){
       var data,version;
-      if (/^(?:Apache-HttpClient\/|Jakarta Commons-HttpClient\/|Java\/)/.exec(ua)) {
+      if (/^(?:Apache-HttpClient\/|Jakarta Commons-HttpClient\/|Java\/)/.exec(ua) || /[- ]HttpClient(\/|$)/.exec(ua)) {
+        data = dataset.get('HTTPLibrary'); version = 'Java';
+      } else if (ua.indexOf('Java(TM) 2 Runtime Environment,') >= 0) {
         data = dataset.get('HTTPLibrary'); version = 'Java';
       } else if (/^Wget/.exec(ua)) {
         data = dataset.get('HTTPLibrary'); version = 'wget';
       } else if (/^(?:libwww-perl|WWW-Mechanize|LWP::Simple|LWP |lwp-trivial)/.exec(ua)) {
         data = dataset.get('HTTPLibrary'); version = 'perl';
-      } else if (/^Python-urllib\//.exec(ua)) {
+      } else if (/^(?:Ruby|feedzirra|Typhoeus)/.exec(ua)) {
+        data = dataset.get('HTTPLibrary'); version = 'ruby';
+      } else if (/^(?:Python-urllib\/|Twisted )/.exec(ua)) {
         data = dataset.get('HTTPLibrary'); version = 'python';
-      } else if (/^(:?PHP\/|WordPress\/|CakePHP|PukiWiki\/)/.exec(ua)) {
+      } else if (/^(:?PHP|WordPress|CakePHP|PukiWiki|PECL::HTTP)(?:\/| |$)/.exec(ua) || /(?:PEAR |)HTTP_Request(?: class|2)/.exec(ua)) {
         data = dataset.get('HTTPLibrary'); version = 'php';
       } else if (ua.indexOf('PEAR HTTP_Request class;') >= 0) {
         data = dataset.get('HTTPLibrary'); version = 'php';
@@ -999,7 +1020,13 @@
     
     var challengeMaybeRSSReader = exports.challengeMaybeRSSReader = function(ua, result){
       var data = null;
-      if (/rss(?:reader|bar|[-_ \/;()])/i.exec(ua)) data = dataset.get('VariousRSSReader');
+      if (/rss(?:reader|bar|[-_ \/;()]|[ +]*\/)/i.exec(ua) || /headline-reader/i.exec(ua)) {
+        data = dataset.get('VariousRSSReader');
+      }
+      else {
+        if (ua.indexOf('cococ/') >= 0)
+          data = dataset.get('VariousRSSReader');
+      }
     
       if (! data)
         return false;
