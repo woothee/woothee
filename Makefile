@@ -1,4 +1,4 @@
-test: java perl ruby js python
+test: perl ruby js python java
 
 java:
 	cd java && ant test
