@@ -1,19 +1,21 @@
 TESTS=test/*.js
 
-all: build
+all: test
 
 lib/dataset.js: ../dataset.yaml
 	perl ../bin/dataset_yaml2js.pl
 	sync; sync; sync
 
-test: lib/dataset.js
+release/woothee.js: lib/*.js
+	mkdir release || ls -d release
+	perl ../bin/jsbuilder.pl
+
+test: lib/dataset.js build
 	@NODE_ENV=test ./node_modules/.bin/mocha \
 		--require should \
 		--slow 20 \
 		$(TESTS)
 
-build: test
-	mkdir release || ls -d release
-	perl ../bin/jsbuilder.pl
+build: release/woothee.js
 
 .PHONY: test

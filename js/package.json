@@ -1,6 +1,6 @@
 {
   "name": "woothee",
-  "version": "0.3.4a",
+  "version": "0.3.4c",
   "description": "User-Agent string parser (js implementation)",
   "main": "./release/woothee",
   "devDependencies": {
