@@ -78,6 +78,14 @@ var challengeSmartPhone = exports.challengeSmartPhone = function(ua, result) {
   else if (ua.indexOf('CFNetwork') >= 0) data = dataset.get('iOS');
   else if (ua.indexOf('BlackBerry') >= 0) data = dataset.get('BlackBerry');
 
+  if (result[dataset.KEY_NAME] && result[dataset.KEY_NAME] === dataset.get('Firefox')[dataset.KEY_NAME]) {
+    // Firefox OS specific pattern
+    // http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/
+    if (/^Mozilla\/[.0-9]+ \(Mobile;(.*;)? rv:[.0-9]+\) Gecko\/[.0-9]+ Firefox\/[.0-9]+$/.exec(ua)) {
+      data = dataset.get('FirefoxOS');
+    }
+  }
+
   if (!data)
     return false;
 

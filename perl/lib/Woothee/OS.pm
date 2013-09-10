@@ -97,6 +97,15 @@ sub challenge_smartphone {
         $data = dataset("BlackBerry");
     }
 
+    if ($result->{Woothee::DataSet->const('KEY_NAME')} and
+            $result->{Woothee::DataSet->const('KEY_NAME')} eq dataset('Firefox')->{Woothee::DataSet->const('KEY_NAME')}) {
+        # Firefox OS specific pattern
+        # http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/
+        if ($ua =~ m!^Mozilla/[.0-9]+ \(Mobile;(.*;)? rv:[.0-9]+\) Gecko/[.0-9]+ Firefox/[.0-9]+$!) {
+            $data = dataset("FirefoxOS");
+        }
+    }
+
     return 0 unless $data;
 
     update_category($result, $data->{Woothee::DataSet->const('KEY_CATEGORY')});

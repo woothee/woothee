@@ -70,6 +70,7 @@ def challenge_linux(ua, result):
   return True
 
 def challenge_smartphone(ua, result):
+  data = None
   if 'iPhone' in ua:
     data = dataset.get('iPhone')
   elif 'iPad' in ua:
@@ -82,8 +83,16 @@ def challenge_smartphone(ua, result):
     data = dataset.get('iOS')
   elif 'BlackBerry' in ua:
     data = dataset.get('BlackBerry')
-  else:
+
+  if dataset.KEY_NAME in result and result[dataset.KEY_NAME] == dataset.get('Firefox')[dataset.KEY_NAME]:
+    # Firefox OS specific pattern
+    # http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/
+    if re.search('^Mozilla/[.0-9]+ \(Mobile;(.*;)? rv:[.0-9]+\) Gecko/[.0-9]+ Firefox/[.0-9]+$', ua):
+      data = dataset.get('FirefoxOS')
+
+  if not data:
     return False
+
   util.update_category(result, data[dataset.KEY_CATEGORY])
   util.update_os(result, data[dataset.KEY_NAME])
   return True

@@ -26,6 +26,20 @@
   os: Android
   category: smartphone
 
+# Firefox + Android
+- target: 'Mozilla/5.0 (Android; Mobile; rv:14.0) Gecko/14.0 Firefox/14.0'
+  name: Firefox
+  version: '14.0'
+  os: Android
+  category: smartphone
+
+# Firefox + Android(Tablet)
+- target: 'Mozilla/5.0 (Android; Tablet; rv:14.0) Gecko/14.0 Firefox/14.0'
+  name: Firefox
+  version: '14.0'
+  os: Android
+  category: smartphone
+
 # UNKNOWN: Dalvik(jvm) agent
 - target: 'Dalvik/1.4.0 (Linux; U; Android 2.3.4; SBM009SH Build/S0008)'
   name: UNKNOWN

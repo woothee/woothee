@@ -33,7 +33,7 @@ var ATTRIBUTE_LIST = exports.ATTRIBUTE_LIST = [ATTRIBUTE_NAME, ATTRIBUTE_CATEGOR
 
 var DATASET = {};
 
-// GENERATED from dataset.yaml at Mon Sep  2 19:53:25 JST 2013 by tagomoris
+// GENERATED from dataset.yaml at Tue Sep 10 14:45:26 JST 2013 by tagomoris
 var obj;
 obj = {label:'MSIE', name:'Internet Explorer', type:'browser'};
 obj['vendor'] = 'Microsoft';
@@ -117,6 +117,9 @@ obj = {label:'iPod', name:'iPod', type:'os'};
 obj['category'] = 'smartphone';
 DATASET[obj.label] = obj;
 obj = {label:'iOS', name:'iOS', type:'os'};
+obj['category'] = 'smartphone';
+DATASET[obj.label] = obj;
+obj = {label:'FirefoxOS', name:'Firefox OS', type:'os'};
 obj['category'] = 'smartphone';
 DATASET[obj.label] = obj;
 obj = {label:'BlackBerry', name:'BlackBerry', type:'os'};

@@ -138,6 +138,11 @@
   type: os
   category: smartphone
 
+- label: FirefoxOS
+  name: Firefox OS
+  type: os
+  category: smartphone
+
 - label: BlackBerry
   name: BlackBerry
   type: os
