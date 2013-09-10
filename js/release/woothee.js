@@ -2,7 +2,7 @@
   var root = this;
   // embed: dataset, util, browser, mobilephone, crawler, appliance, misc, woothee
 
-// GENERATED at Mon Sep  2 20:00:02 JST 2013 by tagomoris
+// GENERATED at Tue Sep 10 15:33:22 JST 2013 by tagomoris
   var dataset = {};
   (function(){
     var exports = dataset;
@@ -42,7 +42,7 @@
     
     var DATASET = {};
     
-    // GENERATED from dataset.yaml at Mon Sep  2 19:53:25 JST 2013 by tagomoris
+    // GENERATED from dataset.yaml at Tue Sep 10 14:45:26 JST 2013 by tagomoris
     var obj;
     obj = {label:'MSIE', name:'Internet Explorer', type:'browser'};
     obj['vendor'] = 'Microsoft';
@@ -126,6 +126,9 @@
     obj['category'] = 'smartphone';
     DATASET[obj.label] = obj;
     obj = {label:'iOS', name:'iOS', type:'os'};
+    obj['category'] = 'smartphone';
+    DATASET[obj.label] = obj;
+    obj = {label:'FirefoxOS', name:'Firefox OS', type:'os'};
     obj['category'] = 'smartphone';
     DATASET[obj.label] = obj;
     obj = {label:'BlackBerry', name:'BlackBerry', type:'os'};
@@ -553,6 +556,14 @@
       else if (ua.indexOf('Android') >= 0) data = dataset.get('Android');
       else if (ua.indexOf('CFNetwork') >= 0) data = dataset.get('iOS');
       else if (ua.indexOf('BlackBerry') >= 0) data = dataset.get('BlackBerry');
+    
+      if (result[dataset.KEY_NAME] && result[dataset.KEY_NAME] === dataset.get('Firefox')[dataset.KEY_NAME]) {
+        // Firefox OS specific pattern
+        // http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/
+        if (/^Mozilla\/[.0-9]+ \(Mobile;(.*;)? rv:[.0-9]+\) Gecko\/[.0-9]+ Firefox\/[.0-9]+$/.exec(ua)) {
+          data = dataset.get('FirefoxOS');
+        }
+      }
     
       if (!data)
         return false;
