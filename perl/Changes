@@ -1,5 +1,8 @@
 Revision history for Perl module Woothee
 
+0.3.4 Tue Sep 10 15:25:33 JST 2013
+   - add Firefox OS
+
 0.3.3  Mon Sep  2 20:12:34 JST 2013
    - add MSIE11 and Windows 8.1
 
