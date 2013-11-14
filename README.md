@@ -16,6 +16,24 @@ Implemantations:
   * Python
   * Javascript (Node.js or browser)
 
+## Versions
+
+* v0.3.4 (CURRENT)
+
+## Implementations
+
+* Java (and Hive UDF)
+  * https://github.com/woothee/woothee-java
+* Perl
+  * https://github.com/woothee/woothee-perl
+* Ruby
+  * https://github.com/woothee/woothee-ruby
+* Python
+  * https://github.com/woothee/woothee-python
+* Javascript (Node.js or browser)
+  * https://github.com/woothee/woothee-js
+
+
 ## SYNOPSIS
 in Java: (use java/woothee.jar)
 
@@ -25,7 +43,7 @@ in Java: (use java/woothee.jar)
 Map r = Classifier.parse("user agent string");
     
 r.get("name")
-// => name of browser (or string like name of user-agent
+// => name of browser (or string like name of user-agent)
 
 r.get("category")
 // => "pc", "smartphone", "mobilephone", "appliance", "crawler", "misc", "unknown"
@@ -35,6 +53,24 @@ r.get("os")
 
 r.get("version");
 // => version of browser, or terminal type name of mobile phones
+```
+
+in Hive: (copy woothee.jar into your CLASSPATH, and create function)
+```sql
+-- add jar to classpath
+add jar woothee.jar;
+-- create function
+CREATE TEMPORARY FUNCTION parse_agent as 'is.tagomor.woothee.hive.ParseAgent';
+-- count visits of bots
+SELECT parsed_agent('name') AS botname, COUNT(*) AS cnt
+FROM (
+  SELECT parse_agent(user_agent) AS parsed_agent
+  FROM table_name
+  WHERE date='today'
+) x
+WHERE parsed_agent('category') = 'crawler'
+GROUP BY parsed_agent('name')
+ORDER BY cnt DESC LIMIT 1000;
 ```
 
 in Perl: (cpanm Woothee)
@@ -78,54 +114,23 @@ woothee.parse('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)')
 // => {name: 'Internet Explorer', category: 'pc', os: 'Windows 7', version: '8.0', vendor: 'Microsoft'}
 ```
 
-### Hive UDF
-
-    // add woothee.jar to classpath
-    add jar woothee.jar;
-    
-    create temporary function parse_agent as 'is.tagomor.woothee.hive.ParseAgent';
-    create temporary function is_pc as 'is.tagomor.woothee.hive.IsPC';
-    create temporary function is_smartphone as 'is.tagomor.woothee.hive.IsSmartPhone';
-    create temporary function is_mobilephone as 'is.tagomor.woothee.hive.IsMobilePhone';
-    create temporary function is_appliance as 'is.tagomor.woothee.hive.IsAppliance';
-    create temporary function is_crawler as 'is.tagomor.woothee.hive.IsCrawler';
-    create temporary function is_misc as 'is.tagomor.woothee.hive.IsMisc';
-    create temporary function is_unknown as 'is.tagomor.woothee.hive.IsUnknown';
-    create temporary function is_in as 'is.tagomor.woothee.hive.IsIn';
-    create temporary function pc as 'is.tagomor.woothee.hive.PC';
-    create temporary function smartphone as 'is.tagomor.woothee.hive.SmartPhone';
-    create temporary function mobilephone as 'is.tagomor.woothee.hive.MobilePhone';
-    create temporary function appliance as 'is.tagomor.woothee.hive.Appliance';
-    create temporary function crawler as 'is.tagomor.woothee.hive.Crawler';
-    create temporary function misc as 'is.tagomor.woothee.hive.Misc';
-    create temporary function unknown as 'is.tagomor.woothee.hive.Unknown';
-    create temporary function oneof as 'is.tagomor.woothee.hive.OneOf';
-    
-    SELECT
-      count(pc(parsed_agent)) as pc_pageviews,
-      count(oneof(parsed_agent, array('pc', 'mobilephone', 'smartphone', 'appliance'))) as total_pageviews
-    FROM (
-      SELECT parse_agent(useragent) as parsed_agent FROM access_log WHERE date='today'
-    ) x
-    WHERE NOT is_crawler(parsed_agent) AND NOT is_unknown(parsed_agent)
-
 ## Todo
 
+* 'os_version' especially for OS version of iOS/Android
 * 'mobilephone' means Japanese mobile phone groups
   * For multi-region code, domestic pattern specifier (or another mechanism) needed
 
 ## FAQ
 
 * What's Woothee?
-    * http://en.wikipedia.org/wiki/Usui_Pass
-    * http://ja.wikipedia.org/wiki/%E7%A2%93%E6%B0%B7%E5%B3%A0
+  * http://en.wikipedia.org/wiki/Usui_Pass
+  * http://ja.wikipedia.org/wiki/%E7%A2%93%E6%B0%B7%E5%B3%A0
 
 * * * * *
 
 ## Authors
 
 * TAGOMORI Satoshi <tagomoris@gmail.com>
-* UEDA Tetsuhiro (najeira)
 
 ## License
 
