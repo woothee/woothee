@@ -35,6 +35,12 @@
   os: PlayStation 3
   category: appliance
 
+# PlayStation 4
+- target: 'Mozilla/5.0 (PlayStation 4 1.000) AppleWebKit/536.26 (KHTML, like Gecko)'
+  name: PlayStation 4
+  os: PlayStation 4
+  category: appliance
+
 # PSP
 - target: 'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)'
   name: PlayStation Portable
@@ -45,6 +51,18 @@
 - target: 'Mozilla/5.0 (PlayStation Vita 1.51) AppleWebKit/531.22.8 (KHTML, like Gecko) Silk/3.2'
   name: PlayStation Vita
   os: PlayStation Vita
+  category: appliance
+
+# Xbox 360
+- target: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)'
+  name: Xbox 360
+  os: Xbox 360
+  category: appliance
+
+# Xbox One
+- target: 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Xbox; Xbox One)'
+  name: Xbox One
+  os: Xbox One
   category: appliance
 
 # Digital TVs

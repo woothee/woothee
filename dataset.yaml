@@ -249,6 +249,27 @@
   os: PlayStation 3
   category: appliance
 
+- label: PS4
+  name: PlayStation 4
+  type: full
+  vendor: Sony
+  os: PlayStation 4
+  category: appliance
+
+- label: Xbox360
+  name: Xbox 360
+  type: full
+  vendor: Microsoft
+  os: Xbox 360
+  category: appliance
+
+- label: XboxOne
+  name: Xbox One
+  type: full
+  vendor: Microsoft
+  os: Xbox One
+  category: appliance
+
 - label: DigitalTV
   name: InternetTVBrowser
   type: full
