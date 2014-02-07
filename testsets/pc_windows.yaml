@@ -48,7 +48,7 @@
   category: pc
 
 # MSIE11 + Windows 8.1
-- target: 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko'
+- target: 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko'
   name: Internet Explorer
   version: '11.0'
   os: Windows 8.1
