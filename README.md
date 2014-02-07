@@ -18,7 +18,7 @@ Implemantations:
 
 ## Versions
 
-* v0.3.5 (Latest of v0.3.x)
+* v0.3.8 (Latest of v0.3.x)
 
 ## Implementations
 
