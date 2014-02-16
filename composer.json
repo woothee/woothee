@@ -1,0 +1,11 @@
+{
+    "name": "sasezaki/woothee",
+    "description": "User-Agent parser/classifier for multi languages",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "TAGOMORI Satoshi",
+            "email": "tagomoris@gmail.com"
+        }
+    ]
+}
