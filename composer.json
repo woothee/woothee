@@ -1,6 +1,6 @@
 {
     "name": "woothee/woothee-testset",
-    "description": "it is test set",
+    "description": "Set of test case for woothee project. Project Woothee is multi-language user-agent strings parsers.",
     "license": "Apache-2.0",
     "authors": [
         {
