@@ -26,6 +26,13 @@
   os: Mac OSX
   category: pc
 
+# Opera (webkit) + OSX
+- target: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36 OPR/20.0.1387.82'
+  name: Opera
+  version: '20.0.1387.82'
+  os: Mac OSX
+  category: pc
+
 # Instapaper + OSX
 - target: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Instapaper/4.0 (+http://www.instapaper.com/)'
   name: UNKNOWN

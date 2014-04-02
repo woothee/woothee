@@ -26,6 +26,13 @@
   os: Android
   category: smartphone
 
+# Opera (webkit) + Android
+- target: 'Mozilla/5.0 (Linux; Android 4.2.2; SO-01F Build/14.1.H.1.281) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.166 Mobile Safari/537.36 OPR/20.0.1396.73172'
+  name: Opera
+  version: '20.0.1396.73172'
+  os: Android
+  category: smartphone
+
 # Firefox + Android
 - target: 'Mozilla/5.0 (Android; Mobile; rv:14.0) Gecko/14.0 Firefox/14.0'
   name: Firefox
