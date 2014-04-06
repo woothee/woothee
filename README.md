@@ -16,10 +16,11 @@ Implemantations:
   * Python
   * Javascript (Node.js or browser)
   * PHP
+  * Go
 
 ## Versions
 
-* v0.3.8 (Latest of v0.3.x)
+* v0.4.0 (Latest of 0.4.x)
 
 ## Implementations
 
@@ -35,6 +36,8 @@ Implemantations:
   * https://github.com/woothee/woothee-js
 * PHP
   * https://github.com/woothee/woothee-php
+* Golang
+  * https://github.com/woothee/woothee-go
 
 
 ## SYNOPSIS
