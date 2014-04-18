@@ -68,14 +68,14 @@ add jar woothee.jar;
 -- create function
 CREATE TEMPORARY FUNCTION parse_agent as 'is.tagomor.woothee.hive.ParseAgent';
 -- count visits of bots
-SELECT parsed_agent('name') AS botname, COUNT(*) AS cnt
+SELECT parsed_agent['name'] AS botname, COUNT(*) AS cnt
 FROM (
   SELECT parse_agent(user_agent) AS parsed_agent
   FROM table_name
   WHERE date='today'
 ) x
-WHERE parsed_agent('category') = 'crawler'
-GROUP BY parsed_agent('name')
+WHERE parsed_agent['category'] = 'crawler'
+GROUP BY parsed_agent['name']
 ORDER BY cnt DESC LIMIT 1000;
 ```
 
