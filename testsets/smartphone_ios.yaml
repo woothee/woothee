@@ -19,6 +19,13 @@
   os: iPod
   category: smartphone
 
+# iPod(touch, iOS 7) + Safari
+- target: 'Mozilla/5.0 (iPod touch; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53'
+  name: Safari
+  version: '7.0'
+  os: iPod
+  category: smartphone
+
 # iPhone + Chrome iOS
 - target: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; ja-jp) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3'
   name: Chrome
