@@ -113,6 +113,11 @@
   type: os
   category: pc
 
+- label: ChromeOS
+  name: ChromeOS
+  type: os
+  category: pc
+
 - label: Android
   name: Android
   type: os
