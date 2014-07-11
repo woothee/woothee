@@ -34,6 +34,16 @@
   os: UNKNOWN
   category: crawler
 
+- target: 'Mozilla/5.0 (Linux; U; Android 2.3.3; ja-jp; sdk Build/GRI34; Y!J-BRZ/YATSHA crawler; http://help.yahoo.co.jp/help/jp/search/indexing/indexing-15.html) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'
+  name: Yahoo! Japan
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Mozilla/5.0 (iPhone; Y!J-BRY/YATSH crawler; http://help.yahoo.co.jp/help/jp/search/indexing/indexing-15.html)'
+  name: Yahoo! Japan
+  os: UNKNOWN
+  category: crawler
+
 - target: 'Yahoo Pipes 2.0'
   name: Yahoo! Pipes
   os: UNKNOWN
