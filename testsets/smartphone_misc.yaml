@@ -19,6 +19,13 @@
   os: Windows Phone OS
   category: smartphone
 
+# IEMobile + Windows Phone
+- target: 'Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 930) like Gecko'
+  name: Internet Explorer
+  version: '11.0'
+  os: Windows Phone OS
+  category: smartphone
+
 # IE + Windows CE
 - target: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.7) S12HT'
   name: Internet Explorer
