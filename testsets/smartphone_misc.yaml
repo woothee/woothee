@@ -10,6 +10,7 @@
   name: Firefox
   version: '26.0'
   os: Firefox OS
+  os_version: '26.0'
   category: smartphone
 
 # IEMobile + Windows Phone
@@ -17,6 +18,7 @@
   name: Internet Explorer
   version: '7.0'
   os: Windows Phone OS
+  os_version: '7.5'
   category: smartphone
 
 # IEMobile + Windows Phone
@@ -24,6 +26,7 @@
   name: Internet Explorer
   version: '11.0'
   os: Windows Phone OS
+  os_version: '8.1'
   category: smartphone
 
 # IE + Windows CE
@@ -44,4 +47,5 @@
 - target: 'BlackBerry9700/5.0.0.1014 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/220'
   name: UNKNOWN
   os: BlackBerry
+  os_version: '5.0.0.1014'
   category: smartphone

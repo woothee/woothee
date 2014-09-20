@@ -3,6 +3,7 @@
   name: Internet Explorer
   version: '6.0'
   os: Windows 2000
+  os_version: 'NT 5.0'
   category: pc
 
 # MSIE 7 + Windows XP
@@ -10,6 +11,7 @@
   name: Internet Explorer
   version: '7.0'
   os: Windows XP
+  os_version: 'NT 5.1'
   category: pc
 
 # MSIE 8 + Windows XP
@@ -17,6 +19,7 @@
   name: Internet Explorer
   version: '8.0'
   os: Windows XP
+  os_version: 'NT 5.1'
   category: pc
 
 # MSIE 8 (Bing Optimized) + Windows XP
@@ -24,6 +27,7 @@
   name: Internet Explorer
   version: '8.0'
   os: Windows XP
+  os_version: 'NT 5.1'
   category: pc
 
 # MSIE 8 + Windows Vista
@@ -31,6 +35,7 @@
   name: Internet Explorer
   version: '8.0'
   os: Windows Vista
+  os_version: 'NT 6.0'
   category: pc
 
 # MSIE 8 + Windows 7
@@ -38,6 +43,7 @@
   name: Internet Explorer
   version: '8.0'
   os: Windows 7
+  os_version: 'NT 6.1'
   category: pc
 
 # MSIE 9 + Windows 7
@@ -45,6 +51,7 @@
   name: Internet Explorer
   version: '9.0'
   os: Windows 7
+  os_version: 'NT 6.1'
   category: pc
 
 # MSIE10 + Windows 8
@@ -52,6 +59,7 @@
   name: Internet Explorer
   version: '10.0'
   os: Windows 8
+  os_version: 'NT 6.2'
   category: pc
 
 # MSIE11 (Bing Optimized) + Windows 7
@@ -59,6 +67,7 @@
   name: Internet Explorer
   version: '11.0'
   os: Windows 7
+  os_version: 'NT 6.1'
   category: pc
 
 # MSIE11 + Windows 8.1
@@ -66,18 +75,21 @@
   name: Internet Explorer
   version: '11.0'
   os: Windows 8.1
+  os_version: 'NT 6.3'
   category: pc
 
 # UNKNOWN (IE4.78?) + Windows 98
 - target: 'Mozilla/4.78 [ja] (Win98; U)'
   name: UNKNOWN
   os: Windows 98
+  os_version: 'Win98'
   category: pc
 
 # UNKNOWN (WOW64?) + windows 7
 - target: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko)'
   name: UNKNOWN
   os: Windows 7
+  os_version: 'NT 6.1'
   category: pc
 
 # Chrome
@@ -85,6 +97,7 @@
   name: Chrome
   version: '0.2.149.27'
   os: Windows XP
+  os_version: 'NT 5.1'
   category: pc
 
 # Firefox
@@ -92,6 +105,7 @@
   name: Firefox
   version: '9.0.1'
   os: Windows Vista
+  os_version: 'NT 6.0'
   category: pc
 
 # Safari
@@ -99,6 +113,7 @@
   name: Safari
   version: '5.1.2'
   os: Windows XP
+  os_version: 'NT 5.1'
   category: pc
 
 # Opera
@@ -106,6 +121,7 @@
   name: Opera
   version: '9.52'
   os: Windows XP
+  os_version: 'NT 5.1'
   category: pc
 
 # Opera (webkit)
@@ -113,6 +129,7 @@
   name: Opera
   version: '20.0.1387.64'
   os: Windows 8.1
+  os_version: 'NT 6.3'
   category: pc
 
 # Sleipnir
@@ -120,17 +137,20 @@
   name: Internet Explorer
   version: '6.0'
   os: Windows XP
+  os_version: 'NT 5.1'
   category: pc
 
 # Netscape 7.1 + Windows Vista
 - target: 'Mozilla/5.0 (Windows; U; Windows NT 6.0; ja-JP; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)'
   name: UNKNOWN
   os: Windows Vista
+  os_version: 'NT 6.0'
   category: pc
 
 # Thunderbird 8.0 + Windows XP
 - target: 'Mozilla/5.0 (Windows NT 5.1; rv:8.0) Gecko/20111105 Thunderbird/8.0'
   name: UNKNOWN
   os: Windows XP
+  os_version: 'NT 5.1'
   category: pc
 

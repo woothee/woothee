@@ -3,6 +3,7 @@
   name: Safari
   version: '5.1'
   os: iPhone
+  os_version: '5.0.1'
   category: smartphone
 
 # iPad + Safari
@@ -10,6 +11,7 @@
   name: Safari
   version: '5.0.2'
   os: iPad
+  os_version: '4.3.2'
   category: smartphone
 
 # iPod(touch) + Safari
@@ -17,6 +19,7 @@
   name: Safari
   version: '5.1'
   os: iPod
+  os_version: '5.0.1'
   category: smartphone
 
 # iPod(touch, iOS 7) + Safari
@@ -24,6 +27,7 @@
   name: Safari
   version: '7.0'
   os: iPod
+  os_version: '7.0'
   category: smartphone
 
 # iPhone + Chrome iOS
@@ -31,12 +35,14 @@
   name: Chrome
   version: '19.0.1084.60'
   os: iPhone
+  os_version: '5.1.1'
   category: smartphone
 
 # UNKNOWN
 - target: 'Mozilla/5.0 (iPhone; CPU iPhone OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A405'
   name: UNKNOWN
   os: iPhone
+  os_version: '5.0.1'
   category: smartphone
 
 # UNKNOWN: application original

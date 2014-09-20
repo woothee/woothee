@@ -3,6 +3,7 @@
   name: Safari
   version: '4.0'
   os: Android
+  os_version: '2.3.5'
   category: smartphone
 
 # Safari + Android
@@ -10,6 +11,7 @@
   name: Safari
   version: '4.0'
   os: Android
+  os_version: '3.1'
   category: smartphone
 
 # Chrome Mobile
@@ -17,6 +19,7 @@
   name: Chrome
   version: '16.0.912.75'
   os: Android
+  os_version: '4.0.3'
   category: smartphone
 
 # Opera Mini + Android
@@ -31,6 +34,7 @@
   name: Opera
   version: '20.0.1396.73172'
   os: Android
+  os_version: '4.2.2'
   category: smartphone
 
 # Firefox + Android
@@ -51,6 +55,7 @@
 - target: 'Dalvik/1.4.0 (Linux; U; Android 2.3.4; SBM009SH Build/S0008)'
   name: UNKNOWN
   os: Android
+  os_version: '2.3.4'
   category: smartphone
 
 # UNKNOWN: application original
