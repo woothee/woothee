@@ -82,7 +82,7 @@
 - target: 'Mozilla/4.78 [ja] (Win98; U)'
   name: UNKNOWN
   os: Windows 98
-  os_version: 'Win98'
+  os_version: '98'
   category: pc
 
 # UNKNOWN (WOW64?) + windows 7
