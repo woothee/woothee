@@ -23,6 +23,13 @@ Implemantations:
 * v1.0.0
   * Some of implementations are not v1 yet.
 
+Version numbers are used as:
+* vX.Y.Z
+  * X and Y is major/minor number to control specs of dataset/testsets
+  * Z is patch number for each language implementation release control
+
+So the version of this repository is always `X.Y.0`.
+
 ## Implementations
 
 * Java (and Hive UDF)
