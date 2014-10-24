@@ -20,7 +20,8 @@ Implemantations:
 
 ## Versions
 
-* v0.4.0 (Latest of 0.4.x)
+* v1.0.0
+  * Some of implementations are not v1 yet.
 
 ## Implementations
 
@@ -59,6 +60,9 @@ r.get("os")
 
 r.get("version");
 // => version of browser, or terminal type name of mobile phones
+
+r.get("os_version");
+// => "NT 6.3" (for Windows), "10.8.3" (for OSX), "8.0.1" (for iOS), ....
 ```
 
 in Hive: (copy woothee.jar into your CLASSPATH, and create function)
@@ -84,7 +88,7 @@ in Perl: (cpanm Woothee)
 ```perl
 use Woothee;
 Woothee::parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)");
-# => {'name'=>"Internet Explorer", 'category'=>"pc", 'os'=>"Windows 7", 'version'=>"8.0", 'vendor'=>"Microsoft"}
+# => {'name'=>"Internet Explorer", 'category'=>"pc", 'os'=>"Windows 7", 'version'=>"8.0", 'vendor'=>"Microsoft", 'os_version'=>"NT 6.1"}
 ```
 
 in Ruby: (gem install woothee)
@@ -92,7 +96,7 @@ in Ruby: (gem install woothee)
 ```ruby
 require 'woothee'
 Woothee.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)")
-# => {:name=>"Internet Explorer", :category=>:pc, :os=>"Windows 7", :version=>"8.0", :vendor=>"Microsoft"}
+# => {:name=>"Internet Explorer", :category=>:pc, :os=>"Windows 7", :version=>"8.0", :vendor=>"Microsoft", :os_version=>"NT 6.1"}
 ```
 
 in Python:
@@ -108,7 +112,7 @@ in Javascript(HTML, copy from release/woothee.js)
 <script src="./your/own/path/woothee.js"></script>
 <script>
 woothee.parse('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)')
-// => {name: 'Internet Explorer', category: 'pc', os: 'Windows 7', version: '8.0', vendor: 'Microsoft'}
+// => {name: 'Internet Explorer', category: 'pc', os: 'Windows 7', version: '8.0', vendor: 'Microsoft', os_version: 'NT 6.1'}
 </script>
 ```
 
@@ -117,7 +121,7 @@ in Node.js (npm install woothee)
 ```javascript
 var woothee = require('woothee');
 woothee.parse('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)')
-// => {name: 'Internet Explorer', category: 'pc', os: 'Windows 7', version: '8.0', vendor: 'Microsoft'}
+// => {name: 'Internet Explorer', category: 'pc', os: 'Windows 7', version: '8.0', vendor: 'Microsoft', os_version: 'NT 6.1'}
 ```
 
 in PHP (composer require woothee/woothee:\*)
@@ -132,7 +136,6 @@ $classifier->parse('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4
 
 ## Todo
 
-* 'os_version' especially for OS version of iOS/Android
 * 'mobilephone' means Japanese mobile phone groups
   * For multi-region code, domestic pattern specifier (or another mechanism) needed
 
