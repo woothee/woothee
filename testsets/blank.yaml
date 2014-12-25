@@ -1,23 +1,20 @@
 - target: ''
-  name:
-  version:
-  os:
-  category:
+  name: UNKNOWN
+  version: UNKNOWN
+  os: UNKNOWN
+  os_version: UNKNOWN
+  category: UNKNOWN
 
-- target: ''
-  name:
-  version:
-  os:
-  category:
+- target: ~
+  name: UNKNOWN
+  version: UNKNOWN
+  os: UNKNOWN
+  os_version: UNKNOWN
+  category: UNKNOWN
 
-- target: ''
-  name:
-  version:
-  os:
-  category:
-
-- target: ''
-  name:
-  version:
-  os:
-  category:
+- target: '-'
+  name: UNKNOWN
+  version: UNKNOWN
+  os: UNKNOWN
+  os_version: UNKNOWN
+  category: UNKNOWN
