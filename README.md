@@ -29,8 +29,7 @@ Version numbers are used as:
 * vX.Y.Z
   * X and Y is major/minor number to control specs of dataset/testsets
   * Z is patch number for each language implementation release control
-
-So the version of this repository is always `X.Y.0`.
+  * Z is also used for bug fix control of testsets (versions of each language implementations should be bumped up too)
 
 ## Implementations
 
