@@ -20,6 +20,8 @@ Implemantations:
 
 ## Versions
 
+* v1.0.1
+  * Add variations of MSIE11
 * v1.0.0
   * Some of implementations are not v1 yet.
 
