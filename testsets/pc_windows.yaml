@@ -78,6 +78,35 @@
   os_version: 'NT 6.3'
   category: pc
 
+## some variations of MSIE11
+- target: 'Mozilla/5.0 (Windows NT 6.1; Trident/7.0; MALCJS; rv:11.0) like Gecko'
+  name: Internet Explorer
+  version: '11.0'
+  os: Windows 7
+  os_version: 'NT 6.1'
+  category: pc
+
+- target: 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; MASPJS; rv:11.0) like Gecko'
+  name: Internet Explorer
+  version: '11.0'
+  os: Windows 7
+  os_version: 'NT 6.1'
+  category: pc
+
+- target: 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko'
+  name: Internet Explorer
+  version: '11.0'
+  os: Windows 8.1
+  os_version: 'NT 6.3'
+  category: pc
+
+- target: 'Mozilla/5.0 (Windows NT 6.3; Win64; x64; Trident/7.0; Touch; rv:11.0) like Gecko'
+  name: Internet Explorer
+  version: '11.0'
+  os: Windows 8.1
+  os_version: 'NT 6.3'
+  category: pc
+
 # UNKNOWN (IE4.78?) + Windows 98
 - target: 'Mozilla/4.78 [ja] (Win98; U)'
   name: UNKNOWN
