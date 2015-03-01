@@ -20,6 +20,8 @@ Implemantations:
 
 ## Versions
 
+* v1.1.0
+  * Add specs for blank input data
 * v1.0.1
   * Add variations of MSIE11
 * v1.0.0
