@@ -28,6 +28,10 @@
   type: browser
   vendor: Fenrir Inc.
 
+- label: Webview
+  name: Webview
+  type: browser
+
 - label: Win
   name: Windows UNKNOWN Ver
   type: os
