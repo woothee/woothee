@@ -197,6 +197,12 @@
   os: UNKNOWN
   category: crawler
 
+# twitter
+- target: 'Twitterbot/1.0'
+  name: twitter
+  os: UNKNOWN
+  category: crawler
+
 # facebook
 - target: 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)'
   name: facebook

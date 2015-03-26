@@ -384,6 +384,11 @@
   type: full
   category: crawler
 
+- label: twitter
+  name: twitter
+  type: full
+  category: crawler
+
 - label: mixi
   name: mixi
   type: full
