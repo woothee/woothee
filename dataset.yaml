@@ -3,6 +3,11 @@
   type: browser
   vendor: Microsoft
 
+- label: Edge
+  name: Edge
+  type: browser
+  vendor: Microsoft
+
 - label: Chrome
   name: Chrome
   type: browser
@@ -30,6 +35,11 @@
 
 - label: Win
   name: Windows UNKNOWN Ver
+  type: os
+  category: pc
+
+- label: Win10
+  name: Windows 10
   type: os
   category: pc
 
