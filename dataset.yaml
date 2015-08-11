@@ -163,6 +163,11 @@
   type: os
   category: smartphone
 
+- label: BlackBerry10
+  name: BlackBerry 10
+  type: os
+  category: smartphone
+
 - label: docomo
   name: docomo
   type: full
