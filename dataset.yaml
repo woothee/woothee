@@ -36,6 +36,7 @@
 - label: Webview
   name: Webview
   type: browser
+  vendor: OS vendor
 
 - label: Win
   name: Windows UNKNOWN Ver
