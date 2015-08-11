@@ -20,6 +20,10 @@ Implemantations:
 
 ## Versions
 
+* v1.2.0
+  * Add Microsoft Edge, Webview of mobile phones
+  * Add Windows 10, BlackBerry 10
+  * Add Twitterbot
 * v1.1.0
   * Add specs for blank input data
 * v1.0.1
