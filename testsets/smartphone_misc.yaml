@@ -49,3 +49,11 @@
   os: BlackBerry
   os_version: '5.0.0.1014'
   category: smartphone
+
+# BlackBerry 10
+- target: 'Mozilla/5.0 (BB10; Touch) AppleWebKit/537.35+ (KHTML, like Gecko) Version/10.3.1.2243 Mobile Safari/537.35+'
+  name: UNKNOWN
+  os: BlackBerry
+  os_version: '10.3.1.2243'
+  category: smartphone
+
