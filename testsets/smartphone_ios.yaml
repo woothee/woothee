@@ -69,6 +69,13 @@
   os_version: '5.1.1'
   category: smartphone
 
+# iPhone + Firefox
+- target: 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.0 Mobile/12F69 Safari/600.1.4'
+  name: Firefox
+  version: '1.0'
+  os: iPhone
+  os_version: '8.3'
+  category: smartphone
 
 # UNKNOWN: application original
 - target: 'Girls/2.0 (livedoor Co.,Ltd.; Peachy 2.1; iPhone; RSS Version 2.0; +http://girls.livedoor.com/)'
