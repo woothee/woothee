@@ -10,13 +10,13 @@ Most important data of this project is only single set of return values, and set
 
 Implemantations:
 
-  * Java (and Hive UDF)
-  * Perl
-  * Ruby
-  * Python
-  * Javascript (Node.js or browser)
-  * PHP
-  * Go
+* [Java](https://github.com/woothee/woothee-java) (and Hive UDF)
+* [Perl](https://github.com/woothee/woothee-perl)
+* [Ruby](https://github.com/woothee/woothee-ruby)
+* [Python](https://github.com/woothee/woothee-python)
+* [Javascript](https://github.com/woothee/woothee-js) (Node.js or browser)
+* [PHP](https://github.com/woothee/woothee-php)
+* [Go](https://github.com/woothee/woothee-go)
 
 ## Versions
 
@@ -54,7 +54,6 @@ Version numbers are used as:
 * Golang
   * https://github.com/woothee/woothee-go
 
-
 ## SYNOPSIS
 in Java: (use java/woothee.jar)
 
@@ -62,7 +61,7 @@ in Java: (use java/woothee.jar)
 // import is.tagomor.woothee.Classifier;
 // import is.tagomor.woothee.DataSet;
 Map r = Classifier.parse("user agent string");
-    
+
 r.get("name")
 // => name of browser (or string like name of user-agent)
 
