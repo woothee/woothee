@@ -20,6 +20,10 @@ Implemantations:
 
 ## Versions
 
+* v1.3.0
+  * Add Firefox for iOS
+* v1.2.1
+  * Fix testset bug for BlackBerry 10
 * v1.2.0
   * Add Microsoft Edge, Webview of mobile phones
   * Add Windows 10, BlackBerry 10
