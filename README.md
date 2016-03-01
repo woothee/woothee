@@ -2,6 +2,8 @@
 
 Project Woothee is multi-language user-agent strings parsers.
 
+You can try it on demo site: http://woothee.github.io/
+
 ## Why new project?
 
 We needs just same logic over 2 or more programming languages, for use on various frameworks, middlewares and environments.
