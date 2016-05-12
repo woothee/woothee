@@ -28,6 +28,11 @@
   type: browser
   vendor: Opera
 
+- label: Vivaldi
+  name: Vivaldi
+  type: browser
+  vendor: Vivaldi Technologies
+
 - label: Sleipnir
   name: Sleipnir
   type: browser
@@ -57,12 +62,12 @@
   name: Windows 8
   type: os
   category: pc
-  
+
 - label: Win7
   name: Windows 7
   type: os
   category: pc
-  
+
 - label: WinVista
   name: Windows Vista
   type: os
