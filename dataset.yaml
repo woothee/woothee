@@ -394,6 +394,11 @@
   type: full
   category: crawler
 
+- label: BingPreview
+  name: BingPreview
+  type: full
+  category: crawler
+
 - label: Yeti
   name: Naver Yeti
   type: full
