@@ -22,6 +22,8 @@ Implemantations:
 
 ## Versions
 
+* v1.5.0
+  * Add BingPreview crawler
 * v1.4.0
   * Add Vivaldi
 * v1.3.0
