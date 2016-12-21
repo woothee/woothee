@@ -193,3 +193,9 @@
   version: php
   os: UNKNOWN
   category: misc
+
+- target: 'curl/7.19.7 (x86_64-redhat-linux-gnu) libcurl/7.19.7 NSS/3.19.1 Basic ECC zlib/1.2.3 libidn/1.18 libssh2/1.4.2'
+  name: HTTP Library
+  version: curl
+  os: UNKNOWN
+  category: misc
