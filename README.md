@@ -22,6 +22,9 @@ Implemantations:
 
 ## Versions
 
+* v1.6.0
+  * Add Android Webview
+  * Add curl HTTP library
 * v1.5.0
   * Add BingPreview crawler
 * v1.4.0
