@@ -1,9 +1,1 @@
-language: perl
-perl:
-  - "5.18"
-before_script:
-  - cpanm YAML
-install:
-  - echo "skip"
-script:
-  - make test
+language: ruby

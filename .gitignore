@@ -7,25 +7,4 @@ tmtags
 .\#*
 *.swp
 tmp/
-
-java/classes
-java/testresults
-# java/src/java/is/tagomor/woothee/DataSet.java is generated at "ant codegen"
-java/src/java/is/tagomor/woothee/DataSet.java
-
-perl/extlib
-perl/t/testsets
-perl/META.yml
-perl/MYMETA.json
-perl/MYMETA.yml
-perl/Makefile
-perl/blib/
-perl/inc/
-perl/pm_to_blib
-
-ruby/pkg
-ruby/Gemfile.lock
-
-*.pyc
-python/PyYAML*.egg
-python/lib/*.egg-info
+Gemfile.lock
