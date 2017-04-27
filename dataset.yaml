@@ -459,6 +459,11 @@
   type: full
   category: crawler
 
+- label: 360Spider
+  name: Haosou 360Spider
+  type: full
+  category: crawler
+
 - label: radian6
   name: salesforce radian6
   type: full

@@ -169,6 +169,17 @@
   os: UNKNOWN
   category: crawler
 
+# Haosou
+- target: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1; 360Spider(compatible; HaosouSpider; http://www.haosou.com/help/help_3_2.html)'
+  name: Haosou 360Spider
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0); 360Spider(compatible; HaosouSpider; http://www.haosou.com/help/help_3_2.html)'
+  name: Haosou 360Spider
+  os: UNKNOWN
+  category: crawler
+
 # Hatena
 - target: 'Hatena Antenna/0.5 (http://a.hatena.ne.jp/help)'
   name: Hatena
