@@ -419,6 +419,11 @@
   type: full
   category: crawler
 
+- label: trendictionbot
+  name: trendiction
+  type: full
+  category: crawler
+
 - label: mixi
   name: mixi
   type: full
