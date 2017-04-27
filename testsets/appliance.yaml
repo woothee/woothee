@@ -60,12 +60,14 @@
 
 # Xbox 360
 - target: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)'
+  version: '9.0'
   name: Xbox 360
   os: Xbox 360
   category: appliance
 
 # Xbox One
 - target: 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Xbox; Xbox One)'
+  version: '10.0'
   name: Xbox One
   os: Xbox One
   category: appliance
