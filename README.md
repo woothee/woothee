@@ -22,9 +22,6 @@ Implemantations:
 
 ## Versions
 
-* v1.7.0
-  * Add trendictionbot crawler
-  * Add Yeti 1.1 crawler user agent tests
 * v1.6.0
   * Add Android Webview
   * Add curl HTTP library
