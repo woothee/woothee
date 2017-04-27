@@ -70,6 +70,13 @@
   os_version: 'NT 6.1'
   category: pc
 
+# MSIE11 (Bing Optimized) + Windows 7
+- target: 'Mozilla/5.0 (Windows NT 6.1; Trident/7.0; BOIE9;JAJP; rv:11.0) like Gecko'
+  name: Internet Explorer
+  version: '11.0'
+  os: Windows 7
+  category: pc
+
 # MSIE11 + Windows 8.1
 - target: 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko'
   name: Internet Explorer
