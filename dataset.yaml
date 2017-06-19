@@ -479,6 +479,11 @@
   type: full
   category: crawler
 
+- label: BLEXBot
+  name: BLEXBot Crawler
+  type: full
+  category: crawler
+
 - label: VariousCrawler
   name: misc crawler
   type: full
