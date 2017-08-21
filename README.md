@@ -19,6 +19,7 @@ Implemantations:
 * [Javascript](https://github.com/woothee/woothee-js) (Node.js or browser)
 * [PHP](https://github.com/woothee/woothee-php)
 * [Go](https://github.com/woothee/woothee-go)
+* [Rust](https://github.com/woothee/woothee-rust)
 
 ## Versions
 
@@ -69,6 +70,8 @@ Version numbers are used as:
   * https://github.com/woothee/woothee-php
 * Golang
   * https://github.com/woothee/woothee-go
+* Rust
+  * https://github.com/woothee/woothee-rust
 
 ## SYNOPSIS
 in Java: (use java/woothee.jar)
@@ -161,6 +164,21 @@ include __DIR__ . '/vendor/autoload.php';
 $classifier = new \Woothee\Classifier;
 $classifier->parse('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)');
 // => ['name' => 'Internet Explorer', 'category' => 'pc', 'os' => 'Windows 7', 'version' => '8.0', 'vendor' => 'Microsoft']
+```
+
+in Rust:
+
+```rust
+extern crate woothee;
+
+use woothee::parser::Parser;
+
+fn main() {
+    let parser = Parser::new();
+    let result = parser.parse("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)");
+    println!("{:?}", result);
+}
+// => Some(WootheeResult { name: "Internet Explorer", category: "pc", os: "Windows 7", os_version: "NT 6.1", browser_type: "UNKNOWN", version: "8.0", vendor: "Microsoft" })
 ```
 
 ## Todo
