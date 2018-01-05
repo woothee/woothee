@@ -38,6 +38,11 @@
   type: browser
   vendor: Fenrir Inc.
 
+- label: GSA
+  name: Google Search App
+  type: browser
+  vendor: Google
+
 - label: Webview
   name: Webview
   type: browser
