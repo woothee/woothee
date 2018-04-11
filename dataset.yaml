@@ -43,6 +43,11 @@
   type: browser
   vendor: OS vendor
 
+- label: YaBrowser
+  name: Yandex Browser
+  type: browser
+  vendor: Yandex
+
 - label: Win
   name: Windows UNKNOWN Ver
   type: os

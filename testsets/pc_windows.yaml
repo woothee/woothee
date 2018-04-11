@@ -197,3 +197,10 @@
   os: Windows XP
   os_version: 'NT 5.1'
   category: pc
+
+#YaBrowser + Windows
+- target: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 YaBrowser/18.1.1.839 Yowser/2.5 Safari/537.36'
+  name: Yandex Browser
+  os: Windows 7
+  os_version: 'NT 6.1'
+  category: pc
