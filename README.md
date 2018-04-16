@@ -10,7 +10,7 @@ We needs just same logic over 2 or more programming languages, for use on variou
 
 Most important data of this project is only single set of return values, and set of test cases, for equality of results of another languages implementations.
 
-Implemantations:
+Implementations:
 
 * [Java](https://github.com/woothee/woothee-java) (and Hive UDF)
 * [Perl](https://github.com/woothee/woothee-perl)
