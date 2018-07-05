@@ -23,6 +23,8 @@ Implementations:
 
 ## Versions
 
+* v1.8.0
+  * Add Yandex Browser
 * v1.7.0
   * Add trendictionbot crawler
   * Add Yeti 1.1 crawler user agent tests
