@@ -71,3 +71,11 @@
   os: Android
   os_version: '5.1.1'
   category: smartphone
+
+# Chrome + Android 9
+- target: 'Mozilla/5.0 (Linux; Android 9; SM-N960F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.105 Mobile Safari/537.36'
+  name: 'Chrome'
+  version: '72.0.3626.105'
+  os: Android
+  os_version: '9'
+  category: smartphone
