@@ -23,6 +23,8 @@ Implementations:
 
 ## Versions
 
+* v1.9.0
+  * Add Android 9
 * v1.8.0
   * Add Yandex Browser
 * v1.7.0
