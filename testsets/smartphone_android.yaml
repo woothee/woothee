@@ -51,6 +51,14 @@
   os: Android
   category: smartphone
 
+# Edge + Android
+- target: 'Mozilla/5.0 (Linux; Android 8.0; Pixel XL Build/OPP3.170518.006) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.0 Mobile Safari/537.36 EdgA/41.1.35.1'
+  name: Edge
+  version: '41.1.35.1'
+  os: Android
+  os_version: '8.0'
+  category: smartphone
+
 # UNKNOWN: Dalvik(jvm) agent
 - target: 'Dalvik/1.4.0 (Linux; U; Android 2.3.4; SBM009SH Build/S0008)'
   name: UNKNOWN

@@ -128,6 +128,13 @@
   os_version: 'NT 10.0'
   category: pc
 
+# Windows 10 + Edge (Chromium base)
+- target: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.48 Safari/537.36 Edg/74.1.96.24'
+  name: Edge
+  os: Windows 10
+  os_version: 'NT 10.0'
+  category: pc
+
 # Chrome
 - target: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13'
   name: Chrome
