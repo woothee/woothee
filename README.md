@@ -23,8 +23,10 @@ Implementations:
 
 ## Versions
 
+* v1.11.0
+  * Add Google Search App
 * v1.10.0
-  * Add Microsoft Edge (based on Chromiumu), Edge for iOS/Android
+  * Add Microsoft Edge (based on Chromium), Edge for iOS/Android
 * v1.9.0
   * Add Android 9
 * v1.8.0
