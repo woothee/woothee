@@ -23,6 +23,8 @@ Implementations:
 
 ## Versions
 
+* v1.11.1
+  * Update the GSA version in testsets
 * v1.11.0
   * Add Google Search App
 * v1.10.0
