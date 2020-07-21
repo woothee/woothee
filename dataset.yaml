@@ -493,3 +493,8 @@
   name: misc crawler
   type: full
   category: crawler
+  
+- label: AdsBotGoogleMobile
+  name: AdsBot-Google-Mobile
+  type: full
+  category: crawler
