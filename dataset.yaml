@@ -498,3 +498,8 @@
   name: AdsBot-Google-Mobile
   type: full
   category: crawler
+
+- label: AdsBotGoogle
+  name: AdsBot-Google
+  type: full
+  category: crawler

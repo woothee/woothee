@@ -57,3 +57,8 @@
   name: AdsBot-Google-Mobile
   os: UNKNOWN
   category: crawler
+
+- target: 'AdsBot-Google (+http://www.google.com/adsbot.html)'
+  name: AdsBot-Google
+  os: UNKNOWN
+  category: crawler
