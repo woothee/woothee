@@ -53,6 +53,11 @@
   type: browser
   vendor: Yandex
 
+- label: SamsungBrowser
+  name: SamsungBrowser
+  type: browser
+  vendor: Samsung
+
 - label: Win
   name: Windows UNKNOWN Ver
   type: os

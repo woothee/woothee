@@ -87,3 +87,11 @@
   os: Android
   os_version: '9'
   category: smartphone
+
+# SamsungBrowser + Android
+- target: 'Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925F Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36'
+  name: SamsungBrowser
+  version: '4.0'
+  os: Android
+  os_version: '5.0.2'
+  category: smartphone
