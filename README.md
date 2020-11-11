@@ -20,6 +20,7 @@ Implementations:
 * [PHP](https://github.com/woothee/woothee-php)
 * [Go](https://github.com/woothee/woothee-go)
 * [Rust](https://github.com/woothee/woothee-rust)
+* [D](https://gitlab.com/sarneaud/woothee-d)
 
 ## Versions
 
