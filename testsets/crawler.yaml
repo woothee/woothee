@@ -245,3 +245,9 @@
   name: trendiction
   os: UNKNOWN
   category: crawler
+
+# BLEXBot
+- target: 'Mozilla/5.0 (compatible; BLEXBot/1.0; +http://webmeup-crawler.com/)'
+  name: BLEXBot Crawler
+  os: UNKNOWN
+  category: crawler
