@@ -24,6 +24,9 @@ Implementations:
 
 ## Versions
 
+* v1.12.0
+  * Add Samsung Browser
+  * Add Google's AdsBot
 * v1.11.1
   * Update the GSA version in testsets
 * v1.11.0
