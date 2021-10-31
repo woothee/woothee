@@ -44,6 +44,14 @@
   os: Android
   category: smartphone
 
+# Firefox + Android (with OS version)
+- target: 'Mozilla/5.0 (Android 11; Mobile; rv:93.0) Gecko/93.0 Firefox/93.0'
+  name: Firefox
+  version: '93.0'
+  os: Android
+  os_version: '11'
+  category: smartphone
+
 # Firefox + Android(Tablet)
 - target: 'Mozilla/5.0 (Android; Tablet; rv:14.0) Gecko/14.0 Firefox/14.0'
   name: Firefox
