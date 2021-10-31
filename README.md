@@ -24,6 +24,8 @@ Implementations:
 
 ## Versions
 
+* v1.13.0
+  * Add Android OS version (Android 11~)
 * v1.12.0
   * Add Samsung Browser
   * Add Google's AdsBot
